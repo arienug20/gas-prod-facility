@@ -16,6 +16,7 @@ if [ ! -d "$PATCH" ]; then
   echo "ERROR: $PATCH (hasil patch) tidak ada." >&2
   exit 1
 fi
+NEW_LIBS="wellhead_common.py compression_common.py powergen_common.py air_system_common.py metering_common.py lbcv_common.py underground_common.py supports_insulation_common.py alignment_sheet_builder.py"
 if [ ! -d "$COMP_PATCH" ]; then
   echo "ERROR: $COMP_PATCH (company patch) tidak ada." >&2
   exit 1
@@ -31,6 +32,9 @@ cp "$COMP_PATCH/scripts/pid_common.py" "$COMP_SKILL/scripts/pid_common.py"
 cp "$COMP_PATCH/scripts/plan_common.py" "$COMP_SKILL/scripts/plan_common.py"
 cp "$COMP_PATCH/scripts/validate_cad_rules.py" "$COMP_SKILL/scripts/validate_cad_rules.py"
 chmod +x "$COMP_SKILL/scripts/validate_cad_rules.py"
+for s in $NEW_LIBS; do
+  cp "$COMP_PATCH/scripts/$s" "$COMP_SKILL/scripts/$s"
+done
 for t in "$COMP_PATCH/scripts/"test_*.py; do
   if [ -f "$t" ]; then
     cp "$t" "$COMP_SKILL/scripts/"
@@ -50,6 +54,9 @@ cp "$COMP_PATCH/scripts/pid_common.py" "$SKILL/scripts/pid_common.py"
 cp "$COMP_PATCH/scripts/plan_common.py" "$SKILL/scripts/plan_common.py"
 cp "$COMP_PATCH/scripts/validate_cad_rules.py" "$SKILL/scripts/validate_cad_rules.py"
 chmod +x "$SKILL/scripts/validate_cad_rules.py"
+for s in $NEW_LIBS; do
+  cp "$COMP_PATCH/scripts/$s" "$SKILL/scripts/$s"
+done
 for t in "$COMP_PATCH/scripts/"test_*.py; do
   if [ -f "$t" ]; then
     cp "$t" "$SKILL/scripts/"
@@ -75,5 +82,8 @@ fi
 if [ -f "$COMP_PATCH/scripts/iso_common.py" ]; then
   cp "$COMP_PATCH/scripts/iso_common.py" "$PATCH/scripts/iso_common.py"
 fi
+for s in $NEW_LIBS; do
+  cp "$COMP_PATCH/scripts/$s" "$PATCH/scripts/$s"
+done
 
 echo "OK — company patch re-applied ke $SKILL dan $COMP_SKILL"

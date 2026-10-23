@@ -1,0 +1,2086 @@
+{
+  "texts": [
+    {
+      "t": "1",
+      "x": 53.458,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 53.458,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 120.375,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 120.375,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 187.292,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 187.292,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 254.208,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 254.208,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 321.125,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 321.125,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 388.042,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 388.042,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 454.958,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 454.958,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 521.875,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 521.875,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 588.792,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 588.792,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 655.708,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 655.708,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 722.625,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 722.625,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 789.542,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 789.542,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 15.0,
+      "y": 543.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 827.0,
+      "y": 543.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 15.0,
+      "y": 473.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 827.0,
+      "y": 473.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 15.0,
+      "y": 402.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 827.0,
+      "y": 402.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 15.0,
+      "y": 332.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 827.0,
+      "y": 332.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 15.0,
+      "y": 261.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 827.0,
+      "y": 261.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 15.0,
+      "y": 191.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 827.0,
+      "y": 191.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 15.0,
+      "y": 120.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 827.0,
+      "y": 120.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 15.0,
+      "y": 50.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 827.0,
+      "y": 50.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NOTES",
+      "x": 739.0,
+      "y": 573.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1. SCHEMATIC - NOT TO SCALE. NO ORIENTATION IMPLIED.",
+      "x": 659.0,
+      "y": 560.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "2. WELLHEAD & CHRISTMAS TREE PER API SPEC 6A (ISO 10423),",
+      "x": 659.0,
+      "y": 551.7,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   RATED 5000 PSI WP / 10000 PSI TEST.",
+      "x": 659.0,
+      "y": 543.4,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "3. SAFETY SYSTEM (UMV, PWV, SCSSV) PER API RP 14C.",
+      "x": 659.0,
+      "y": 535.1,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "4. UMV-201 & PWV-201: HYDRAULIC GATE VALVES, SPRING-RETURN",
+      "x": 659.0,
+      "y": 526.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   FAIL-CLOSE (FC), ACTUATED FROM WELLHEAD HYDRAULIC ESD",
+      "x": 659.0,
+      "y": 518.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   PANEL (FROM ESD-1 LOGIC SOLVER).",
+      "x": 659.0,
+      "y": 510.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5. SCSSV-201: FAIL-CLOSE ON LOSS OF HYDRAULIC CONTROL",
+      "x": 659.0,
+      "y": 501.9,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   PRESSURE (3000-10000 PSI).",
+      "x": 659.0,
+      "y": 493.6,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "6. XOV-201: ADJUSTABLE CHOKE, TUNGSTEN CARBIDE NEEDLE +",
+      "x": 659.0,
+      "y": 485.3,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   MICROMETER HEAD. POSITIVE CHOKE SHOWN IN LEGEND.",
+      "x": 659.0,
+      "y": 477.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "7. ANNULUS A/B/C MONITORED VIA NEEDLE VALVE + PI (TABLE).",
+      "x": 659.0,
+      "y": 468.7,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "8. NRV-201 PREVENTS BACKFLOW FROM KILL LINE 050-WH-2002.",
+      "x": 659.0,
+      "y": 460.4,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "9. ALL GATE VALVES FULL OPEN OR FULL CLOSED - NO THROTTLING.",
+      "x": 659.0,
+      "y": 452.1,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "10. LINE NUMBERING PER PIPING LINE INDEX; SIZES FOR CLARITY.",
+      "x": 659.0,
+      "y": 443.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "LEGEND & SYMBOLS",
+      "x": 739.0,
+      "y": 429.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PROCESS LINE",
+      "x": 690.0,
+      "y": 413.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "HYDRAULIC SIGNAL (ESD PANEL / SCSSV)",
+      "x": 690.0,
+      "y": 398.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GATE VALVE - MANUAL (LMV/KWV/SWAB)",
+      "x": 690.0,
+      "y": 383.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "H",
+      "x": 668.0,
+      "y": 372.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GATE VALVE - HYDRAULIC ACTUATOR, FC",
+      "x": 690.0,
+      "y": 364.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NEEDLE VALVE (ANNULUS OUTLET)",
+      "x": 690.0,
+      "y": 350.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ADJUSTABLE CHOKE (CARBIDE NEEDLE)",
+      "x": 690.0,
+      "y": 333.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "POSITIVE CHOKE (FIXED BEAN)",
+      "x": 690.0,
+      "y": 316.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SCSSV (DOWNHOLE, FAIL-CLOSE)",
+      "x": 690.0,
+      "y": 300.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PI",
+      "x": 663.0,
+      "y": 285.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLEEDER VALVE + PRESSURE GAUGE (PI)",
+      "x": 690.0,
+      "y": 285.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "BATTERY LIMIT (CONTINUITY ARROW)",
+      "x": 690.0,
+      "y": 270.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "H = HYDRAULIC ACTUATOR | FC = FAIL CLOSE",
+      "x": 659.0,
+      "y": 255.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "STANDARD ABBREVIATIONS:",
+      "x": 659.0,
+      "y": 240.0,
+      "h": 1.9,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "UMV/LMV: UPPER/LOWER MASTER VALVE",
+      "x": 659.0,
+      "y": 231.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PWV/KWV: PRODUCTION/KILL WING VALVE",
+      "x": 659.0,
+      "y": 222.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SCSSV: SUB-SURFACE SAFETY VALVE (DOWNHOLE)",
+      "x": 659.0,
+      "y": 213.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NC: NORMALLY CLOSED    | THF: TUBING HEAD FLANGE",
+      "x": 659.0,
+      "y": 204.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "BL: BATTERY LIMIT      | XOV: CHOKE VALVE",
+      "x": 659.0,
+      "y": 195.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REFERENCE DRAWINGS",
+      "x": 739.0,
+      "y": 180.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GPF-00-DB-0001 : DESIGN BASIS - GAS PRODUCTION FACILITY",
+      "x": 659.0,
+      "y": 169.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0001 : P&ID - 3-PHASE SEPARATOR V-101",
+      "x": 659.0,
+      "y": 163.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PLN-0002 : PIPING PLAN - SEPARATOR AREA",
+      "x": 659.0,
+      "y": 158.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PM-PLN-0008 : BLUEPRINT MODUL HULU s/d ALIGNMENT (REV A2)",
+      "x": 659.0,
+      "y": 152.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REV",
+      "x": 665.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DESCRIPTION",
+      "x": 719.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DATE",
+      "x": 779.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHK",
+      "x": 802.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APP",
+      "x": 816.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A0",
+      "x": 665.0,
+      "y": 139.4,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ISSUED FOR REVIEW",
+      "x": 678.0,
+      "y": 139.4,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 26",
+      "x": 779.0,
+      "y": 139.4,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PM",
+      "x": 802.0,
+      "y": 139.4,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RE",
+      "x": 816.0,
+      "y": 139.4,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GAS PRODUCTION FACILITY - ONSHORE FIELD",
+      "x": 739.0,
+      "y": 108.5,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PM OIL & GAS SURFACE FACILITY",
+      "x": 739.0,
+      "y": 102.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REKAYASA ENGINEERING",
+      "x": 739.0,
+      "y": 98.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PIPING & INSTRUMENTATION DIAGRAM",
+      "x": 739.0,
+      "y": 87.0,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "WELLHEAD & CHRISTMAS TREE (API SPEC 6A)",
+      "x": 739.0,
+      "y": 80.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWING NO:",
+      "x": 658.0,
+      "y": 70.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0011",
+      "x": 739.0,
+      "y": 65.5,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REV:",
+      "x": 658.0,
+      "y": 56.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "A0",
+      "x": 697.0,
+      "y": 52.5,
+      "h": 3.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SCALE:",
+      "x": 742.0,
+      "y": 56.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NTS",
+      "x": 781.0,
+      "y": 52.5,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DATE:",
+      "x": 658.0,
+      "y": 44.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 2026",
+      "x": 697.0,
+      "y": 40.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SHEET:",
+      "x": 742.0,
+      "y": 44.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "1 OF 1",
+      "x": 781.0,
+      "y": 40.5,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWN:",
+      "x": 658.0,
+      "y": 32.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GLM-5.3-FLASH",
+      "x": 697.0,
+      "y": 29.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECKED:",
+      "x": 658.0,
+      "y": 21.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PM (AI)",
+      "x": 697.0,
+      "y": 18.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APPROVED:",
+      "x": 742.0,
+      "y": 21.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "WELLHEAD & CHRISTMAS TREE DATA - API SPEC 6A / ISO 10423",
+      "x": 227.0,
+      "y": 550.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TAG NUMBER",
+      "x": 28.0,
+      "y": 542.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "XMAS TREE WT-201 (WELL GPF-201)",
+      "x": 150.0,
+      "y": 542.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DESIGN STANDARD",
+      "x": 28.0,
+      "y": 535.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "API SPEC 6A (ISO 10423), PSL 2",
+      "x": 150.0,
+      "y": 535.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "RATING",
+      "x": 28.0,
+      "y": 529.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5000 PSI WP / 10000 PSI TEST",
+      "x": 150.0,
+      "y": 529.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SERVICE",
+      "x": 28.0,
+      "y": 522.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GAS PRODUCTION (ONSHORE)",
+      "x": 150.0,
+      "y": 522.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SCSSV",
+      "x": 28.0,
+      "y": 516.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "HYDRAULIC 3000-10000 PSI, FAIL-CLOSE",
+      "x": 150.0,
+      "y": 516.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ESD ACTION",
+      "x": 28.0,
+      "y": 509.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CLOSE UMV-201 & PWV-201 (API RP 14C)",
+      "x": 150.0,
+      "y": 509.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ANNULUS MONITORING DATA",
+      "x": 547.0,
+      "y": 550.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANNULUS A",
+      "x": 453.0,
+      "y": 542.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5-1/2 x 9-5/8 IN (N2 PAD)",
+      "x": 548.0,
+      "y": 542.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ANNULUS B",
+      "x": 453.0,
+      "y": 535.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "9-5/8 x 13-3/8 IN (BRINE)",
+      "x": 548.0,
+      "y": 535.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ANNULUS C",
+      "x": 453.0,
+      "y": 529.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "13-3/8 x 20 IN (CEMENTED)",
+      "x": 548.0,
+      "y": 529.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "MONITORING",
+      "x": 453.0,
+      "y": 522.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NEEDLE VALVE + PI EACH OUTLET",
+      "x": 548.0,
+      "y": 522.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ACCESS",
+      "x": 453.0,
+      "y": 516.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "MANUAL, TOP-OF-WORK STRING",
+      "x": 548.0,
+      "y": 516.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ALARM",
+      "x": 453.0,
+      "y": 509.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PI LOCAL READING PER SHIFT",
+      "x": 548.0,
+      "y": 509.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "WELL GPF-201",
+      "x": 170.0,
+      "y": 30.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SURFACE CASING 13-3/8 IN",
+      "x": 150.0,
+      "y": 110.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 6
+    },
+    {
+      "t": "SCSSV-201",
+      "x": 198.0,
+      "y": 100.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "HYD FAIL-CLOSE",
+      "x": 198.0,
+      "y": 90.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TUBING HEAD FLANGE",
+      "x": 144.0,
+      "y": 179.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 6
+    },
+    {
+      "t": "LMV-201",
+      "x": 152.0,
+      "y": 195.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 170.0,
+      "y": 237.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FC",
+      "x": 161.5,
+      "y": 237.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 6
+    },
+    {
+      "t": "UMV-201",
+      "x": 152.0,
+      "y": 208.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 6
+    },
+    {
+      "t": "SWV-201",
+      "x": 152.0,
+      "y": 285.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PI",
+      "x": 170.0,
+      "y": 317.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "201",
+      "x": 170.0,
+      "y": 312.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NRV-201",
+      "x": 115.0,
+      "y": 264.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "KWV-201",
+      "x": 140.0,
+      "y": 267.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NC",
+      "x": 140.0,
+      "y": 271.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TIE-IN: WELL CONTROL SKID",
+      "x": 46.5,
+      "y": 255.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FROM KILL PUMP UNIT",
+      "x": 46.5,
+      "y": 262.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "050-WH-2002 DN50",
+      "x": 46.5,
+      "y": 247.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 200.0,
+      "y": 265.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FC",
+      "x": 208.5,
+      "y": 265.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PWV-201",
+      "x": 200.0,
+      "y": 247.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "XOV-201",
+      "x": 228.0,
+      "y": 267.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ADJUSTABLE CHOKE",
+      "x": 228.0,
+      "y": 244.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "150-WH-2001 DN150",
+      "x": 400.0,
+      "y": 261.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BATTERY LIMIT",
+      "x": 606.5,
+      "y": 255.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO GAS PROCESSING FACILITY",
+      "x": 606.5,
+      "y": 262.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "150-WH-2001 DN150",
+      "x": 606.5,
+      "y": 247.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PI",
+      "x": 195.0,
+      "y": 184.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "202",
+      "x": 195.0,
+      "y": 179.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANNULUS A",
+      "x": 186.0,
+      "y": 164.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PI",
+      "x": 145.0,
+      "y": 164.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "203",
+      "x": 145.0,
+      "y": 159.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANNULUS B",
+      "x": 145.0,
+      "y": 143.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PI",
+      "x": 195.0,
+      "y": 158.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "204",
+      "x": 195.0,
+      "y": 153.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANNULUS C",
+      "x": 218.0,
+      "y": 144.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "WELLHEAD HYDRAULIC",
+      "x": 425.0,
+      "y": 349.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD PANEL",
+      "x": 425.0,
+      "y": 343.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "(FROM ESD-1 LOGIC SOLVER)",
+      "x": 425.0,
+      "y": 336.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UMV-201",
+      "x": 394.0,
+      "y": 345.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TO PWV-201",
+      "x": 394.0,
+      "y": 330.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TO SCSSV-201",
+      "x": 394.0,
+      "y": 315.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SCSSV CONTROL LINE 3000-10000 PSI",
+      "x": 220.0,
+      "y": 180.0,
+      "h": 1.8,
+      "rot": 90.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    }
+  ],
+  "dims": [],
+  "solids": [
+    {
+      "pts": [
+        [
+          675,
+          413
+        ],
+        [
+          670.2,
+          414.6
+        ],
+        [
+          670.2,
+          411.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          672,
+          270
+        ],
+        [
+          668.7,
+          271.1
+        ],
+        [
+          668.7,
+          268.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          110.9,
+          258.0
+        ],
+        [
+          110.636,
+          258.636
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          110.636,
+          258.636
+        ],
+        [
+          110.0,
+          258.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          110.0,
+          258.9
+        ],
+        [
+          109.364,
+          258.636
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          109.364,
+          258.636
+        ],
+        [
+          109.1,
+          258.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          109.1,
+          258.0
+        ],
+        [
+          109.364,
+          257.364
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          109.364,
+          257.364
+        ],
+        [
+          110.0,
+          257.1
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          110.0,
+          257.1
+        ],
+        [
+          110.636,
+          257.364
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          110.0,
+          258.0
+        ],
+        [
+          110.636,
+          257.364
+        ],
+        [
+          110.9,
+          258.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          120.0,
+          252.0
+        ],
+        [
+          117.0,
+          252.0
+        ],
+        [
+          120.0,
+          255.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          189.5,
+          170.0
+        ],
+        [
+          186.2,
+          171.1
+        ],
+        [
+          186.2,
+          168.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          150.5,
+          150.0
+        ],
+        [
+          153.8,
+          151.1
+        ],
+        [
+          153.8,
+          148.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          189.5,
+          144.0
+        ],
+        [
+          186.2,
+          145.1
+        ],
+        [
+          186.2,
+          142.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          95.0,
+          255.0
+        ],
+        [
+          90.5,
+          256.5
+        ],
+        [
+          90.5,
+          253.5
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          127.0,
+          255.0
+        ],
+        [
+          123.4,
+          256.2
+        ],
+        [
+          123.4,
+          253.8
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          157.0,
+          255.0
+        ],
+        [
+          153.4,
+          256.2
+        ],
+        [
+          153.4,
+          253.8
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          178.0,
+          255.0
+        ],
+        [
+          174.4,
+          256.2
+        ],
+        [
+          174.4,
+          253.8
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          255.0,
+          255.0
+        ],
+        [
+          250.2,
+          256.6
+        ],
+        [
+          250.2,
+          253.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          350.0,
+          255.0
+        ],
+        [
+          345.2,
+          256.6
+        ],
+        [
+          345.2,
+          253.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          450.0,
+          255.0
+        ],
+        [
+          445.2,
+          256.6
+        ],
+        [
+          445.2,
+          253.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          550.0,
+          255.0
+        ],
+        [
+          545.2,
+          256.6
+        ],
+        [
+          545.2,
+          253.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          170.0,
+          130.0
+        ],
+        [
+          168.7,
+          126.1
+        ],
+        [
+          171.3,
+          126.1
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          170.0,
+          186.5
+        ],
+        [
+          168.8,
+          182.9
+        ],
+        [
+          171.2,
+          182.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          170.0,
+          216.0
+        ],
+        [
+          168.8,
+          212.4
+        ],
+        [
+          171.2,
+          212.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          170.0,
+          268.0
+        ],
+        [
+          168.8,
+          264.4
+        ],
+        [
+          171.2,
+          264.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          170.0,
+          297.0
+        ],
+        [
+          168.8,
+          293.4
+        ],
+        [
+          171.2,
+          293.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    }
+  ]
+}

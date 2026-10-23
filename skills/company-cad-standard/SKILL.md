@@ -141,6 +141,37 @@ Sumber acuan: **ASME B31.3-2022** (*Process Piping*), **API Spec 12J, 8th Ed. (2
 5. **Rantai Build & Manifest**:
    - Model `@dxf` memanggil `ctx.export_manifest(...)` untuk menyimpan `.texts.json` (MTEXT, SOLID, DIMENSION) dan mengembalikan layer dictionary. Pasca-build, jalankan `apply_text.py` untuk menginjeksi entitas MTEXT Arial asli dan lineweight layer standar perusahaan.
 
+## 6C. PUSTAKA MODUL LANJUTAN — HULU, KOMPRESI, UTILITAS, TRANSMISI, BAWAH TANAH (ROADMAP GPF-00-PM-PLN-0008)
+
+Sembilan pustaka lanjutan (dibangun 23 Okt 2026 oleh subagent GLM-5.3-Flash,
+semua lulus linter 0 error + verifikasi visual). Semua mengikuti pola manifest
+`PIDContext`/pola pustaka inti dan TUNDUK PADA SELURUH ATURAN §1–§5 dan QA §8.
+WAJIB diimpor dari `scripts/` (atau salinan proyek `cad/`) untuk drawing pada
+domain masing-masing — DILARANG menggambar ulang simbolnya secara manual:
+
+| Pustaka | Domain (standar acuan) | Isi ringkas |
+|---|---|---|
+| `wellhead_common.py` | Hulu — API SPEC 6A/ISO 10423, API RP 14C | Christmas tree (LMV/UMV/PWV/KWV/swab), choke adjustable & positive, SCSSV + control line, annulus outlet, panel ESD hidrolik |
+| `compression_common.py` | Kompresi — API 618/617/661, TEMA | Kompresor torak (double-acting, unloader 0-50-100%, pulsation dampener) & sentrifugal (DGS, loop anti-surge ASV/UIC), fin-fan inter/aftercooler, shell & tube |
+| `powergen_common.py` | Pembangkit — ISO 3046/8528 | Engine-alternator common skid, fuel gas conditioning (coalescer, preheater, dual PCV), siklus JW & AW/AC, exhaust + silencer/spark arrestor/stack, GCB/CT/PT |
+| `air_system_common.py` | Utilitas — ISO 8573-1, ASME Sec. VIII | Screw compressor, aftercooler + moisture trap, wet/dry receiver + PSV, twin-tower desiccant dryer + switching PLC, priority valve IA/UA (5,5 barg) |
+| `metering_common.py` | Metering — AGA 3/7/9/11, API MPMS, ISO 5167/17089 | Stasiun multi-run, USM/Coriolis/orifice senior dual-chamber/turbine, DBB plug valve + cavity bleed, fast-loop sampling + GC analyzer |
+| `lbcv_common.py` | Transmisi — ASME B31.8, API 6D | MLV ball trunnion + stem extension, aktuator gas-over-oil otonom, line break pilot ΔP/Δt, hand pump, bypass equalizing, blowdown stack ganda |
+| `underground_common.py` | Bawah tanah — NACE SP0169, API RP 1102 | Layer `REF-PROC-UG` (dashed 0,35 mm), soil-to-air interface (puddle flange), typical trench cross-section terdimensi, MIJ, CP test post, cased road crossing |
+| `supports_insulation_common.py` | Mekanikal — MSS SP-58, ASME B31.3 | Katalog 8 tipe support ANC/RES/GUI/STP/HNG/VSP/CSP/TRN (simbol iso + plan), tabel shoe height 0/100/150/200, kode insulasi PP/HC/CC/AC/ET/ST |
+| `alignment_sheet_builder.py` | Geografis — ASME B31.8 | Parser survei CSV (KP/Northing/Easting/Elev), lembar A1 split-window: plan 40% + profile 30% (vertical exaggeration) + data bands 30% |
+
+Catatan khusus:
+- `underground_common.py`: layer `REF-PROC-UG` belum dikenal pens oleh
+  `apply_text.py` — lineweight distempel via `stamp_layer_pens()` bawaan
+  pustaka setelah build (pola demo/test sudah benar).
+- `alignment_sheet_builder.py`: garis stasiun vertikal band di-break 3 mm di
+  sekeliling teks nilai; label penyeberangan diberi leader di atas ROW;
+  panah aliran profile di-offset dari garis BOP.
+- Drawing demo acuan ke-9 pustaka: `GPF-00-PI-PID-0011..0016`,
+  `GPF-00-PI-PLN-0017`, `GPF-00-PI-STD-0018`, `GPF-00-PI-PLN-0019` — semua
+  Rev A0 ISSUED FOR REVIEW, lulus `validate_cad_rules.py` exit 0 + visual.
+
 ## 7. GAYA ISOMETRIK — STANDAR ISO 6412-2, ISO 10628-2 & REFERENSI FNKT-10 (WAJIB UNTUK ISO)
 
 Sumber acuan: **ISO 6412-2:2017** (*Simplified representation of pipelines — Part 2: Isometric projection*), **ISO 10628-2:2012** (*Graphical symbols for chemical & petrochemical industry*), **ANSI/ISA-5.1-2024** (*Instrumentation Symbols and Identification*), **ASME B31.3-2022** (*Process Piping*), **ISO 5457:1999** (*Sizes and layout of drawing sheets*), **ISO 7200:2004** (*Data fields in title blocks*), dan dokumen proyek **`FNKT-10-L0-DWG-007`** (dibedah ulang Modelspace 3D + Viewport `(1, -1, 1)` + Layout 22 Oct 2026). Berlaku untuk SEMUA isometrik piping; plan/P&ID tidak berubah.

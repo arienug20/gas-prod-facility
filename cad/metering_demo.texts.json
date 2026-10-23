@@ -1,0 +1,2328 @@
+{
+  "texts": [
+    {
+      "t": "1",
+      "x": 53.458,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 53.458,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 120.375,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 120.375,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 187.292,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 187.292,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 254.208,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 254.208,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 321.125,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 321.125,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 388.042,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 388.042,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 454.958,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 454.958,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 521.875,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 521.875,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 588.792,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 588.792,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 655.708,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 655.708,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 722.625,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 722.625,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 789.542,
+      "y": 11.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 789.542,
+      "y": 583.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 15.0,
+      "y": 543.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 827.0,
+      "y": 543.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 15.0,
+      "y": 473.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 827.0,
+      "y": 473.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 15.0,
+      "y": 402.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 827.0,
+      "y": 402.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 15.0,
+      "y": 332.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 827.0,
+      "y": 332.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 15.0,
+      "y": 261.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 827.0,
+      "y": 261.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 15.0,
+      "y": 191.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 827.0,
+      "y": 191.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 15.0,
+      "y": 120.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 827.0,
+      "y": 120.75,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 15.0,
+      "y": 50.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 827.0,
+      "y": 50.25,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NOTES",
+      "x": 739.0,
+      "y": 573.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1. SCHEMATIC - NOT TO SCALE. NO ORIENTATION IMPLIED.",
+      "x": 659.0,
+      "y": 560.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "2. METERING PER AGA RPT 3/7/9/11, API MPMS CH.5 & 14, ISO 5167, ISO 17089.",
+      "x": 659.0,
+      "y": 551.7,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "3. EACH METER RUN ISOLATED BY DOUBLE BLOCK & BLEED (DBB) TWIN PLUG",
+      "x": 659.0,
+      "y": 543.4,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   VALVES, BUBBLE-TIGHT SHUT-OFF WITH CAVITY BLEED (BLD) TO CLOSED DRAIN.",
+      "x": 659.0,
+      "y": 535.1,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "4. RUN 1 (USM) & RUN 2 (ORIFICE) DUTY; RUN 3 (CORIOLIS) STANDBY -",
+      "x": 659.0,
+      "y": 526.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   AUTOMATIC SWITCHOVER BY FLOW COMPUTERS FQI-611/621/631.",
+      "x": 659.0,
+      "y": 518.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5. SENIOR DUAL-CHAMBER FITTING OF-6021 PERMITS ORIFICE PLATE CHANGE",
+      "x": 659.0,
+      "y": 510.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   UNDER PROCESS PRESSURE WITHOUT SHUTDOWN.",
+      "x": 659.0,
+      "y": 501.9,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "6. USM-6001 SPOOL 10D-20D WITH ZANKER CONDITIONER PER AGA 9 / ISO 17089.",
+      "x": 659.0,
+      "y": 493.6,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "7. FAST LOOP SAMPLE TO GC AT-6090 (C1-C6+, CO2, N2); GHV TO FQI PER",
+      "x": 659.0,
+      "y": 485.3,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   AGA 8. SAMPLE RETURN VIA SAMPLE RECOVERY - SEE GPF-00-PI-PID-0016.",
+      "x": 659.0,
+      "y": 477.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "8. LINE NUMBERS 200-MT-6001..6005 PER PIPING LINE INDEX (PATTERN 200-MT-60XX).",
+      "x": 659.0,
+      "y": 468.7,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "9. SIZES/DIMENSIONS FOR CLARITY ONLY - REFER TO PIPING LINE INDEX.",
+      "x": 659.0,
+      "y": 460.4,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "10. EQUIPMENT DESIGN: METERS PER API MPMS; DBB VALVES PER API 6D.",
+      "x": 659.0,
+      "y": 452.1,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "LEGEND & SYMBOLS",
+      "x": 739.0,
+      "y": 429.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ULTRASONIC FLOW METER (USM) - AGA 9 / ISO 17089",
+      "x": 695.0,
+      "y": 408.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FLOW CONDITIONER (ZANKER / TUBE BUNDLE)",
+      "x": 695.0,
+      "y": 390.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CORIOLIS MASS METER - AGA 11 / API MPMS 5.6",
+      "x": 695.0,
+      "y": 372.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SENIOR DUAL-CHAMBER ORIFICE FITTING - AGA 3 / ISO 5167",
+      "x": 695.0,
+      "y": 352.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TURBINE FLOW METER - AGA 7 / API MPMS 5.3",
+      "x": 695.0,
+      "y": 334.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DOUBLE BLOCK & BLEED VALVE (BUBBLE-TIGHT)",
+      "x": 695.0,
+      "y": 316.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FLOW COMPUTER (FQI / FC)",
+      "x": 695.0,
+      "y": 298.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ONLINE GAS CHROMATOGRAPH (GC) - C1-C6+, CO2, N2, GHV",
+      "x": 695.0,
+      "y": 280.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FAST LOOP SAMPLING PROBE + ISOLATION VALVE",
+      "x": 695.0,
+      "y": 262.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PROCESS LINE / FLOW DIRECTION",
+      "x": 695.0,
+      "y": 244.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ELECTRIC SIGNAL (GC / FT TO FQI)",
+      "x": 695.0,
+      "y": 228.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "STANDARD ABBREVIATIONS:",
+      "x": 659.0,
+      "y": 212.0,
+      "h": 1.9,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DBB: DOUBLE BLOCK & BLEED  |  BLD: CAVITY BLEED",
+      "x": 659.0,
+      "y": 203.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FQI: FLOW COMPUTER  |  GHV: GROSS HEATING VALUE",
+      "x": 659.0,
+      "y": 195.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DT/TT: DENSITY / TEMPERATURE TRANSMITTER",
+      "x": 659.0,
+      "y": 187.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REFERENCE DRAWINGS",
+      "x": 739.0,
+      "y": 180.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GPF-00-DB-0001 : DESIGN BASIS - GAS PRODUCTION FACILITY",
+      "x": 659.0,
+      "y": 169.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0001 : P&ID - 3-PHASE PRODUCTION SEPARATOR V-101",
+      "x": 659.0,
+      "y": 163.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0016 : P&ID - LBCV / EXPORT PIPELINE STATION",
+      "x": 659.0,
+      "y": 158.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PM-PLN-0008 : ROADMAP METERING, LBCV & UNDERGROUND (REV A2)",
+      "x": 659.0,
+      "y": 152.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REV",
+      "x": 665.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DESCRIPTION",
+      "x": 719.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DATE",
+      "x": 779.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHK",
+      "x": 802.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APP",
+      "x": 816.0,
+      "y": 145.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A0",
+      "x": 665.0,
+      "y": 118.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ISSUED FOR REVIEW",
+      "x": 678.0,
+      "y": 118.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 26",
+      "x": 779.0,
+      "y": 118.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PM",
+      "x": 802.0,
+      "y": 118.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RE",
+      "x": 816.0,
+      "y": 118.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GAS PRODUCTION FACILITY - ONSHORE FIELD",
+      "x": 739.0,
+      "y": 108.5,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PM OIL & GAS SURFACE FACILITY",
+      "x": 739.0,
+      "y": 102.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REKAYASA ENGINEERING",
+      "x": 739.0,
+      "y": 98.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PIPING & INSTRUMENTATION DIAGRAM",
+      "x": 739.0,
+      "y": 87.0,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CUSTODY METERING STATION",
+      "x": 739.0,
+      "y": 80.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWING NO:",
+      "x": 658.0,
+      "y": 70.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0015",
+      "x": 739.0,
+      "y": 65.5,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REV:",
+      "x": 658.0,
+      "y": 56.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "A0",
+      "x": 697.0,
+      "y": 52.5,
+      "h": 3.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SCALE:",
+      "x": 742.0,
+      "y": 56.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NTS",
+      "x": 781.0,
+      "y": 52.5,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DATE:",
+      "x": 658.0,
+      "y": 44.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 2026",
+      "x": 697.0,
+      "y": 40.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SHEET:",
+      "x": 742.0,
+      "y": 44.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "1 OF 1",
+      "x": 781.0,
+      "y": 40.5,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DESIGNED:",
+      "x": 658.0,
+      "y": 32.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CAD/FEED",
+      "x": 697.0,
+      "y": 29.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWN:",
+      "x": 742.0,
+      "y": 32.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GLM-5.3-FLASH",
+      "x": 781.0,
+      "y": 29.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECKED:",
+      "x": 658.0,
+      "y": 21.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PM (AI)",
+      "x": 697.0,
+      "y": 18.5,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APPROVED:",
+      "x": 742.0,
+      "y": 21.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "EQUIPMENT DATA - METER RUN USM-6001 (RUN 1)",
+      "x": 255.0,
+      "y": 569.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TAG NUMBER",
+      "x": 138.0,
+      "y": 561.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "USM-6001 (RUN 1 - DUTY)",
+      "x": 232.0,
+      "y": 561.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SERVICE NAME",
+      "x": 138.0,
+      "y": 553.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CUSTODY TRANSFER GAS METERING",
+      "x": 232.0,
+      "y": 553.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "METER TYPE",
+      "x": 138.0,
+      "y": 545.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "MULTI-PATH ULTRASONIC (AGA 9 / ISO 17089)",
+      "x": 232.0,
+      "y": 545.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "METER SPOOL",
+      "x": 138.0,
+      "y": 537.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "10D-20D + ZANKER FLOW CONDITIONER",
+      "x": 232.0,
+      "y": 537.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DESIGN P/T",
+      "x": 138.0,
+      "y": 529.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "17.2 BARG / 60 DEG C (OPER 10.0 BARG / 40 DEG C)",
+      "x": 232.0,
+      "y": 529.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "OUTPUT",
+      "x": 138.0,
+      "y": 521.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FQI-611 VOLUME + ENERGY (GHV FROM AT-6090)",
+      "x": 232.0,
+      "y": 521.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "EQUIPMENT DATA - GAS ANALYZER AT-6090",
+      "x": 515.0,
+      "y": 569.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TAG NUMBER",
+      "x": 398.0,
+      "y": 561.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "AT-6090 (GC-1)",
+      "x": 492.0,
+      "y": 561.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SERVICE NAME",
+      "x": 398.0,
+      "y": 553.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ONLINE GAS CHROMATOGRAPH",
+      "x": 492.0,
+      "y": 553.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ANALYSIS",
+      "x": 398.0,
+      "y": 545.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "C1-C6+ / CO2 / N2 (MOLE %)",
+      "x": 492.0,
+      "y": 545.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "OUTPUT",
+      "x": 398.0,
+      "y": 537.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GHV + DENSITY TO FQI PER AGA 8 / ISO 6976",
+      "x": 492.0,
+      "y": 537.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SAMPLE POINT",
+      "x": 398.0,
+      "y": 529.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FAST LOOP PROBE, INLET HEADER 200-MT-6001",
+      "x": 492.0,
+      "y": 529.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "HOUSING",
+      "x": 398.0,
+      "y": 521.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "EXPEDITION GRADE, PRESSURIZED ENCLOSURE (EX P)",
+      "x": 492.0,
+      "y": 521.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DWG: GPF-00-PI-PID-0001",
+      "x": 46.5,
+      "y": 300.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FROM GAS PROCESSING PLANT",
+      "x": 46.5,
+      "y": 307.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6001 DN300",
+      "x": 46.5,
+      "y": 292.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6001 DN300",
+      "x": 78.0,
+      "y": 293.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INLET HEADER",
+      "x": 77.0,
+      "y": 310.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLD",
+      "x": 175.5,
+      "y": 437.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DBB-611A",
+      "x": 170.0,
+      "y": 418.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLD",
+      "x": 325.5,
+      "y": 437.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DBB-611B",
+      "x": 320.0,
+      "y": 418.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6002 DN200",
+      "x": 194.0,
+      "y": 420.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLD",
+      "x": 175.5,
+      "y": 307.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DBB-621A",
+      "x": 170.0,
+      "y": 288.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLD",
+      "x": 325.5,
+      "y": 307.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DBB-621B",
+      "x": 320.0,
+      "y": 288.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6003 DN200",
+      "x": 205.0,
+      "y": 294.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLD",
+      "x": 175.5,
+      "y": 177.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DBB-631A",
+      "x": 170.0,
+      "y": 158.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BLD",
+      "x": 325.5,
+      "y": 177.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DBB-631B",
+      "x": 320.0,
+      "y": 158.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6004 DN200",
+      "x": 195.0,
+      "y": 160.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FT",
+      "x": 245.0,
+      "y": 453.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "611",
+      "x": 245.0,
+      "y": 448.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FQI",
+      "x": 245.0,
+      "y": 472.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "611",
+      "x": 245.0,
+      "y": 467.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FC",
+      "x": 233.0,
+      "y": 441.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "USM-6001",
+      "x": 245.0,
+      "y": 413.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RUN 1 - ULTRASONIC METER (DUTY)",
+      "x": 245.0,
+      "y": 492.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FT",
+      "x": 245.0,
+      "y": 333.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "621",
+      "x": 245.0,
+      "y": 328.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FQI",
+      "x": 245.0,
+      "y": 351.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "621",
+      "x": 245.0,
+      "y": 346.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "OF-6021",
+      "x": 245.0,
+      "y": 279.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DUAL CHAMBER",
+      "x": 267.0,
+      "y": 310.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RUN 2 - ORIFICE METER (DUTY)",
+      "x": 245.0,
+      "y": 362.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FT",
+      "x": 245.0,
+      "y": 193.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "631",
+      "x": 245.0,
+      "y": 188.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DT",
+      "x": 263.0,
+      "y": 193.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "632",
+      "x": 263.0,
+      "y": 188.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FQI",
+      "x": 245.0,
+      "y": 212.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "631",
+      "x": 245.0,
+      "y": 207.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CM-6031",
+      "x": 245.0,
+      "y": 153.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANTI-VIB CLAMP",
+      "x": 213.0,
+      "y": 154.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RUN 3 - CORIOLIS METER (STANDBY)",
+      "x": 245.0,
+      "y": 223.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6005 DN300",
+      "x": 450.0,
+      "y": 293.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "OUTLET HEADER",
+      "x": 450.0,
+      "y": 307.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DWG: GPF-00-PI-PID-0016",
+      "x": 606.5,
+      "y": 300.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO LBCV STATION / EXPORT PIPELINE",
+      "x": 606.5,
+      "y": 307.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "200-MT-6005 DN300",
+      "x": 606.5,
+      "y": 292.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FAST LOOP",
+      "x": 98.5,
+      "y": 385.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GAS CHROMATOGRAPH",
+      "x": 105.0,
+      "y": 500.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ONLINE ANALYZER AT-6090",
+      "x": 105.0,
+      "y": 490.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C1-C6+ / CO2 / N2",
+      "x": 105.0,
+      "y": 480.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GHV TO FQI (AGA 8)",
+      "x": 105.0,
+      "y": 470.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GHV",
+      "x": 188.0,
+      "y": 473.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    }
+  ],
+  "dims": [],
+  "solids": [
+    {
+      "pts": [
+        [
+          675,
+          244.0
+        ],
+        [
+          670.2,
+          245.6
+        ],
+        [
+          670.2,
+          242.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          85.15,
+          300.0
+        ],
+        [
+          80.35,
+          301.6
+        ],
+        [
+          80.35,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          130.0,
+          395.0
+        ],
+        [
+          128.4,
+          399.8
+        ],
+        [
+          131.6,
+          399.8
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          130.0,
+          230.0
+        ],
+        [
+          128.4,
+          225.2
+        ],
+        [
+          131.6,
+          225.2
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          142.0,
+          430.0
+        ],
+        [
+          137.2,
+          431.6
+        ],
+        [
+          137.2,
+          428.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205.0,
+          430.0
+        ],
+        [
+          200.2,
+          431.6
+        ],
+        [
+          200.2,
+          428.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285.0,
+          430.0
+        ],
+        [
+          280.2,
+          431.6
+        ],
+        [
+          280.2,
+          428.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          352.0,
+          430.0
+        ],
+        [
+          347.2,
+          431.6
+        ],
+        [
+          347.2,
+          428.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          142.0,
+          300.0
+        ],
+        [
+          137.2,
+          301.6
+        ],
+        [
+          137.2,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205.0,
+          300.0
+        ],
+        [
+          200.2,
+          301.6
+        ],
+        [
+          200.2,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285.0,
+          300.0
+        ],
+        [
+          280.2,
+          301.6
+        ],
+        [
+          280.2,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          352.0,
+          300.0
+        ],
+        [
+          347.2,
+          301.6
+        ],
+        [
+          347.2,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          142.0,
+          170.0
+        ],
+        [
+          137.2,
+          171.6
+        ],
+        [
+          137.2,
+          168.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205.0,
+          170.0
+        ],
+        [
+          200.2,
+          171.6
+        ],
+        [
+          200.2,
+          168.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285.0,
+          170.0
+        ],
+        [
+          280.2,
+          171.6
+        ],
+        [
+          280.2,
+          168.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          352.0,
+          170.0
+        ],
+        [
+          347.2,
+          171.6
+        ],
+        [
+          347.2,
+          168.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          243.9,
+          170.0
+        ],
+        [
+          243.636,
+          170.636
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          243.636,
+          170.636
+        ],
+        [
+          243.0,
+          170.9
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          243.0,
+          170.9
+        ],
+        [
+          242.364,
+          170.636
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          242.364,
+          170.636
+        ],
+        [
+          242.1,
+          170.0
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          242.1,
+          170.0
+        ],
+        [
+          242.364,
+          169.364
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          242.364,
+          169.364
+        ],
+        [
+          243.0,
+          169.1
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          243.0,
+          169.1
+        ],
+        [
+          243.636,
+          169.364
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          243.0,
+          170.0
+        ],
+        [
+          243.636,
+          169.364
+        ],
+        [
+          243.9,
+          170.0
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          251.9,
+          170.0
+        ],
+        [
+          251.636,
+          170.636
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          251.636,
+          170.636
+        ],
+        [
+          251.0,
+          170.9
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          251.0,
+          170.9
+        ],
+        [
+          250.364,
+          170.636
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          250.364,
+          170.636
+        ],
+        [
+          250.1,
+          170.0
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          250.1,
+          170.0
+        ],
+        [
+          250.364,
+          169.364
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          250.364,
+          169.364
+        ],
+        [
+          251.0,
+          169.1
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          251.0,
+          169.1
+        ],
+        [
+          251.636,
+          169.364
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          251.0,
+          170.0
+        ],
+        [
+          251.636,
+          169.364
+        ],
+        [
+          251.9,
+          170.0
+        ]
+      ],
+      "layer": "REF-EQUIP"
+    },
+    {
+      "pts": [
+        [
+          370.0,
+          395.0
+        ],
+        [
+          368.4,
+          390.2
+        ],
+        [
+          371.6,
+          390.2
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          370.0,
+          230.0
+        ],
+        [
+          368.4,
+          234.8
+        ],
+        [
+          371.6,
+          234.8
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          417.3,
+          300.0
+        ],
+        [
+          412.5,
+          301.6
+        ],
+        [
+          412.5,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          520.0,
+          300.0
+        ],
+        [
+          515.2,
+          301.6
+        ],
+        [
+          515.2,
+          298.4
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          105.0,
+          390.75
+        ],
+        [
+          103.4,
+          395.55
+        ],
+        [
+          106.6,
+          395.55
+        ]
+      ],
+      "layer": "REF-PROC"
+    }
+  ]
+}

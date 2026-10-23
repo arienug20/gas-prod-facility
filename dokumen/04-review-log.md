@@ -397,6 +397,66 @@ Pemicu: evaluasi PM atas keluhan user bahwa format isometrik model sebelumnya be
 
 Seluruh deliverable isometrik (**Rev A5**) telah memenuhi standar **True Piping Isometric** sesuai referensi `FNKT-10-L0-DWG-007`, bebas `POLYFACE` (ukuran < 500 KB), lulus validasi deterministik (`0 errors`), dan lulus pemeriksaan visual PM tanpa tabrakan teks/simbol.
 
+---
+
+# ROUND ROADMAP-08 — 9 MODUL LANJUTAN HULU s.d. ALIGNMENT SHEET (23 Oct 2026)
+
+Pemicu: user — "tuntaskan rencana pengembangan dengan subagent glm-5.3-flash,
+hire beberapa subagent". Eksekusi: 8 subagent GLM-5.3-Flash paralel (workflow
+`dwfrun-7dfabe58`, amend `dwfrun-1d79eb68`) membangun 9 pustaka + 9 demo DXF
++ 9 test ringan sesuai GPF-00-PM-PLN-0008 Rev A2. Gate deterministik: script
+menjalankan `validate_cad_rules.py` per DXF (exit 0 wajib), gagal → subagent
+"Perbaik" maks 2 ronde.
+
+## Verifikasi independen PM (linter diulang sendiri + 2 subagent QA visual)
+
+| Demo (dok no, Rev A0) | Linter PM | Visual pass 1 | Perbaikan | Visual final |
+|---|---|---|---|---|
+| wellhead_demo (PID-0011) | 0 error | PASS | — | PASS |
+| compression_demo (PID-0012) | 0 error | TEMUAN: sinyal dashed menembus V-202 & motor E-201 | fixer flash | TERTUTUP |
+| powergen_demo (PID-0013) | 0 error | minor: bubble PT tangen aktuator PCV | fixer flash | TERTUTUP |
+| air_system_demo (PID-0014) | 0 error | TEMUAN: line number menimpa pipa vertikal | fixer flash + micro-fix PM (label PCV-501) | TERTUTUP |
+| metering_demo (PID-0015) | 0 error | minor: tag DBB & label run dempet | fixer flash | TERTUTUP |
+| lbcv_demo (PID-0016) | 0 error | TEMUAN: grade line memotong klaster aktuator + teks padat | fixer flash | TERTUTUP |
+| underground_demo (PLN-0017) | 0 error | PASS (3 minor diterima utk B0) | — | PASS |
+| supports_demo (STD-0018) | 0 error | PASS | — | PASS |
+| alignment_demo (PLN-0019) | 0 error | TEMUAN: label crossing tertembus hatch, data band tak sejajar grid KP, sel coating terpotong, panah profile terbelah | fixer flash | TERTUTUP |
+
+## Integrasi
+
+1. 9 pustaka + 9 test disalin ke `skills/company-cad-standard/scripts/`,
+   `skills/skills-patches/`, `~/skills-patches/`, dan diinstal via
+   `reapply.sh` ke `~/.agents/skills/` (company-cad-standard + dxf).
+2. `SKILL.md` baru §6C: katalog modul lanjutan (WAJIB impor, dilarang gambar manual).
+3. `reapply.sh` diperbarui: loop sinkronisasi 9 pustaka baru.
+
+## Deviasi & catatan untuk B0
+
+1. Modul baru berada DI LUAR design basis GPF-00-DB-0001 (line list FINAL
+   hanya area separator). Nomor line modul (`150-WH-2001`, `200-CG-3xxx`,
+   `080-FG-4xxx`, `080-IA/UA-5xxx`, `200-MT-6xxx`, `300-ML-7xxx`) adalah
+   ekstensi pola tugas — perlu registrasi resmi di line index bila dipakai
+   lintas drawing; design basis tetap menguasai untuk area separator.
+2. underground: rute plan mini berlabel `TYP. UG LINE - SEE PIPELINE LINE
+   INDEX` tanpa mengarang nomor line (disiplin konsistensi dijaga).
+3. Minor diterima (kosmetik, B0): compression — dashed melewati interior
+   bubble FT-202 & level-loop ~0,2 mm di atas arc head V-201/V-202;
+   underground — teks anotasi di atas hatch tanpa mask + extension line
+   dim menembus hatch native soil; air_system — label `080-UA-5002 DN50`
+   ±7 mm dari branch UA (bebas, tidak menimpa).
+4. `apply_text.py` belum mengenal layer `REF-PROC-UG` (pen 0,35 distempel
+   via `stamp_layer_pens()` bawaan `underground_common.py`) — kandidat
+   upgrade apply_text berikutnya.
+5. Linter Check 5 tidak menguji tabrakan teks terhadap REF-SIG/REF-FRAME
+   (dua temuan ronde ini hanya tertangkap QA visual) — kandidat penguatan
+   `validate_cad_rules.py`.
+
+## Status akhir
+
+9/9 pustaka + 9/9 demo DXF: valid 0 error, visual lolos, terinstal di skill
+perusahaan. **Roadmap GPF-00-PM-PLN-0008 (Rev A2) TERIMPLEMENTASI PENUH —
+Fase 1 s.d. 5 selesai 23 Okt 2026.**
+
 
 
 

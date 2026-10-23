@@ -1,0 +1,1472 @@
+{
+  "texts": [
+    {
+      "t": "1",
+      "x": 23.917,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 23.917,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 57.75,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 57.75,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 91.583,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 91.583,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 125.417,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 125.417,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 159.25,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 159.25,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 193.083,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 193.083,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 226.917,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 226.917,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 260.75,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 260.75,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 294.583,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 294.583,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 328.417,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 328.417,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 362.25,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 362.25,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 396.083,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 396.083,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 4.5,
+      "y": 272.925,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 415.5,
+      "y": 272.925,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 4.5,
+      "y": 237.375,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 415.5,
+      "y": 237.375,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 4.5,
+      "y": 201.825,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 415.5,
+      "y": 201.825,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 4.5,
+      "y": 166.275,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 415.5,
+      "y": 166.275,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 4.5,
+      "y": 130.725,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 415.5,
+      "y": 130.725,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 4.5,
+      "y": 95.175,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 415.5,
+      "y": 95.175,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 4.5,
+      "y": 59.625,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 415.5,
+      "y": 59.625,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 4.5,
+      "y": 24.075,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 415.5,
+      "y": 24.075,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NOTES",
+      "x": 374.5,
+      "y": 286.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1. SUPPORT TYPES PER MSS SP-58 & ASME B31.3.",
+      "x": 339.0,
+      "y": 278.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "2. SHOE HEIGHT PER INSULATION THICKNESS (TABLE).",
+      "x": 339.0,
+      "y": 272.2,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "3. INSULATION CLASSES PER ISO 12241 / ASTM C585.",
+      "x": 339.0,
+      "y": 265.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "4. MIN. CLEARANCE 100 MM FROM OUTER CLADDING.",
+      "x": 339.0,
+      "y": 259.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5. ISO BOM: INSULATED AREA (M2) + TRACING (M).",
+      "x": 339.0,
+      "y": 253.3,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "6. THIS STANDARD SHEET IS NOT TO SCALE.",
+      "x": 339.0,
+      "y": 247.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "LEGEND",
+      "x": 374.5,
+      "y": 234.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REFERENCE DOCUMENT",
+      "x": 374.5,
+      "y": 166.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GPF-00-DB-0001",
+      "x": 339.0,
+      "y": 157.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DESIGN BASIS",
+      "x": 372.0,
+      "y": 157.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0001",
+      "x": 339.0,
+      "y": 151.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "P&ID SEPARATOR V-101",
+      "x": 372.0,
+      "y": 151.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PM-PLN-0008",
+      "x": 339.0,
+      "y": 145.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DEVELOPMENT ROADMAP REV A2",
+      "x": 372.0,
+      "y": 145.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NO",
+      "x": 341.0,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REV",
+      "x": 351.0,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DESCRIPTION",
+      "x": 358.0,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DATE",
+      "x": 404.5,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 341.0,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A0",
+      "x": 351.0,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ISSUED FOR REVIEW",
+      "x": 358.0,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 2026",
+      "x": 404.5,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PROJECT:",
+      "x": 339.0,
+      "y": 114.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GAS PRODUCTION FACILITY - ONSHORE FIELD",
+      "x": 339.0,
+      "y": 111.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "COMPANY:",
+      "x": 339.0,
+      "y": 106.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PM OIL & GAS SURFACE FACILITY",
+      "x": 339.0,
+      "y": 103.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CONSULTANT:",
+      "x": 339.0,
+      "y": 98.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REKAYASA ENGINEERING",
+      "x": 339.0,
+      "y": 95.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PIPE SUPPORT &",
+      "x": 374.5,
+      "y": 82.5,
+      "h": 2.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION STANDARD",
+      "x": 374.5,
+      "y": 76.5,
+      "h": 2.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWING NO:",
+      "x": 339.0,
+      "y": 64.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-STD-0018",
+      "x": 339.0,
+      "y": 58.0,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REV:",
+      "x": 339.0,
+      "y": 50.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "A0",
+      "x": 344.0,
+      "y": 44.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SCALE:",
+      "x": 365.0,
+      "y": 50.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NTS",
+      "x": 372.0,
+      "y": 44.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SHEET:",
+      "x": 392.0,
+      "y": 50.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "1 OF 1",
+      "x": 398.0,
+      "y": 44.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DATE:",
+      "x": 339.0,
+      "y": 36.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 2026",
+      "x": 344.0,
+      "y": 30.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWN:",
+      "x": 372.0,
+      "y": 36.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GLM-5.3-FLASH",
+      "x": 376.0,
+      "y": 30.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECKED:",
+      "x": 339.0,
+      "y": 22.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PM (AI)",
+      "x": 346.0,
+      "y": 16.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APPROVED:",
+      "x": 376.0,
+      "y": 22.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PIPE SUPPORT (ISO SYMBOL)",
+      "x": 366.0,
+      "y": 226.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PIPE SUPPORT (PLAN SYMBOL)",
+      "x": 366.0,
+      "y": 215.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "[PP-50]",
+      "x": 351.0,
+      "y": 207.6,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION JACKET [CLASS-THK]",
+      "x": 366.0,
+      "y": 204.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "INSULATION BREAK (CHAIN LINE)",
+      "x": 366.0,
+      "y": 193.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CODE",
+      "x": 27.0,
+      "y": 283.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ISO SYMBOL",
+      "x": 71.0,
+      "y": 283.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PLAN SYMBOL",
+      "x": 130.0,
+      "y": 283.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TYPE / FUNCTION - DEGREES OF FREEDOM",
+      "x": 245.0,
+      "y": 283.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANC",
+      "x": 27.0,
+      "y": 275.15,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ANCHOR",
+      "x": 27.0,
+      "y": 270.15,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RESTRAINS TRANSLATION X, Y, Z & ROTATION - FULLY RIGID",
+      "x": 164.0,
+      "y": 272.75,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "RES",
+      "x": 27.0,
+      "y": 260.65,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RESTING / SIMPLE SHOE",
+      "x": 27.0,
+      "y": 255.65,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CARRIES VERTICAL LOAD (-Z); FREE TO EXPAND IN X, Y",
+      "x": 164.0,
+      "y": 258.25,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GUI",
+      "x": 27.0,
+      "y": 246.15,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GUIDE",
+      "x": 27.0,
+      "y": 241.15,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ALLOWS AXIAL (+/-X) ONLY; RESTRAINS LATERAL (+/-Y)",
+      "x": 164.0,
+      "y": 243.75,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "STP",
+      "x": 27.0,
+      "y": 231.65,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LINE STOP",
+      "x": 27.0,
+      "y": 226.65,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RESTRAINS AXIAL (+/-X); FREE LATERAL (+/-Y)",
+      "x": 164.0,
+      "y": 229.25,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "HNG",
+      "x": 27.0,
+      "y": 217.15,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RIGID HANGER",
+      "x": 27.0,
+      "y": 212.15,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SUSPENDS PIPE FROM STRUCTURE ABOVE (GRAVITY -Z)",
+      "x": 164.0,
+      "y": 214.75,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "VSP",
+      "x": 27.0,
+      "y": 202.65,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "VARIABLE SPRING HANGER",
+      "x": 27.0,
+      "y": 197.65,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "VS",
+      "x": 130.0,
+      "y": 200.25,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "VARIABLE SPRING FORCE FOR MODERATE THERMAL TRAVEL",
+      "x": 164.0,
+      "y": 200.25,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CSP",
+      "x": 27.0,
+      "y": 188.15,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CONSTANT SPRING HANGER",
+      "x": 27.0,
+      "y": 183.15,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CS",
+      "x": 130.0,
+      "y": 185.75,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CONSTANT FORCE FOR CRITICAL / LARGE THERMAL TRAVEL",
+      "x": 164.0,
+      "y": 185.75,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TRN",
+      "x": 27.0,
+      "y": 173.65,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TRUNNION / DUMMY LEG",
+      "x": 27.0,
+      "y": 168.65,
+      "h": 1.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DUMMY LEG WELDED TO ELBOW BEARING ON STRUCTURE",
+      "x": 164.0,
+      "y": 171.25,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PIPE SHOE HEIGHT (SH) SELECTION",
+      "x": 86.0,
+      "y": 146.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SH CODE",
+      "x": 36.0,
+      "y": 140.2,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION THICKNESS",
+      "x": 96.0,
+      "y": 140.2,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SH",
+      "x": 146.0,
+      "y": 140.2,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SH-0",
+      "x": 36.0,
+      "y": 134.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "BARE PIPE OR WEAR PAD",
+      "x": 64.0,
+      "y": 134.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "0 MM",
+      "x": 146.0,
+      "y": 134.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SH-100",
+      "x": 36.0,
+      "y": 127.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION <= 50 MM",
+      "x": 64.0,
+      "y": 127.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "100 MM",
+      "x": 146.0,
+      "y": 127.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SH-150",
+      "x": 36.0,
+      "y": 120.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION 60 - 100 MM",
+      "x": 64.0,
+      "y": 120.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "150 MM",
+      "x": 146.0,
+      "y": 120.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SH-200",
+      "x": 36.0,
+      "y": 113.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION > 100 MM",
+      "x": 64.0,
+      "y": 113.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "200 MM",
+      "x": 146.0,
+      "y": 113.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TYPICAL SHOE ON INSULATED PIPE",
+      "x": 252.5,
+      "y": 146.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION",
+      "x": 266.0,
+      "y": 142.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "WEAR PAD / SHOE",
+      "x": 196.0,
+      "y": 116.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "INSULATION CLASS CODES & SYMBOLS (ISO 12241 / ASTM C585)",
+      "x": 171.0,
+      "y": 96.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CODE",
+      "x": 26.0,
+      "y": 94.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DESCRIPTION",
+      "x": 44.0,
+      "y": 94.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PP",
+      "x": 26.0,
+      "y": 85.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PERSONNEL PROTECTION",
+      "x": 44.0,
+      "y": 85.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "HC",
+      "x": 26.0,
+      "y": 76.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "HEAT CONSERVATION",
+      "x": 44.0,
+      "y": 76.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CC",
+      "x": 26.0,
+      "y": 67.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "COLD CONSERVATION",
+      "x": 44.0,
+      "y": 67.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "AC",
+      "x": 26.0,
+      "y": 58.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ACOUSTIC",
+      "x": 44.0,
+      "y": 58.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ET",
+      "x": 26.0,
+      "y": 49.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ELECTRIC TRACING",
+      "x": 44.0,
+      "y": 49.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ST",
+      "x": 26.0,
+      "y": 40.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "STEAM TRACING",
+      "x": 44.0,
+      "y": 40.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "[PP-50]",
+      "x": 205.0,
+      "y": 84.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "P&ID: INSULATION JACKET - [CLASS-THK]",
+      "x": 205.0,
+      "y": 72.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "[ET-HC-40]",
+      "x": 205.0,
+      "y": 62.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "P&ID: ELECTRIC TRACING + HEAT CONSERVATION",
+      "x": 205.0,
+      "y": 50.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INSULATION BREAK",
+      "x": 205.0,
+      "y": 37.1,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ISO: CHAIN LINE AT INSULATION LIMIT",
+      "x": 205.0,
+      "y": 19.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    }
+  ],
+  "dims": [
+    {
+      "p1": [
+        251.0,
+        121.4
+      ],
+      "p2": [
+        251.0,
+        112.0
+      ],
+      "angle": 90.0,
+      "text": "SH",
+      "base": [
+        259.0,
+        121.4
+      ]
+    }
+  ],
+  "solids": []
+}

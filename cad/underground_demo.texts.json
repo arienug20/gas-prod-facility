@@ -1,0 +1,1492 @@
+{
+  "texts": [
+    {
+      "t": "1",
+      "x": 23.917,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 23.917,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 57.75,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 57.75,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 91.583,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 91.583,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 125.417,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 125.417,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 159.25,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 159.25,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 193.083,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 193.083,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 226.917,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 226.917,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 260.75,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 260.75,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 294.583,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 294.583,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 328.417,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 328.417,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 362.25,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 362.25,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 396.083,
+      "y": 293.2,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 396.083,
+      "y": 3.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 4.5,
+      "y": 272.925,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 415.5,
+      "y": 272.925,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 4.5,
+      "y": 237.375,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 415.5,
+      "y": 237.375,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 4.5,
+      "y": 201.825,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 415.5,
+      "y": 201.825,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 4.5,
+      "y": 166.275,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 415.5,
+      "y": 166.275,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 4.5,
+      "y": 130.725,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 415.5,
+      "y": 130.725,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 4.5,
+      "y": 95.175,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 415.5,
+      "y": 95.175,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 4.5,
+      "y": 59.625,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 415.5,
+      "y": 59.625,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 4.5,
+      "y": 24.075,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 415.5,
+      "y": 24.075,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NOTES",
+      "x": 374.5,
+      "y": 286.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1. UG PROCESS LINE REF-PROC-UG DASHED 0.35 MM.",
+      "x": 339.0,
+      "y": 278.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "2. COVER 1.0-1.2 M ASME B31.8; 1.5 M ROAD XING.",
+      "x": 339.0,
+      "y": 272.2,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "3. SAND BEDDING 150 MM + PADDING; TAPE 300-500 BGL.",
+      "x": 339.0,
+      "y": 265.9,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "4. BACKFILL COMPACTED TO 95% STD. PROCTOR.",
+      "x": 339.0,
+      "y": 259.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5. CASED CROSSING API RP 1102 - SPACERS/SEALS/VENT.",
+      "x": 339.0,
+      "y": 253.3,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "6. MIJ + CP TEST POST PER NACE SP0169.",
+      "x": 339.0,
+      "y": 247.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "7. TYPICAL DETAIL - NTS. DIMENSIONS IN MM.",
+      "x": 339.0,
+      "y": 240.7,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "LEGEND",
+      "x": 374.5,
+      "y": 234.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REFERENCE DOCUMENT",
+      "x": 374.5,
+      "y": 166.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GPF-00-DB-0001",
+      "x": 339.0,
+      "y": 157.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DESIGN BASIS",
+      "x": 372.0,
+      "y": 157.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PID-0001",
+      "x": 339.0,
+      "y": 151.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "P&ID SEPARATOR V-101",
+      "x": 372.0,
+      "y": 151.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PM-PLN-0008",
+      "x": 339.0,
+      "y": 145.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DEVELOPMENT ROADMAP REV A2",
+      "x": 372.0,
+      "y": 145.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NO",
+      "x": 341.0,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REV",
+      "x": 351.0,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DESCRIPTION",
+      "x": 358.0,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DATE",
+      "x": 404.5,
+      "y": 138.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 341.0,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A0",
+      "x": 351.0,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ISSUED FOR REVIEW",
+      "x": 358.0,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 2026",
+      "x": 404.5,
+      "y": 131.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PROJECT:",
+      "x": 339.0,
+      "y": 114.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GAS PRODUCTION FACILITY - ONSHORE FIELD",
+      "x": 339.0,
+      "y": 111.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "COMPANY:",
+      "x": 339.0,
+      "y": 106.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PM OIL & GAS SURFACE FACILITY",
+      "x": 339.0,
+      "y": 103.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CONSULTANT:",
+      "x": 339.0,
+      "y": 98.8,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REKAYASA ENGINEERING",
+      "x": 339.0,
+      "y": 95.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "UNDERGROUND PIPING &",
+      "x": 374.5,
+      "y": 82.5,
+      "h": 2.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TRENCH DETAIL",
+      "x": 374.5,
+      "y": 76.5,
+      "h": 2.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWING NO:",
+      "x": 339.0,
+      "y": 64.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-PI-PLN-0017",
+      "x": 339.0,
+      "y": 58.0,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REV:",
+      "x": 339.0,
+      "y": 50.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "A0",
+      "x": 344.0,
+      "y": 44.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SCALE:",
+      "x": 365.0,
+      "y": 50.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NTS",
+      "x": 372.0,
+      "y": 44.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SHEET:",
+      "x": 392.0,
+      "y": 50.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "1 OF 1",
+      "x": 398.0,
+      "y": 44.0,
+      "h": 2.4,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DATE:",
+      "x": 339.0,
+      "y": 36.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "23 OCT 2026",
+      "x": 344.0,
+      "y": 30.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWN:",
+      "x": 372.0,
+      "y": 36.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GLM-5.3-FLASH",
+      "x": 376.0,
+      "y": 30.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECKED:",
+      "x": 339.0,
+      "y": 22.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PM (AI)",
+      "x": 346.0,
+      "y": 16.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APPROVED:",
+      "x": 376.0,
+      "y": 22.0,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "UG PROCESS LINE (DASHED)",
+      "x": 366.0,
+      "y": 224.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ABOVE-GROUND PROCESS LINE",
+      "x": 366.0,
+      "y": 216.5,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "MONOLITHIC ISOLATION JOINT",
+      "x": 366.0,
+      "y": 209.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SOIL-TO-AIR INTERFACE (PUDDLE FLANGE)",
+      "x": 366.0,
+      "y": 201.5,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CP TEST POST (NACE SP0169)",
+      "x": 366.0,
+      "y": 194.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CASED CROSSING (API RP 1102)",
+      "x": 366.0,
+      "y": 186.5,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "CASING VENT PIPE",
+      "x": 366.0,
+      "y": 179.0,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "WARNING TAPE (300-500 MM BGL)",
+      "x": 366.0,
+      "y": 171.5,
+      "h": 1.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "NATIVE SOIL",
+      "x": 38.55,
+      "y": 263.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NATIVE SOIL",
+      "x": 303.45,
+      "y": 263.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "COMPACTED BACKFILL",
+      "x": 171.0,
+      "y": 236.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "95% STD. PROCTOR",
+      "x": 171.0,
+      "y": 232.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "WARNING TAPE",
+      "x": 270.9,
+      "y": 258.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "300-500 BELOW GRADE",
+      "x": 270.9,
+      "y": 253.6,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SAND BEDDING 150 MM",
+      "x": 98.0,
+      "y": 187.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SAND PADDING",
+      "x": 204.2,
+      "y": 230.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DN150 CARRIER PIPE (3LPE)",
+      "x": 75.0,
+      "y": 217.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TYPICAL TRENCH CROSS-SECTION",
+      "x": 171.0,
+      "y": 163.0,
+      "h": 2.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DIMENSIONS IN MM - TYPICAL DETAIL",
+      "x": 171.0,
+      "y": 159.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "COVER MIN. 1.5 M AT ROAD CROSSING (API RP 1102)",
+      "x": 171.0,
+      "y": 155.4,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "MINI PLAN - TYPICAL UNDERGROUND ROUTE (NTS)",
+      "x": 171.0,
+      "y": 145.0,
+      "h": 2.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FROM FACILITY / ABOVE GROUND",
+      "x": 14.0,
+      "y": 86.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "SOIL-TO-AIR INTERFACE",
+      "x": 56.0,
+      "y": 110.8,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PUDDLE FLANGE (WATER STOP)",
+      "x": 56.0,
+      "y": 105.6,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "MIJ-01",
+      "x": 66.0,
+      "y": 85.5,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TP-01",
+      "x": 121.0,
+      "y": 110.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CP TEST POST",
+      "x": 121.0,
+      "y": 114.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TYP. UG LINE - SEE PIPELINE LINE INDEX",
+      "x": 145.0,
+      "y": 100.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "UG ROUTE BCL EL. -1.200 (TYP.)",
+      "x": 145.0,
+      "y": 70.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "VENT",
+      "x": 168.0,
+      "y": 116.2,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CASED ROAD CROSSING (API RP 1102)",
+      "x": 215.0,
+      "y": 83.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CASING SPACERS + END SEALS",
+      "x": 215.0,
+      "y": 79.3,
+      "h": 1.6,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ACCESS ROAD",
+      "x": 219.0,
+      "y": 70.0,
+      "h": 1.8,
+      "rot": 90.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "MIJ-02",
+      "x": 304.5,
+      "y": 85.5,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO PIPELINE",
+      "x": 313.0,
+      "y": 80.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    }
+  ],
+  "dims": [
+    {
+      "p1": [
+        65.1,
+        272.0
+      ],
+      "p2": [
+        276.9,
+        272.0
+      ],
+      "angle": 0.0,
+      "text": "4236",
+      "base": [
+        171.0,
+        282.0
+      ]
+    },
+    {
+      "p1": [
+        141.0,
+        196.1
+      ],
+      "p2": [
+        201.0,
+        196.1
+      ],
+      "angle": 0.0,
+      "text": "1200",
+      "base": [
+        171.0,
+        187.1
+      ]
+    },
+    {
+      "p1": [
+        310.0,
+        272.0
+      ],
+      "p2": [
+        310.0,
+        212.0
+      ],
+      "angle": 90.0,
+      "text": "1200",
+      "base": [
+        326.0,
+        272.0
+      ]
+    },
+    {
+      "p1": [
+        302.0,
+        272.0
+      ],
+      "p2": [
+        302.0,
+        247.0
+      ],
+      "angle": 90.0,
+      "text": "500",
+      "base": [
+        317.0,
+        272.0
+      ]
+    },
+    {
+      "p1": [
+        129.0,
+        203.6
+      ],
+      "p2": [
+        129.0,
+        196.1
+      ],
+      "angle": 90.0,
+      "text": "150",
+      "base": [
+        120.0,
+        203.6
+      ]
+    }
+  ],
+  "solids": [
+    {
+      "pts": [
+        [
+          358.0,
+          216.5
+        ],
+        [
+          352.0,
+          218.0
+        ],
+        [
+          352.0,
+          215.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          349.5,
+          206.5
+        ],
+        [
+          352.5,
+          206.5
+        ],
+        [
+          352.5,
+          211.5
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          349.5,
+          206.5
+        ],
+        [
+          352.5,
+          211.5
+        ],
+        [
+          349.5,
+          211.5
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          340.0,
+          184.5
+        ],
+        [
+          341.6,
+          184.5
+        ],
+        [
+          341.6,
+          188.5
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          340.0,
+          184.5
+        ],
+        [
+          341.6,
+          188.5
+        ],
+        [
+          340.0,
+          188.5
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          38.0,
+          95.0
+        ],
+        [
+          33.5,
+          96.5
+        ],
+        [
+          33.5,
+          93.5
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          95.0,
+          95.0
+        ],
+        [
+          90.5,
+          96.5
+        ],
+        [
+          90.5,
+          93.5
+        ]
+      ],
+      "layer": "REF-PROC-UG"
+    },
+    {
+      "pts": [
+        [
+          145.0,
+          95.0
+        ],
+        [
+          140.5,
+          96.5
+        ],
+        [
+          140.5,
+          93.5
+        ]
+      ],
+      "layer": "REF-PROC-UG"
+    },
+    {
+      "pts": [
+        [
+          280.0,
+          95.0
+        ],
+        [
+          275.5,
+          96.5
+        ],
+        [
+          275.5,
+          93.5
+        ]
+      ],
+      "layer": "REF-PROC-UG"
+    },
+    {
+      "pts": [
+        [
+          65.0,
+          92.0
+        ],
+        [
+          67.0,
+          92.0
+        ],
+        [
+          67.0,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          65.0,
+          92.0
+        ],
+        [
+          67.0,
+          98.0
+        ],
+        [
+          65.0,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          163.6,
+          92.0
+        ],
+        [
+          166.4,
+          92.0
+        ],
+        [
+          166.4,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          163.6,
+          92.0
+        ],
+        [
+          166.4,
+          98.0
+        ],
+        [
+          163.6,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          263.6,
+          92.0
+        ],
+        [
+          266.4,
+          92.0
+        ],
+        [
+          266.4,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          263.6,
+          92.0
+        ],
+        [
+          266.4,
+          98.0
+        ],
+        [
+          263.6,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          303.5,
+          92.0
+        ],
+        [
+          305.5,
+          92.0
+        ],
+        [
+          305.5,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          303.5,
+          92.0
+        ],
+        [
+          305.5,
+          98.0
+        ],
+        [
+          303.5,
+          98.0
+        ]
+      ],
+      "layer": "REF-SYM"
+    },
+    {
+      "pts": [
+        [
+          313.0,
+          95.0
+        ],
+        [
+          308.5,
+          96.5
+        ],
+        [
+          308.5,
+          93.5
+        ]
+      ],
+      "layer": "REF-PROC"
+    }
+  ]
+}

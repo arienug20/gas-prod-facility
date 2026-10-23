@@ -295,3 +295,30 @@ flowchart TD
 ```
 
 Dokumen perancangan teknis Rev A2 ini telah dirapikan secara terstruktur, komprehensif, dan siap dipublikasikan ke repositori GitHub.
+
+---
+
+## Status Implementasi (23 Oktober 2026)
+
+Kesembilan modul roadmap ini **TERIMPLEMENTASI PENUH** (Fase 1–5) oleh
+subagent GLM-5.3-Flash paralel, diverifikasi PM (linter 0 error + QA visual
+independen), dan terinstal di skill perusahaan. Detail eksekusi dan temuan:
+lihat review log `GPF-00-QA-0004` Round **ROADMAP-08**.
+
+| Modul (fase) | File pustaka | Demo drawing (Rev A0) | Status |
+|---|---|---|---|
+| wellhead_common (F1) | `cad/wellhead_common.py` | GPF-00-PI-PID-0011 | LULUS linter+visual |
+| compression_common (F1) | `cad/compression_common.py` | GPF-00-PI-PID-0012 | LULUS linter+visual |
+| air_system_common (F2) | `cad/air_system_common.py` | GPF-00-PI-PID-0014 | LULUS linter+visual |
+| powergen_common (F2) | `cad/powergen_common.py` | GPF-00-PI-PID-0013 | LULUS linter+visual |
+| metering_common (F3) | `cad/metering_common.py` | GPF-00-PI-PID-0015 | LULUS linter+visual |
+| lbcv_common (F3) | `cad/lbcv_common.py` | GPF-00-PI-PID-0016 | LULUS linter+visual |
+| underground_common (F4) | `cad/underground_common.py` | GPF-00-PI-PLN-0017 | LULUS linter+visual |
+| supports_and_insulation (F4) | `cad/supports_insulation_common.py` | GPF-00-PI-STD-0018 | LULUS linter+visual |
+| alignment_sheet_builder (F5) | `cad/alignment_sheet_builder.py` | GPF-00-PI-PLN-0019 | LULUS linter+visual |
+
+Salinan pustaka terpasang di `skills/company-cad-standard/scripts/` +
+`~/skills-patches/` + `~/.agents/skills/` (via `reapply.sh`); katalog
+didokumentasikan di `SKILL.md` §6C. Tindak lanjut terbuka untuk B0: registrasi
+nomor line modul baru ke line index, upgrade `apply_text.py` (layer
+REF-PROC-UG), dan penguatan Check 5 linter (teks vs REF-SIG/REF-FRAME).

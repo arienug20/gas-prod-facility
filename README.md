@@ -17,7 +17,17 @@ gas-prod-facility/
 │   ├── validate_cad_rules.py   # Linter QA geometris 6-pillar & cross-discipline checker
 │   ├── apply_text.py           # Post-processor injeksi MTEXT Arial & layer lineweight
 │   ├── routing_plan.py         # Piping Plan area separator ke flare & storage tank
-│   └── iso_*.py                # 3 Lembar Isometrik Pipa (GO-1002, CO-1003, CO-1004)
+│   ├── iso_*.py                # 3 Lembar Isometrik Pipa (GO-1002, CO-1003, CO-1004)
+│   ├── wellhead_common.py      # Modul lanjutan: Christmas tree API 6A (Bagian I dok 08)
+│   ├── compression_common.py   # Modul lanjutan: kompresor API 618/617 + inter/aftercooler (Bagian II)
+│   ├── powergen_common.py      # Modul lanjutan: gas engine generator ISO 8528 (Bagian III)
+│   ├── air_system_common.py    # Modul lanjutan: instrument air ISO 8573-1 + dryer (Bagian III)
+│   ├── metering_common.py      # Modul lanjutan: custody metering AGA/API MPMS (Bagian IV)
+│   ├── lbcv_common.py          # Modul lanjutan: line break valve API 6D (Bagian IV)
+│   ├── underground_common.py   # Modul lanjutan: pipa bawah tanah & trench API RP 1102 (Bagian V)
+│   ├── supports_insulation_common.py # Modul lanjutan: support MSS SP-58 + insulasi (Bagian V)
+│   ├── alignment_sheet_builder.py    # Modul lanjutan: alignment sheet split A1 (Bagian VI)
+│   └── *_demo.py               # 9 demo DXF Rev A0: GPF-00-PI-PID-0011..0016, PLN-0017/0019, STD-0018
 ├── dokumen/                    # Dokumen teknis perencanaan & catatan engineering
 │   ├── 01-design-basis.md      # Basis desain proses & mekanikal fasilitas
 │   ├── 02-plan-pid.md          # Konsep awal P&ID

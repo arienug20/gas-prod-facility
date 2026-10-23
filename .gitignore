@@ -4,3 +4,8 @@ __pycache__/
 *.dwl2
 *.log
 /tmp/
+
+# workflow run drafts (machine-owned) & test build artifacts
+.zcode/workflow-drafts/
+cad/test_*.dxf
+cad/test_*.texts.json
