@@ -50,7 +50,8 @@ gas-prod-facility/
 │   │   ├── SKILL.md            # Aturan drafting, font Arial, lineweight, & QA
 │   │   ├── references/         # Buku panduan P&ID, Plan, & Isometrik
 │   │   └── scripts/            # Pustaka Python, linter, & unit tests
-│   └── skills-patches/         # Script instalasi & patch environment workstation
+│   ├── skills-patches/         # Script instalasi & patch environment workstation
+│   └── install/                 # Installer Windows (install-windows.ps1) + panduan engineer
 │       └── reapply.sh          # One-click installer sinkronisasi ke ~/.agents/skills/
 ├── src/                        # Script utilitas ekspor multi-sheet isometrik & 3D
 ├── step/                       # File model 3D mekanikal (piping_3d.step)
@@ -83,5 +84,10 @@ $PY cad/validate_cad_rules.py --cross-check cad/pid_v101.texts.json cad/iso_go10
 
 ### 3. Pasang Skill ke Workstation Engineer Lain
 ```bash
+# Linux / macOS
 bash skills/skills-patches/reapply.sh
+```
+```powershell
+# Windows (opencode / agent lain) — panduan: skills/install/INSTALL-ENGINEER.md
+powershell -ExecutionPolicy Bypass -File skills\install\install-windows.ps1 -RunSelfTest
 ```

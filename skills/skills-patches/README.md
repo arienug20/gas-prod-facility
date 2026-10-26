@@ -46,3 +46,16 @@ npx skills add earthtojake/text-to-cad#latest -g -a opencode -y
 Bila upstream mengubah SKILL.md/generator-templates.md secara substansial,
 diff dulu terhadap `dxf-pristine/` (`diff -ru dxf-pristine dxf-company`)
 dan merge manual ke `dxf-company/` sebelum re-apply.
+
+
+## Windows (opencode / engineer lain)
+
+Untuk workstation Windows gunakan installer PowerShell (setara `reapply.sh`,
+ikut memasang snapshot `dxf-company` lengkap sehingga tidak perlu `npx`):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File skills\install\install-windows.ps1 [-RunSelfTest]
+```
+
+Panduan lengkap (prasyarat uv/opencode, perintah harian, troubleshooting):
+`skills/install/INSTALL-ENGINEER.md`.

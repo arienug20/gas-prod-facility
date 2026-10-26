@@ -13,7 +13,7 @@ Exercises 100% of methods and components in PlanContext:
   - Manifest primitives: text, solid_triangle, solid_quad, solid_dot, dimrec
   - Export: export_manifest, get_layers, save_manifest
 
-Standard: ASME B31.3-2022, API STD 650 13th Ed. 2020, API Spec 12J, 8th Ed. (2008), R2023, API STD 521 7th Ed. 2020.
+Standard: ASME B31.3-2022, API STD 650 13th Ed. 2020, API RP 12J 8th Ed. 2014, API STD 521 7th Ed. 2020.
 """
 
 from __future__ import annotations

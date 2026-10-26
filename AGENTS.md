@@ -31,6 +31,19 @@ pekerjaan di dalam folder ini.
 
 - `dokumen/` — design basis, plan, review log (Markdown).
 - `cad/` — script sumber `.py`, hasil `.dxf`, snapshot `.png`, helper.
+- `skills/` — salinan in-repo skill perusahaan (identik dengan yang
+  terpasang di `~/.agents/skills/`); boleh dimuat dari sini bila workstation
+  belum menjalankan installer.
+
+## Instalasi workstation (Windows / opencode / lainnya)
+
+- **Windows**: `powershell -ExecutionPolicy Bypass -File
+  skills\install\install-windows.ps1` (idempoten; `-RunSelfTest` untuk uji
+  import pustaka, `-Uninstall` untuk menghapus). Panduan lengkap:
+  `skills/install/INSTALL-ENGINEER.md`.
+- **Linux/macOS**: `bash skills/skills-patches/reapply.sh`.
+- Bila skill `dxf` terpasang belum berisi seksi "Company standard override"
+  (tertimpa `npx skills add`), jalankan ulang installer di atas.
 
 ## Keamanan informasi
 

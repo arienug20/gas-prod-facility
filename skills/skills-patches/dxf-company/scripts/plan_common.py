@@ -1,6 +1,6 @@
 """Reusable 2D Piping Plan & Plot Plan Standard Library.
 
-Standard: ASME B31.3-2022, API STD 650 13th Ed. 2020, API Spec 12J, 8th Ed. (2008), R2023, API STD 521 7th Ed. 2020, ISO 5457:1999, ISO 7200:2004 & Company CAD Standard.
+Standard: ASME B31.3-2022, API STD 650 13th Ed. 2020, API RP 12J 8th Ed. 2014, API STD 521 7th Ed. 2020, ISO 5457:1999, ISO 7200:2004 & Company CAD Standard.
 Coordinates:
   Plant Coordinate System (Easting, Northing) in METERS -> Sheet (X, Y) in MILLIMETERS.
   Default mapping for A1 sheet (841 x 594 mm) at scale 1:200:
