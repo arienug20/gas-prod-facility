@@ -1,4 +1,4 @@
-"""P&ID GPF-00-PI-PID-0001 Rev A4 — 3-PHASE PRODUCTION SEPARATOR V-101.
+"""P&ID GPF-00-PI-PID-0001 Rev A5 — 3-PHASE PRODUCTION SEPARATOR V-101.
 
 Sheet A1 (841 x 594 mm), origin kiri-bawah.
 Standar acuan:
@@ -44,7 +44,7 @@ from pid_common import (
 
 
 # =============================================================================
-# MODEL UTAMA P&ID REV A4
+# MODEL UTAMA P&ID REV A5
 # =============================================================================
 @dxf
 def pid_v101():
@@ -208,28 +208,30 @@ def pid_v101():
     # --- 2.4 REVISION TABLE (Bottom-Up, y = 116..148) ---
     ctx.title += [
         line(655, 116, 823, 116),
-        line(655, 142.0, 823, 142.0),
-        line(655, 136.8, 823, 136.8),
-        line(655, 131.6, 823, 131.6),
-        line(655, 126.4, 823, 126.4),
-        line(655, 121.2, 823, 121.2),
+        line(655, 143.6, 823, 143.6),
+        line(655, 139.0, 823, 139.0),
+        line(655, 134.4, 823, 134.4),
+        line(655, 129.8, 823, 129.8),
+        line(655, 125.2, 823, 125.2),
+        line(655, 120.6, 823, 120.6),
         line(675, 116, 675, 148),
         line(763, 116, 763, 148),
         line(795, 116, 795, 148),
         line(809, 116, 809, 148),
     ]
-    ctx.text("REV", 665, 145.0, size=1.8)
-    ctx.text("DESCRIPTION", 719, 145.0, size=1.8)
-    ctx.text("DATE", 779, 145.0, size=1.8)
-    ctx.text("CHK", 802, 145.0, size=1.8)
-    ctx.text("APP", 816, 145.0, size=1.8)
+    ctx.text("REV", 665, 145.8, size=1.8)
+    ctx.text("DESCRIPTION", 719, 145.8, size=1.8)
+    ctx.text("DATE", 779, 145.8, size=1.8)
+    ctx.text("CHK", 802, 145.8, size=1.8)
+    ctx.text("APP", 816, 145.8, size=1.8)
 
     rev_data = [
-        ("A4", "ADDED GV-103; REFACTORED TO PID_COMMON; LINTER FIXES", "23 OCT 26", "PM", "RE", 139.4),
-        ("A3", "UPGRADED TO FULL ISA-5.1 / ISO 10628-2 P&ID", "23 OCT 26", "PM", "RE", 134.2),
-        ("A2", "TEXT CONVERTED TO MTEXT PER STANDARD", "12 OCT 26", "PM", "RE", 129.0),
-        ("A1", "REVISED PER COMPANY DRAFTING STANDARD", "09 OCT 26", "PM", "RE", 123.8),
-        ("A0", "ISSUED FOR REVIEW", "09 OCT 26", "PM", "RE", 118.6),
+        ("A5", "TRIP LABEL OFFSET PER LINTER OPT-3 (SIG-TEXT RULE)", "26 OCT 26", "PM", "RE", 141.3),
+        ("A4", "ADDED GV-103; REFACTORED TO PID_COMMON; LINTER FIXES", "23 OCT 26", "PM", "RE", 136.7),
+        ("A3", "UPGRADED TO FULL ISA-5.1 / ISO 10628-2 P&ID", "23 OCT 26", "PM", "RE", 132.1),
+        ("A2", "TEXT CONVERTED TO MTEXT PER STANDARD", "12 OCT 26", "PM", "RE", 127.5),
+        ("A1", "REVISED PER COMPANY DRAFTING STANDARD", "09 OCT 26", "PM", "RE", 122.9),
+        ("A0", "ISSUED FOR REVIEW", "09 OCT 26", "PM", "RE", 118.3),
     ]
     for r_rev, r_desc, r_date, r_chk, r_app, ry in rev_data:
         ctx.text(r_rev, 665, ry, size=1.8)
@@ -260,7 +262,7 @@ def pid_v101():
     ctx.text("GPF-00-PI-PID-0001", 739, 65.5, size=2.8)
     # Metadata rows
     ctx.text("REV:", 658, 56.5, size=1.8, left=True)
-    ctx.text("A4", 697, 52.5, size=3.0)
+    ctx.text("A5", 697, 52.5, size=3.0)
     ctx.text("SCALE:", 742, 56.5, size=1.8, left=True)
     ctx.text("NTS", 781, 52.5, size=2.5)
 
@@ -690,7 +692,7 @@ def pid_v101():
     # Trip dari ESD-1 ke Motor M
     ctx.sym += ctx.interlock_diamond(465.0, 110.0, tag="ESD-1")
     ctx.sig += dashed(465.0, 105.0, 465.0, 100.0)
-    ctx.text("TRIP", 465.0, 102.5, size=1.8)
+    ctx.text("TRIP", 469.5, 102.5, size=1.8)
 
     # CO-1004 Discharge (y = 102 tangensial dari puncak pompa):
     # Rangkaian spasi presisi (jarak antar tick >= 4 mm, FE-142 tegak lurus di bawah FT/FI, panah >= 6 mm dari tick, GV-103 bebas dari x=585):

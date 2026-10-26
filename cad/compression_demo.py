@@ -361,7 +361,7 @@ def compression_demo():
     ctx.sig += dashed(228.0, 309.0, 228.0, 339.0)
     ctx.sym += ctx.bubble(228.0, 345.0, "FT", "202")
     ctx.sig += dashed(220.0, 321.0, 220.0, 355.0)
-    ctx.sig += dashed(228.0, 321.0, 228.0, 355.0)
+    ctx.sig += dashed(228.0, 351.0, 228.0, 355.0)  # keluar puncak bubble (perbaikan OPT-3: dulu menembus bubble)
     e1 = ctx.fin_fan_cooler(310.0, 300.0, tag="E-201", tee_dx=15.0)
     ctx.text("E-201 INTERCOOLER (FIN-FAN)", 300.0, 402.0, size=2.5)
     ctx.sym += ctx.bubble(325.0, 394.0, "TIC", "201")
@@ -448,7 +448,7 @@ def compression_demo():
     ctx.text("ANTI-SURGE CONTROLLER", 376.0, 275.0, size=1.8)
     ctx.sig += dashed(350.0, 252.0, 350.0, 254.5)
     # Sinyal hisap: PT-201 & FT-202 -> UIC-201
-    ctx.sig += dashed_brk(220.0, 355.0, 342.0, 355.0, brk=[58.0])
+    ctx.sig += dashed_brk(228.0, 355.0, 342.0, 355.0, brk=[50.0])
     ctx.sig += dashed_brk(342.0, 269.5, 342.0, 355.0, brk=[30.5])
     # Sinyal tekan: PT-207 & TT-207 -> UIC-201. Bus di-jog naik ke y=390
     # (di x=400) agar memutar head V-202 — temuan QA: dashed semula

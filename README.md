@@ -36,7 +36,8 @@ gas-prod-facility/
 │   ├── 05-plan-iso-true.md     # Perancangan isometrik presisi ISO 6412-2
 │   ├── 06-plan-pid-true.md     # Perancangan P&ID standar ANSI/ISA-5.1
 │   ├── 07-plan-process-piping-cad-suite.md # Arsitektur paket linter & pustaka
-│   └── 08-plan-pipeline-metering-lbcv-underground.md # Rencana modul lanjutan
+│   ├── 08-plan-pipeline-metering-lbcv-underground.md # Rencana modul lanjutan
+│   └── 09-plan-optimasi-tooling.md # Optimasi: template parametrik, linter 2-tier, diet konteks
 ├── handoff/                    # Paket deliverable terpadu serah terima proyek
 │   ├── HANDOFF.md              # Lembar serah terima teknis
 │   ├── 01-dokumen/             # Salinan dokumen perancangan

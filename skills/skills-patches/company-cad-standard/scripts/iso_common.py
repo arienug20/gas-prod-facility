@@ -632,7 +632,7 @@ class IsoContext:
         self.text("DATE", 397.75, 98.2, size=1.25, att=5)
         self.text("REM", 408.5, 98.2, size=1.25, att=5)
 
-        # Rev rows A0 to A5 (bottom to top)
+        # Rev rows A0 to A6 (bottom to top)
         revs = [
             ("1", "A0", "ISSUED FOR REVIEW", "09 OCT 26", "IFR"),
             ("2", "A1", "REVISED PER CAD STANDARD", "10 OCT 26", "REV"),
@@ -640,8 +640,9 @@ class IsoContext:
             ("4", "A3", "RESTYLED PER FNKT-10", "13 OCT 26", "REV"),
             ("5", "A4", "ISO ORIENTATION UPDATE", "15 OCT 26", "REV"),
             ("6", "A5", "TRUE PIPING ISO & FNKT-10", "22 OCT 26", "REV"),
+            ("7", "A6", "QA LINTER FIX — LABEL OFFSET (OPT-3)", "26 OCT 26", "REV"),
         ]
-        rev_h = (121.3 - 100.0) / 6.0
+        rev_h = (121.3 - 100.0) / 7.0
         for i, (r_no, r_rev, r_desc, r_date, r_rem) in enumerate(revs):
             ry = 100.0 + i * rev_h
             if i > 0:
@@ -649,7 +650,8 @@ class IsoContext:
             ryc = ry + 0.5 * rev_h
             self.text(r_no, 352.0, ryc, size=1.25, att=5)
             self.text(r_rev, 358.0, ryc, size=1.25, att=5)
-            self.text(r_desc, 363.0, ryc, size=1.2, left=True, att=4)
+            desc_size = 1.05 if r_rev == "A6" else 1.2  # A6 desc longer, sized to fit column
+            self.text(r_desc, 363.0, ryc, size=desc_size, left=True, att=4)
             self.text(r_date, 397.75, ryc, size=1.2, att=5)
             self.text(r_rem, 408.5, ryc, size=1.2, att=5)
 
@@ -708,11 +710,11 @@ class IsoContext:
         self.text(f"{sheet_no:02d}/{total_sheets:02d}", 390.5, 8.8, size=1.4, att=5)
 
         self.text("REV", 399.5, 14.3, size=1.2, att=5)
-        # Revision triangle around A5
+        # Revision triangle around A6
         self.furn_edges += [line(396.5, 6.8, 402.5, 6.8),
                             line(402.5, 6.8, 399.5, 11.0),
                             line(399.5, 11.0, 396.5, 6.8)]
-        self.text("A5", 399.5, 8.5, size=1.35, att=5)
+        self.text("A6", 399.5, 8.5, size=1.35, att=5)
 
         self.text("SCALE", 408.5, 14.3, size=1.2, att=5)
         self.text("NTS", 408.5, 8.8, size=1.35, att=5)

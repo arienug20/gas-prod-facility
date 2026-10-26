@@ -1,6 +1,6 @@
 """PIPE ISOMETRIC - 080-CO-1003 DN80 (V-101 N3 -> P-101 SUCTION).
 
-GPF-00-PI-ISO-0004 Rev A5, A3 420x297, NTS (dimensions govern).
+GPF-00-PI-ISO-0004 Rev A6, A3 420x297, NTS (dimensions govern).
 True Piping Isometric (30°/150°/90°) & 3-Column FNKT-10 Layout.
 """
 from __future__ import annotations
@@ -112,7 +112,7 @@ def build_iso_co1003(ctx: IsoContext) -> None:
 
     # Field welds (SW)
     ctx.sw(addp(A, mulp(EX, 4.0)), EX, txtoff=(0.0, 3.2))
-    ctx.sw(subp(B, mulp(EX, 4.0)), EX, txtoff=(0.0, 3.2))
+    ctx.sw(subp(B, mulp(EX, 4.0)), EX, txtoff=(0.0, -3.2))  # OPT-3 A6: label clear of callout/bubble leaders
     ctx.sw(addp(B, mulp(SX, 4.0)), SX, txtoff=(2.5, 2.5))
     ctx.sw((B2[0], B2[1] - 4.0), DNX, txtoff=(-3.0, 0.0))
 

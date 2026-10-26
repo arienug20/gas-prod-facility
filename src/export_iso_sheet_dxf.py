@@ -1,6 +1,6 @@
-"""Export multi-sheet isometric DXF (Rev A5) without POLYFACE 3D mesh.
+"""Export multi-sheet isometric DXF (Rev A6) without POLYFACE 3D mesh.
 
-GPF-00-PI-ISO-0007 SHT 1 - 3 Rev A5:
+GPF-00-PI-ISO-0007 SHT 1 - 3 Rev A6:
 - 3 Paper Space Layouts ("SHEET 1 OF 3", "SHEET 2 OF 3", "SHEET 3 OF 3")
 - Modelspace: 3 sheets arranged side-by-side at X = 0, 500, 1000 mm
 - 2D Viewport per layout pointing to corresponding sheet in Modelspace

@@ -457,6 +457,106 @@ menjalankan `validate_cad_rules.py` per DXF (exit 0 wajib), gagal → subagent
 perusahaan. **Roadmap GPF-00-PM-PLN-0008 (Rev A2) TERIMPLEMENTASI PENUH —
 Fase 1 s.d. 5 selesai 23 Okt 2026.**
 
+---
+
+# ROUND PID-0020/0021 — P&ID BOOSTER KOMPRESI STANDALONE 2×50% (26 Oct 2026)
+
+Pemicu: user — dua P&ID paralel 250→450 psig, 10 MMSCFD, 2×50%, fin-fan,
+standalone. Eksekusi: 2 subagent GLM-5.3-Flash paralel (PID-0020 recip
+12,2 jt/63 mnt; PID-0021 centrifugal 22,6 jt/82 mnt) → gate linter → QA
+visual independen subagent umum (5,9 jt — batch terakhir sebelum SOP flash)
+→ rework 2 subagent flash (3,4 jt & 5,4 jt) → verifikasi PM.
+
+## Verifikasi akhir PM (linter diulang sendiri)
+
+| Drawing | Linter | Catatan |
+|---|---|---|
+| pid_recip_booster (GPF-00-PI-PID-0020 Rev A0) | PASS 0 error 0 warning | 280 MTEXT ARIAL |
+| pid_centrifugal (GPF-00-PI-PID-0021 Rev A0) | PASS 0 error 0 warning | 262 MTEXT ARIAL |
+
+## Siklus temuan → rework (semua TERTUTUP)
+
+| Temuan QA visual | 0020 | 0021 |
+|---|---|---|
+| Fungsional | PSV-21B tail dead-end → disambungkan ke BD header (pola PSV-21A/Note 10) | — |
+| Penomoran/konsistensi | duplikasi 150-NG-9010 dihapus (per-train 9011/9012, header 9010) | loop kacau "302/303" lintas train → skema unik 301=A, 302=B, 303/304=TT/TIC cooler, LSL-301/302 saklar level SIS; V-302B→V-301B; NOTES diselaraskan |
+| Teks vs simbol | label PSV A/B digeser; "PURGE" train B keluar dari box FY | typo "AFT ERCOOLER"→"AFTERCOOLER"; label recycle vs batang ASV (graze 0,73 tertangkap linter baru saat rework) |
+| Sinyal vs simbol | — | dash tak lagi menembus bubble LT (dipindah keluar koridor bus UIC) |
+| Persilangan tanpa break | terbukti SUDAH ADA break (panah menutupi visual) — panah digeser | idem (break di 75,235 sah; panah hisap train B digeser) |
+
+## Deviasi tercatat
+
+1. Standalone di luar GPF-00-DB-0001; line 9000-series NG pending line index
+   (NOTES kedua lembar); asumsi: driver motor listrik, T hisap 40 °C,
+   PSV set indikatif (19,6 / 34,5 barg), spec class indikatif.
+2. Rework 0020/0021 mempertahankan REV A0 (QA closure pre-issue, preseden
+   round ROADMAP-08); pid_v101 — sheet legacy yang disentuh — DI-BUMP ke A5
+   (lihat round OPT-3).
+
+---
+
+# ROUND OPT-3 FASE A — PENGUATAN LINTER & QA EFISIEN (26 Oct 2026)
+
+Pemicu: dokumen GPF-00-PM-PLN-0009 (OPT-3 + OPT-5, Fase A). Empat celah
+linter yang terbukti lolos QA visual kini ditutup:
+
+| Celah | Perbaikan | Bukti |
+|---|---|---|
+| Check 5 tak uji teks vs REF-SIG/SIGP/FRAME/GRID | layer sinyal masuk tier ERROR; FRAME/TITLE/GRID tier WARNING | negative test (i); langsung menangkap label "TRIP" pid_v101 & sisa dashed menembus bubble FT-202 compression |
+| Faktor lebar glyph 0,62 (Arial riil ±0,73) | sistem DUA TIER: ERROR pada 0,62 (tembus/nyata), WARNING pada 0,73 (graze sub-mm) + text-vs-text dua tier | negative test (k); menangkap label "TYP. UG LINE" underground |
+| REF-PROC-UG tak diperiksa | masuk Check 4/5/6 (subjek & kandidat; UG solid > 6 mm) | negative test (j) |
+| apply_text tak kenal pens REF-PROC-UG | PENS + REF-PROC-UG = 35; workaround `stamp_layer_pens()` dihapus | rebuild underground_demo PASS |
+
+## Perbaikan sheet tertentu (tertangkap oleh linter baru)
+
+1. underground_demo: label TYP. UG LINE dipecah 2 baris (beres sampai tier 0,73).
+2. compression_demo: sisa dashed duplikat menembus bubble FT-202 dihapus;
+   sinyal kini masuk-keluar bubble pada tepi; break bus dikoreksi (50).
+3. powergen_common: label GCB digeser dari atas jalur sinyal panel.
+4. pid_recip_booster: label spill-back train A keluar dari jalur dashed.
+5. **pid_v101 → Rev A5** "TRIP LABEL OFFSET PER LINTER OPT-3 (SIG-TEXT
+   RULE)" (tabel revisi dipadatkan pitch 4,6 mm, 6 baris A0–A5).
+
+## Regresi & instalasi
+
+- Test suite linter: **14/14 PASS** (termasuk 4 negative test baru i–l).
+- Sweep 16 drawing: 12 PASS; 4 gagal = **utang legacy pra-OPT-3** (routing_plan
+  5 tabrakan+1 dangling+tumpukan notes; iso GO/CO-1003 "SW" vs leader weld;
+  iso CO-1004 "BOP.EL. +6150") — terverifikasi GAGAL PULA pada validator
+  HEAD sebelum perubahan; dijadwalkan siklus revisi berikutnya (bump REV
+  masing-masing).
+- Tooling tersinkron 3 lokasi skill + terinstal via reapply.sh.
+- OPT-5 SOP: pass QA visual independen berikutnya dikerjakan subagent
+  flash-executor (batch 0020/0021 di atas 5,9 jt pada model umum — batch
+  terakhir model umum; rework builder flash 3,4–5,4 jt menunjukkan skala
+  penghematan).
+
+---
+
+# ROUND LEGACY-DEBT — PENUTUPAN 4 SHEET LAMA (26 Oct 2026)
+
+Pemicu: sweep OPT-3 memperlihatkan routing_plan + 3 isometrik gagal — dan
+terverifikasi GAGAL PULA pada validator HEAD pra-OPT-3 (tak pernah di-sweep
+ulang sejak linter berevolusi). Diperbaiki 2 subagent GLM-5.3-Flash paralel.
+
+| Sheet | Akar temuan & perbaikan | REV | Linter final (PM) |
+|---|---|---|---|
+| routing_plan (PLN-0002) | 5 label bergeser (GO-1002 vs kotak support, CO-1003 vs dashed bund, TO TANK di garis, PSV TAIL & TRUCK LOADING grase); "tumpukan notes" ternyata note-1 menabrak HURUF GRID B/C → blok notes turun + spasi baris 2,8; dangling riser CD-1007 ditutup panah aliran (konsisten PW-1006) | **A3** | PASS 0/0 |
+| iso_go1002 (ISO-0003) | 'SW' vs leader callout → offset (3.0, −2.4) | **A6** | PASS 0/0 |
+| iso_co1003 (ISO-0004) | 'SW' vs leader callout+bubble → offset (0, −3.2) | **A6** | PASS 0/0 |
+| iso_co1004 (ISO-0005) | 'BOP.EL. +6150' vs dash kontinuasi → turun 10,2 mm (posisi pre-verifikasi algoritma box linter) | **A6** | PASS 0/0 |
+| GPF-00-PI-ISO-0007 SHT 1-3 | regenerasi multi-sheet; REV mengikuti sheet sumber (A6 ×3 sheet terverifikasi ezdxf; POLYFACE 0; 495 KB) | A6 | 0 error validate_dxf_file |
+
+Catatan: baris rev table A6 dikelola di `iso_common.py` (furniture bersama) —
+terSinkron ke 3 lokasi skill via reapply.sh. Deskripsi baris A6 memakai
+h=1,05 mm agar bebas grase kolom DATE (rentang standar 0,5–3,0 dipenuhi).
+
+## Sweep final PM: 16/16 drawing PASS exit 0
+
+Sisa WARNING (tier 0,73, non-blocking untuk B0): compression_demo (grase
+from/to) dan alignment_demo (1 grase). Semua temuan QA visual ronde ini
+tertutup; tidak ada regresi baru.
+
 
 
 

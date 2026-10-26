@@ -1,6 +1,6 @@
 """PIPE ISOMETRIC - 080-CO-1004 DN80 (P-101 DISCHARGE -> T-101 N1).
 
-GPF-00-PI-ISO-0005 Rev A5, A3 420x297, NTS (dimensions govern).
+GPF-00-PI-ISO-0005 Rev A6, A3 420x297, NTS (dimensions govern).
 True Piping Isometric (30°/150°/90°) & 3-Column FNKT-10 Layout.
 """
 from __future__ import annotations
@@ -200,7 +200,7 @@ def build_iso_co1004(ctx: IsoContext) -> None:
     # BOP.EL. labels (placed in clean clear zones)
     ctx.text("BOP.EL. +0800", A[0] + 4.0, A[1] - 5.0, size=1.4, left=True, att=4)
     ctx.text("BOP.EL. +1200", F[0] + 8.0, F[1] - 3.5, size=1.4, left=True, att=4)
-    ctx.text("BOP.EL. +6150", K[0] + 3.0, K[1] - 3.5, size=1.4, left=True, att=4)
+    ctx.text("BOP.EL. +6150", K[0] + 2.4, K[1] - 10.2, size=1.4, left=True, att=4)  # OPT-3 A6: below continuation dashes
 
     # ---------------- 3. Dimensions with Oblique Extension Lines ----------------
     dim_y_off = -20.0

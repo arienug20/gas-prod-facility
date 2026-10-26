@@ -560,7 +560,7 @@ class PowerGenContext(PIDContext):
         # GCB (rect tertutup REF-SYM)
         self.sym += rect(x_gcb, y_bus - 7.0, x_gcb + 15.0, y_bus + 7.0)
         self.text("GCB", x_gcb + 7.5, y_bus, size=2.0)
-        self.text(tag_gcb, x_gcb + 7.5, y_bus + 12.0, size=1.8)
+        self.text(tag_gcb, x_gcb + 17.0, y_bus + 12.0, size=1.8)
         # Kabel GCB -> CT -> busbar
         self.sig += dashed(x_gcb + 15.0, y_bus, x_ct - 5.0, y_bus)
         self.sym.append(circle(x_ct, y_bus, 5.0))

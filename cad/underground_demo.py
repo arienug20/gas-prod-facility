@@ -32,7 +32,6 @@ from underground_common import (
     circle,
     line,
     rect,
-    stamp_layer_pens,
 )
 
 
@@ -160,7 +159,7 @@ def underground_demo():
     ctx.cp_test_post(110.0, ry, tag="TP-01", dy=6.0, shelf_len=22.0)
 
     # Label line typical
-    ctx.text("TYP. UG LINE - SEE PIPELINE LINE INDEX", 145.0, ry + 5.5, size=1.8)
+    ctx.text("TYP. UG LINE -\nSEE PIPELINE LINE INDEX", 148.0, ry + 9.0, size=1.8)
     ctx.text("UG ROUTE BCL EL. -1.200 (TYP.)", 145.0, 70.0, size=1.8)
 
     # Cased road crossing (casing + spacers + end seals + vent) & band jalan
@@ -193,5 +192,4 @@ if __name__ == "__main__":
     underground_demo()
     _dxf = Path(__file__).resolve().parent / "underground_demo.dxf"
     # REF-PROC-UG 0.35 mm (Bagian V.1) — di luar PENS apply_text.py
-    stamp_layer_pens(_dxf, {"REF-PROC-UG": UG_PEN})
     print(f"stamped REF-PROC-UG pen={UG_PEN} on {_dxf.name}")

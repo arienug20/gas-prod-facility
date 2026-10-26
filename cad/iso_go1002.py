@@ -1,6 +1,6 @@
 """PIPE ISOMETRIC - 100-GO-1002 DN100 -> 100-FL-1005 DN150.
 
-GPF-00-PI-ISO-0003 Rev A5, A3 420x297, NTS (dimensions govern).
+GPF-00-PI-ISO-0003 Rev A6, A3 420x297, NTS (dimensions govern).
 True Piping Isometric (30°/150°/90°) & 3-Column FNKT-10 Layout.
 """
 from __future__ import annotations
@@ -158,7 +158,7 @@ def build_iso_go1002(ctx: IsoContext) -> None:
     ctx.flow_arrow(addp(E, mulp(EX, 8.0)), EX)
 
     # Field welds (SW)
-    ctx.sw(addp(B, mulp(EX, 3.0)), EX, txtoff=(0.0, 3.2))
+    ctx.sw(addp(B, mulp(EX, 3.0)), EX, txtoff=(3.0, -2.4))  # OPT-3 A6: label clear of callout leader
     ctx.sw(subp(C, mulp(EX, 6.0)), EX, txtoff=(0.0, 3.2))
     ctx.sw(addp(D, mulp(NX, 3.0)), NX, txtoff=(3.0, 2.0))
     ctx.sw(addp(E, mulp(EX, 3.0)), EX, txtoff=(0.0, 3.2))

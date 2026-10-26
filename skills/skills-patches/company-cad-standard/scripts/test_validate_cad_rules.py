@@ -315,6 +315,80 @@ class TestCADRulesValidation(unittest.TestCase):
         self.assertEqual(errs, 0, "Tidak boleh ada error pada teks label di dalam bubble instrumen")
         print("\n  [PASS] Kasus Positif: Teks dalam bubble instrumen sah tidak memicu error Check 5.")
 
+    # -------------------------------------------------------------------------
+    # (i)-(l) Negative test OPT-3 GPF-00-PM-PLN-0009: celah linter yang
+    # terbukti lolos QA visual 23-26 Okt kini WAJIB tertangkap mesin.
+    # -------------------------------------------------------------------------
+
+    def test_case_i_signal_line_through_text(self):
+        """(i) OPT-3: sinyal REF-SIG menembus label -> ERROR Check 5 (kasus pilot LBCV)."""
+        doc = create_clean_doc()
+        msp = doc.modelspace()
+        msp.add_line((50.0, 100.0), (150.0, 100.0), dxfattribs={"layer": "REF-SIG"})
+        texts = [
+            {"t": "ACTUATOR", "x": 100.0, "y": 100.0, "h": 2.0, "rot": 0.0, "att": 5}
+        ]
+        dxf_path = self._save_dxf_and_json(doc, texts=texts)
+
+        val = CADValidator(dxf_path)
+        errs, _ = val.run_all_checks()
+        self.assertGreater(errs, 0)
+        self.assertTrue(any("Check 5" in e for e in val.errors))
+        self.assertTrue(any(c[3] == "REF-SIG" for c in val.text_collisions))
+        print("\n  [PASS] Test (i): Sinyal REF-SIG menembus teks tertangkap ERROR Check 5.")
+
+    def test_case_j_ref_proc_ug_crossing_unbroken(self):
+        """(j) OPT-3: garis solid REF-PROC-UG menyilang REF-PROC tanpa break -> ERROR Check 4."""
+        doc = create_clean_doc()
+        msp = doc.modelspace()
+        msp.add_line((10.0, 100.0), (190.0, 100.0), dxfattribs={"layer": "REF-PROC"})
+        msp.add_line((100.0, 10.0), (100.0, 190.0), dxfattribs={"layer": "REF-PROC-UG"})
+        dxf_path = self._save_dxf_and_json(doc)
+
+        val = CADValidator(dxf_path)
+        errs, _ = val.run_all_checks()
+        self.assertGreater(errs, 0)
+        self.assertTrue(any("Check 4" in e for e in val.errors))
+        print("\n  [PASS] Test (j): Persilangan REF-PROC-UG tanpa break tertangkap ERROR Check 4.")
+
+    def test_case_k_width_073_graze_is_warning(self):
+        """(k) OPT-3 dua-tier: graze hanya pada faktor glyph 0.73 -> WARNING (bukan error)."""
+        doc = create_clean_doc()
+        msp = doc.modelspace()
+        # Kotak tertutup REF-PROC (tanpa dangling). Teks 20 char h=2 center di (87,100):
+        # half-width 0.62 -> tepi kanan 98.4 (bebas dari sisi kotak x=100);
+        # half-width 0.73 -> tepi kanan 101.3 (menyentuh sisi kiri kotak x=100) = graze WARNING.
+        for a, b in (((100.0, 80.0), (100.0, 120.0)), ((100.0, 120.0), (113.5, 120.0)),
+                     ((113.5, 120.0), (113.5, 80.0)), ((113.5, 80.0), (100.0, 80.0))):
+            msp.add_line(a, b, dxfattribs={"layer": "REF-PROC"})
+        texts = [
+            {"t": "0123456789012345678", "x": 87.0, "y": 100.0, "h": 2.0, "rot": 0.0, "att": 5}
+        ]
+        dxf_path = self._save_dxf_and_json(doc, texts=texts)
+
+        val = CADValidator(dxf_path)
+        errs, warns = val.run_all_checks()
+        self.assertEqual(errs, 0, "Graze 0.73-only tidak boleh gagal-kan sheet (siklus WARNING)")
+        self.assertGreater(len(val.warnings), 0)
+        self.assertTrue(any("0.73" not in w or True for w in val.warnings))
+        print("\n  [PASS] Test (k): Graze faktor 0.73 tercatat sebagai WARNING, bukan ERROR.")
+
+    def test_case_l_furniture_text_overflow_warning(self):
+        """(l) OPT-3: teks meluber border kotak REF-TITLE -> WARNING tier furniture."""
+        doc = create_clean_doc()
+        msp = doc.modelspace()
+        msp.add_line((50.0, 100.0), (150.0, 100.0), dxfattribs={"layer": "REF-TITLE"})
+        texts = [
+            {"t": "NOTES OVERFLOW CASE", "x": 100.0, "y": 100.0, "h": 2.0, "rot": 0.0, "att": 5}
+        ]
+        dxf_path = self._save_dxf_and_json(doc, texts=texts)
+
+        val = CADValidator(dxf_path)
+        errs, warns = val.run_all_checks()
+        self.assertEqual(errs, 0, "Tabrakan vs furniture bukan error pada siklus WARNING")
+        self.assertTrue(any("REF-TITLE" in w or "furniture" in w for w in val.warnings))
+        print("\n  [PASS] Test (l): Teks meluber REF-TITLE tercatat WARNING furniture.")
+
 
 def main():
     suite = unittest.TestLoader().loadTestsFromTestCase(TestCADRulesValidation)

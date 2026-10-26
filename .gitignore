@@ -9,3 +9,4 @@ __pycache__/
 .zcode/workflow-drafts/
 cad/test_*.dxf
 cad/test_*.texts.json
+.zcode/plans/

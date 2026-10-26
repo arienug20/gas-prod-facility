@@ -35,6 +35,7 @@ COMPANY_LINEWEIGHTS = {
     "REF-PROC": 50,
     "REF-EQUIP": 35,
     "REF-FRAME": 35,
+    "REF-PROC-UG": 35,
     "REF-SYM": 25,
     "REF-TITLE": 25,
     "REF-TEXT": 18,
@@ -199,13 +200,14 @@ def segment_intersects_aabb(
 
 
 def compute_text_local_box(
-    text: str, h: float, att: int = 5, shrink: float = 0.35
+    text: str, h: float, att: int = 5, shrink: float = 0.35, factor: float = 0.73
 ) -> Tuple[float, float, float, float]:
     """Hitung bounding box 2D teks di ruang koordinat lokal (terhadap origin teks) dengan shrink margin."""
     lines = text.split("\n")
     max_len = max(len(l) for l in lines) if lines else 1
     num_lines = len(lines)
-    w = max_len * 0.62 * h
+    # factor: 0.73 = glyph Arial riil (tier WARNING); 0.62 = kalibrasi lama (tier ERROR)
+    w = max_len * factor * h
     total_h = h * (1.0 + 0.25 * (num_lines - 1))
 
     # Horizontal alignment
@@ -241,7 +243,9 @@ def compute_text_local_box(
     return lx0, ly0, lx1, ly1
 
 
-def get_text_obb_corners(item: Dict[str, Any], shrink: float = 0.15) -> List[Tuple[float, float]]:
+def get_text_obb_corners(
+    item: Dict[str, Any], shrink: float = 0.15, factor: float = 0.73
+) -> List[Tuple[float, float]]:
     """Dapatkan 4 sudut 2D bounding box teks di ruang koordinat gambar (world coordinates)."""
     t = str(item.get("t", "")).strip()
     x = float(item.get("x", 0.0))
@@ -250,7 +254,7 @@ def get_text_obb_corners(item: Dict[str, Any], shrink: float = 0.15) -> List[Tup
     rot_deg = float(item.get("rot", 0.0))
     att = int(item.get("att", 5))
 
-    lx0, ly0, lx1, ly1 = compute_text_local_box(t, h, att=att, shrink=shrink)
+    lx0, ly0, lx1, ly1 = compute_text_local_box(t, h, att=att, shrink=shrink, factor=factor)
     rad = math.radians(rot_deg)
     cos_a = math.cos(rad)
     sin_a = math.sin(rad)
@@ -614,7 +618,9 @@ class CADValidator:
 
     def _check_unbroken_crossings(self, msp) -> None:
         """Check 4: Deteksi persilangan pipa proses ortogonal tanpa break gap 3 mm."""
-        proc_lines = list(msp.query('LINE[layer=="REF-PROC"]'))
+        proc_lines = list(msp.query('LINE[layer=="REF-PROC"]')) + list(
+            msp.query('LINE[layer=="REF-PROC-UG"]')
+        )
         h_lines: List[Tuple[float, float, float, float]] = []
         v_lines: List[Tuple[float, float, float, float]] = []
 
@@ -663,7 +669,7 @@ class CADValidator:
         texts = extract_manifest_texts(self.json_path)
         valid_texts = [it for it in texts if str(it.get("t", "")).strip()]
 
-        target_layers = ("REF-PROC", "REF-EQUIP", "REF-SYM")
+        target_layers = ("REF-PROC", "REF-EQUIP", "REF-SYM", "REF-SIG", "REF-SIGP", "REF-PROC-UG")
         lines = [l for l in msp.query("LINE") if l.dxf.layer in target_layers]
         arcs = [a for a in msp.query("ARC") if a.dxf.layer in target_layers]
         circles = [c for c in msp.query("CIRCLE") if c.dxf.layer in target_layers]
@@ -679,7 +685,7 @@ class CADValidator:
             rot_deg = float(item.get("rot", 0.0))
             att = int(item.get("att", 5))
 
-            box = compute_text_local_box(t, h, att=att, shrink=0.35)
+            box = compute_text_local_box(t, h, att=att, shrink=0.35, factor=0.62)
             rad = math.radians(rot_deg)
             cos_a = math.cos(rad)
             sin_a = math.sin(rad)
@@ -752,15 +758,57 @@ class CADValidator:
                 if hit:
                     break
 
-        # 2. Text vs Text (Bounding Box tumpang tindih > 0.3 mm)
-        obbs = [(it, get_text_obb_corners(it, shrink=0.15)) for it in valid_texts]
+        warn_collisions_tt: List[Tuple[str, str, Tuple[float, float], str]] = []
+        # 2. Text vs Text (dua tier: tumpukan pada faktor 0.62 = ERROR; hanya pada
+        #    0.73 = WARNING graze)
+        obbs = [(it, get_text_obb_corners(it, shrink=0.15),
+                 get_text_obb_corners(it, shrink=0.15, factor=0.62)) for it in valid_texts]
         for i in range(len(obbs)):
             for j in range(i + 1, len(obbs)):
                 if obbs_overlap_sat(obbs[i][1], obbs[j][1]):
                     t1 = str(obbs[i][0].get("t", "")).strip()
                     t2 = str(obbs[j][0].get("t", "")).strip()
                     pt1 = (round(float(obbs[i][0].get("x", 0.0)), 2), round(float(obbs[i][0].get("y", 0.0)), 2))
-                    collisions.append(("TEXT", f"'{t1}' bertumpuk dengan '{t2}'", pt1, "REF-TEXT"))
+                    hard = obbs_overlap_sat(obbs[i][2], obbs[j][2])
+                    if hard:
+                        collisions.append(("TEXT", f"'{t1}' bertumpuk dengan '{t2}'", pt1, "REF-TEXT"))
+                    else:
+                        warn_collisions_tt = warn_collisions_tt + [("TEXT", f"'{t1}' menyentuh '{t2}'", pt1, "REF-TEXT")]
+
+        # OPT-3: tier WARNING — teks vs garis furniture REF-FRAME/REF-TITLE/REF-GRID
+        # (menangkap teks meluber keluar kotak NOTES/LEGEND/border; belum gagal-kan sheet)
+        warn_layers = ("REF-PROC", "REF-EQUIP", "REF-SYM", "REF-SIG", "REF-SIGP",
+                       "REF-PROC-UG", "REF-FRAME", "REF-TITLE", "REF-GRID")
+        err_texts = {c[1] for c in collisions}
+        warn_lines = [l for l in msp.query("LINE") if l.dxf.layer in warn_layers]
+        warn_collisions: List[Tuple[str, str, Tuple[float, float], str]] = []
+        for item in valid_texts:
+            t = str(item.get("t", "")).strip()
+            if t in err_texts:
+                continue
+            x = float(item.get("x", 0.0))
+            y = float(item.get("y", 0.0))
+            h = float(item.get("h", 2.0))
+            rot_deg = float(item.get("rot", 0.0))
+            att = int(item.get("att", 5))
+            box = compute_text_local_box(t, h, att=att, shrink=0.35, factor=0.73)
+            rad = math.radians(rot_deg)
+            cos_a, sin_a = math.cos(rad), math.sin(rad)
+            for pl in warn_lines:
+                p1, p2 = pl.dxf.start, pl.dxf.end
+                dx1, dy1 = float(p1.x) - x, float(p1.y) - y
+                dx2, dy2 = float(p2.x) - x, float(p2.y) - y
+                tx1, ty1 = dx1 * cos_a + dy1 * sin_a, -dx1 * sin_a + dy1 * cos_a
+                tx2, ty2 = dx2 * cos_a + dy2 * sin_a, -dx2 * sin_a + dy2 * cos_a
+                if segment_intersects_aabb((tx1, ty1), (tx2, ty2), box):
+                    warn_collisions.append(("LINE", t, (round(x, 2), round(y, 2)), pl.dxf.layer))
+                    break
+        warn_collisions = warn_collisions + warn_collisions_tt
+        if warn_collisions:
+            sample = [(c[0], c[1][:25], c[2], c[3]) for c in warn_collisions[:5]]
+            self.warnings.append(
+                f"Check 5 (furniture): {len(warn_collisions)} teks menyentuh garis REF-FRAME/TITLE/GRID: {sample}"
+            )
 
         self.text_collisions = collisions
         if collisions:
@@ -780,8 +828,13 @@ class CADValidator:
         solids = list(msp.query("SOLID"))
         mtexts = list(msp.query("MTEXT"))
 
-        target_lines = [l for l in lines if l.dxf.layer in ("REF-PROC", "REF-EQUIP")]
-        cand_layers = ("REF-PROC", "REF-EQUIP", "REF-SYM", "REF-FRAME", "REF-TITLE")
+        target_lines = [l for l in lines if l.dxf.layer in ("REF-PROC", "REF-EQUIP")] + [
+            l for l in lines
+            if l.dxf.layer == "REF-PROC-UG"
+            and math.hypot(float(l.dxf.start.x) - float(l.dxf.end.x),
+                           float(l.dxf.start.y) - float(l.dxf.end.y)) > 6.0
+        ]
+        cand_layers = ("REF-PROC", "REF-EQUIP", "REF-SYM", "REF-FRAME", "REF-TITLE", "REF-PROC-UG")
         cand_lines = [l for l in lines if l.dxf.layer in cand_layers]
         cand_arcs = [a for a in arcs if a.dxf.layer in cand_layers]
         cand_circs = [c for c in circles if c.dxf.layer in cand_layers]

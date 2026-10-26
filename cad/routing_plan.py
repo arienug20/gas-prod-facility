@@ -1,7 +1,9 @@
 """PIPING PLAN - SEPARATOR TO FLARE & STORAGE TANK.
 
-GPF-00-PI-PLN-0002 Rev A0-A2 841x594, scale 1:200.
+GPF-00-PI-PLN-0002 Rev A0-A3 841x594, scale 1:200.
 Rev A2: text converted to MTEXT per company standard (apply_text.py).
+Rev A3: QA linter fix (OPT-3) — labels moved off lines / notes
+respaced below grid letters; flow arrow added on CD-1007 riser.
 Plant (0..100, 0..60) m -> sheet: X = 40 + 5*E ; Y = 40 + 5*N.
 Source: dokumen/01-design-basis.md + dokumen/03-plan-routing.md par.2.
 """
@@ -124,10 +126,14 @@ def frame_items():
 # ---- REF-TITLE: title block ISO 7200 + rev table --------------------------
 def title_items():
     it = rect(651.0, 15.0, 827.0, 105.0)
-    # rev table reuses the shared edge y=105 (no duplicate); A2 adds row 120-125
+    # rev table reuses the shared edge y=105 (no duplicate); A2 row 120-125,
+    # A3 row 125-130
     it += [line(651.0, 105.0, 651.0, 125.0), line(651.0, 120.0, 827.0, 120.0),
            line(651.0, 125.0, 827.0, 125.0), line(827.0, 105.0, 827.0, 125.0),
            line(700.0, 120.0, 700.0, 125.0), line(770.0, 120.0, 770.0, 125.0)]
+    it += [line(651.0, 125.0, 651.0, 130.0), line(651.0, 130.0, 827.0, 130.0),
+           line(827.0, 125.0, 827.0, 130.0), line(700.0, 125.0, 700.0, 130.0),
+           line(770.0, 125.0, 770.0, 130.0)]
     for y in (88.0, 71.0, 57.25, 43.5, 29.75):
         it.append(line(651.0, y, 827.0, y))
     for x in (700.0, 770.0):
@@ -138,8 +144,8 @@ def title_items():
                    739.0, 79.5, 3.0))
     fields = [
         (64.1, "DOC NO: GPF-00-PI-PLN-0002"),
-        (50.4, "REV: A2 (ISSUED FOR REVIEW)    SCALE: 1:200 @ A1"),
-        (36.6, "DATE: 12 OCT 2026    UNITS: mm    SHEET: 1 OF 1"),
+        (50.4, "REV: A3 (ISSUED FOR REVIEW)    SCALE: 1:200 @ A1"),
+        (36.6, "DATE: 26 OCT 2026    UNITS: mm    SHEET: 1 OF 1"),
         (22.4, "DRAWN: GLM-5.3-FLASH    CHECKED: PM (AI)    APPROVED: —"),
     ]
     for y, s in fields:
@@ -157,6 +163,9 @@ def title_items():
     it.extend(text("TEXT CONVERTED TO MTEXT PER COMPANY STANDARD",
                    735.0, 122.5, 1.8))
     it.extend(text("12 OCT 26", 798.5, 122.5, 1.8))
+    it.extend(text("A3", 675.5, 127.5, 1.8))
+    it.extend(text("QA LINTER FIX — LABEL/NOTES OFFSET (OPT-3)", 735.0, 127.5, 1.8))
+    it.extend(text("26 OCT 26", 798.5, 127.5, 1.8))
     return it
 
 
@@ -310,7 +319,8 @@ def proc_items():
         (67, 16.9, 90),                                # CO-1004 (7)
         (26, 27, 270), (40, 22, 0), (55, 22, 0),
         (70, 22, 0), (85, 22, 0),                      # PW-1006 (5)
-        (44.5, 20, 270), (60, 6, 0), (75, 6, 0), (90, 6, 0),   # CD-1007 (4)
+        (44.5, 27, 270), (44.5, 20, 270), (60, 6, 0), (75, 6, 0),
+        (90, 6, 0),                                           # CD-1007 (5)
         (69, 10.3, 270), (80, 9.7, 0), (92, 9.7, 0),   # loading (3)
         (25, 36, 0), (40, 36, 0), (50, 35.5, 270),     # PSV tail (3)
     ]
@@ -366,21 +376,21 @@ def txt_items():
     # route labels (skill §1: line no 2.0; from/to 2.0, split two lines)
     it.extend(text("100-PF-1001 DN150", *P(5, 35.4), 2.0))
     it.extend(text("FROM PRODUCTION HEADER", *P(5, 34.6), 2.0))
-    it.extend(text("100-GO-1002 DN100 SLOPE 1:500", *P(46, 35.6), 2.0))
+    it.extend(text("100-GO-1002 DN100 SLOPE 1:500", *P(23, 36.9), 2.0))  # A3: was (46,35.6), hit support box
     it.extend(text("100-FL-1005 DN150 FLARE HEADER", *P(52, 44.4), 2.0))
     it.extend(text("PSV TAIL + GO-1002 — SLOPE 1:500 TO KO DRUM",
-                   *P(52, 43.6), 2.0))
-    it.extend(text("080-CO-1003 DN80", *P(19, 32.6), 2.0))
+                   *P(51, 43.6), 2.0))  # A3: was (52,43.6), grazed FL riser
+    it.extend(text("080-CO-1003 DN80", *P(16, 31.5), 2.0))  # A3: was (19,32.6), hit bund dashed
     it.extend(text("080-CO-1004 DN80", *P(30, 32.0), 2.0))
     it.extend(text("TO TANK", *P(30, 31.2), 2.0))
     it.extend(text("080-CO-1004 DN80", *P(55, 16.8), 2.0))
-    it.extend(text("TO TANK", *P(55, 16.0), 2.0))
+    it.extend(text("TO TANK", *P(55, 15.2), 2.0))  # A3: was (55,16.0), on line CO-1004
     it.extend(text("050-PW-1006 DN50", *P(60, 23.4), 2.0))
     it.extend(text("TO PW TREATMENT", *P(60, 22.6), 2.0))
     it.extend(text("050-CD-1007 DN50", *P(60, 7.4), 2.0))
     it.extend(text("TO CLOSED DRAIN", *P(60, 6.6), 2.0))
     it.extend(text("T-101 N3 DN80", *P(80, 11.2), 2.0))
-    it.extend(text("TO TRUCK LOADING (BY OTHERS)", *P(80, 10.4), 2.0))
+    it.extend(text("TO TRUCK LOADING (BY OTHERS)", *P(80.4, 10.4), 2.0))  # A3: was (80,10.4), grazed bund
     it.extend(text("PSV-101 TAIL DN150", *P(46, 36.7), 2.0))
     # equipment labels (2.5-3.0)
     it.extend(text("V-101 3-PHASE SEPARATOR", *P(14, 30.5), 2.5))
@@ -464,10 +474,10 @@ def txt_items():
         "7. ROUTE SURVEY & PIPE SUPPORT DESIGN BY OTHERS.",
         "8. SEE P&ID GPF-00-PI-PID-0001 FOR INSTRUMENTATION.",
     ]
-    y = 32.8
+    y = 31.5  # A3: was 32.8 — note 1 hit grid letters B/C at y 34 (linter)
     for s in notes:
         it.extend(text(s, 56.0, y, 2.2, left=True))
-        y -= 3.0
+        y -= 2.8  # A3: was 3.0 — keeps note 8 clear of frame border y=10
     return it
 
 

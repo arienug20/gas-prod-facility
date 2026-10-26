@@ -1027,9 +1027,9 @@
       "att": 5
     },
     {
-      "t": "TYP. UG LINE - SEE PIPELINE LINE INDEX",
-      "x": 145.0,
-      "y": 100.5,
+      "t": "TYP. UG LINE -\nSEE PIPELINE LINE INDEX",
+      "x": 148.0,
+      "y": 104.0,
       "h": 1.8,
       "rot": 0.0,
       "layer": "REF-TEXT",
