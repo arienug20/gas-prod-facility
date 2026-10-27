@@ -6,7 +6,9 @@ import sys
 import tempfile
 from pathlib import Path
 
-REPO = Path(r"C:\Users\Reka Elang\AppData\Local\Temp\gas-prod-facility")
+# Path relatif terhadap lokasi file ini (tools/ -> root repo), BUKAN absolut:
+# path absolut lokal membuat test ini gagal di CI Linux.
+REPO = Path(__file__).resolve().parent.parent
 TOOLS = REPO / "tools"
 
 
@@ -117,7 +119,10 @@ def main():
                 ok += 1
             detail = next((ln.strip() for ln in out.splitlines()
                            if ln.startswith(f"[ERROR] {expect}")), "-")
-            print(f"[{status}] {name:<40} exit={code} {detail[:70]}")
+            if status == "FAIL":
+                tail = " / ".join(out.strip().splitlines()[-3:])[:160]
+                detail = f"TIDAK TERDETEKSI ({expect}) :: {tail}"
+            print(f"[{status}] {name:<40} exit={code} {detail[:140]}")
         finally:
             shutil.rmtree(repo.parent, ignore_errors=True)
 
@@ -127,7 +132,10 @@ def main():
     status = "PASS" if code == 0 else "FAIL"
     if status == "PASS":
         ok += 1
-    print(f"[{status}] {'baseline repo bersih (harus exit 0)':<40} exit={code}")
+    tail = "" if status == "PASS" else " :: " + " / ".join(
+        out.strip().splitlines()[-3:])[:140]
+    print(f"[{status}] {'baseline repo bersih (harus exit 0)':<40} "
+          f"exit={code}{tail}")
 
     print("-" * 70)
     print(f"HASIL NEGATIVE TEST: {ok}/{total}")
