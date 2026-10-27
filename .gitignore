@@ -10,3 +10,17 @@ __pycache__/
 cad/test_*.dxf
 cad/test_*.texts.json
 .zcode/plans/
+
+# Python venv, cache & tooling
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Keluaran quality gate
+gate.json
+rebuild.json

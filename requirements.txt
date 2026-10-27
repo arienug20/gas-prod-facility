@@ -1,0 +1,40 @@
+# ============================================================================
+# requirements.txt — gas-prod-facility (GPF CAD Suite)
+#
+# Dipakai untuk environment reproducible di CI dan workstation engineer.
+#
+#   python -m venv .venv
+#   .venv\Scripts\activate           # Windows
+#   pip install -r requirements.txt
+#
+# Target Python: 3.11 / 3.12 / 3.13
+#   (3.14 BELUM didukung: dependency cadgen/OCC belum punya wheel 3.14 —
+#    lihat DEPENDENCIES.md § "Kenapa Python 3.14 tidak dipakai")
+#
+# Pin di sini adalah versi yang SUDAH TERUJI di repo ini. Untuk memperbarui,
+# jalankan gate lokal dulu:  python tools/quality_gate.py
+# ============================================================================
+
+# --- Inti (WAJIB) -----------------------------------------------------------
+# ezdxf adalah satu-satunya dependency pihak ketiga yang benar-benar diimpor
+# oleh pustaka perusahaan (cad/validate_cad_rules.py, apply_text.py, dst).
+ezdxf==1.4.3
+
+# --- Render / QA visual -----------------------------------------------------
+# Dipakai oleh cadshim.py (backend ezdxf) untuk snapshot DXF -> PNG.
+matplotlib==3.10.8
+pillow==12.1.0
+
+# Numerik: dipakai untuk analisis citra pada QA test (opsional di runtime).
+numpy==2.4.1
+
+# --- CAD opsional -----------------------------------------------------------
+# cadgen TIDAK dipin di sini secara default. Lihat DEPENDENCIES.md.
+# Untuk mengaktifkannya:
+#   pip install -r requirements-cadgen.txt
+# PERINGATAN: cadgen>=0.7.22 menarik cadquery-ocp-novtk (kernel OCC,
+# ratusan MB) + playwright. Instalasi bisa puluhan menit.
+#
+# cadcraft-cli adalah aplikasi biner (Rust), bukan paket pip.
+# Unduh: https://github.com/storytold/cadcraft/releases
+#   cadcraft-<ver>-windows-x64-portable.zip  -> berisi cadcraft-cli.exe

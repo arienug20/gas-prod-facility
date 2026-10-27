@@ -1,0 +1,23 @@
+# ============================================================================
+# requirements-cadgen.txt — backend cadgen OPSIONAL
+#
+# HANYA dipasang bila engineer memang membutuhkan backend cadgen asli
+# (build123d + CAD kernel OCC). Resolver `cadbackend.py` sudah otomatis
+# memakai backend ezdxf bila file ini tidak dipasang, sehingga hasil
+# drawing & QA TIDAK berubah.
+#
+#   pip install -r requirements.txt -r requirements-cadgen.txt
+#
+# Ukuran unduhan: ratusan MB (cadquery-ocp-novtk). Di mesin tanpa kompilator
+# lengkap, instalasi bisa >30 menit atau gagal. Tidak dipakai CI.
+# ============================================================================
+
+# 0.7.26 = rilis stabil terbaru saat file ini ditulis (cek: pip index versions cadgen)
+cadgen==0.7.26
+
+# Pin transitif penting: cadgen>=0.7.22 bergantung pada OCC + playwright.
+# Playwright tidak diperlukan untuk build/snapshot headless; bila instalasi
+# menggantung pada langkah playwright, pasang dengan:
+#   pip install cadgen==0.7.26 --no-deps
+#   pip install build123d cadquery-ocp-novtk ezdxf matplotlib pillow shapely
+playwright==1.64.0 ; python_version >= "3.11"
