@@ -24,3 +24,7 @@ dist/
 # Keluaran quality gate
 gate.json
 rebuild.json
+
+# Keluaran ekspor Excel (tools/export_xlsx.py)
+dist/
+*.xlsx

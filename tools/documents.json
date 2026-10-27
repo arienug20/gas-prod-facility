@@ -17,8 +17,8 @@
     {"file": "air_system_demo",   "doc_no": "GPF-00-PI-PID-0014", "sheet": "A1", "type": "P&ID"},
     {"file": "metering_demo",     "doc_no": "GPF-00-PI-PID-0015", "sheet": "A1", "type": "P&ID"},
     {"file": "lbcv_demo",         "doc_no": "GPF-00-PI-PID-0016", "sheet": "A1", "type": "P&ID"},
-    {"file": "underground_demo",  "doc_no": "GPF-00-PI-PLN-0017", "sheet": "A1", "type": "PIPING PLAN"},
-    {"file": "supports_demo",     "doc_no": "GPF-00-PI-STD-0018", "sheet": "A1", "type": "STANDARD"},
+    {"file": "underground_demo",  "doc_no": "GPF-00-PI-PLN-0017", "sheet": "A3", "type": "PIPING PLAN"},
+    {"file": "supports_demo",     "doc_no": "GPF-00-PI-STD-0018", "sheet": "A3", "type": "STANDARD"},
     {"file": "alignment_demo",    "doc_no": "GPF-00-PI-PLN-0019", "sheet": "A1", "type": "PIPING PLAN"},
     {"file": "pid_recip_booster", "doc_no": "GPF-00-PI-PID-0020", "sheet": "A1", "type": "P&ID"},
     {"file": "pid_centrifugal",   "doc_no": "GPF-00-PI-PID-0021", "sheet": "A1", "type": "P&ID"}

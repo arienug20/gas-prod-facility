@@ -309,6 +309,37 @@ def step_bom_negtest() -> Result:
                   seconds=time.perf_counter() - t0)
 
 
+def _script_step(label: str, script_name: str, summary_prefix: str,
+                 timeout: int = 600) -> Result:
+    """Jalankan salah satu alat QA di tools/ dan ringkas hasilnya."""
+    script = Path(__file__).resolve().parent / script_name
+    if not script.is_file():
+        return Result(label, True, f"{script_name} tidak ada (DILEWATI)")
+    t0 = time.perf_counter()
+    try:
+        r = _run([sys.executable, str(script)], cwd=REPO, timeout=timeout)
+    except subprocess.TimeoutExpired:
+        return Result(label, False, "TIMEOUT")
+    out = (r.stdout or "") + (r.stderr or "")
+    errs = [ln.strip() for ln in out.splitlines() if ln.startswith("[ERROR]")]
+    warns = [ln.strip() for ln in out.splitlines() if ln.startswith("[WARN ]")]
+    summary = next((ln.strip() for ln in out.splitlines()
+                    if ln.startswith(summary_prefix)), "")
+    return Result(label, r.returncode == 0, summary, errs, warns,
+                  time.perf_counter() - t0)
+
+
+def step_titleblock() -> Result:
+    """Field title block per ISO 7200 (tools/titleblock_check.py)."""
+    return _script_step("titleblock", "titleblock_check.py", "HASIL:")
+
+
+def step_tools_test() -> Result:
+    """Uji negatif titleblock/revdiff/export_xlsx (tools/test_tools.py)."""
+    return _script_step("tools-test", "test_tools.py", "HASIL TOOLS TEST",
+                        timeout=900)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -324,12 +355,14 @@ def main(argv=None) -> int:
     results.append(step_hygiene())
     results.append(step_consistency())
     results.append(step_bom())
+    results.append(step_titleblock())
     if args.build and not args.lint_only:
         results.extend(step_build())
     results.extend(step_lint())
     if not args.lint_only:
         results.append(terminate_negative_tests())
         results.append(step_bom_negtest())
+        results.append(step_tools_test())
         results.append(step_tests())
 
     # --- verifikasi cakupan: 16 sheet wajib ada -----------------------------
