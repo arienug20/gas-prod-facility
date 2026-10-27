@@ -213,14 +213,26 @@ def step_tests() -> Result:
     has_pytest = _run([sys.executable, "-c", "import pytest"]).returncode == 0
     if not has_pytest:
         return Result("tests", True, "pytest tidak terpasang (DILEWATI)")
+
+    # Folder kosong tidak ikut ter-commit, sehingga `tests/` bisa TIDAK ADA di CI
+    # sementara ada di mesin lokal. pytest menolak argumen direktori yang tidak
+    # ada ("no tests ran") -> sertakan hanya path yang benar-benar eksis.
+    targets = [str(p) for p in (CAD, REPO / "tests") if p.is_dir()]
+    if not targets:
+        return Result("tests", False, "tidak ada direktori test")
+
     t0 = time.perf_counter()
     try:
-        r = _run([sys.executable, "-m", "pytest", "-q", "--no-header",
-                  str(CAD), str(REPO / "tests")], cwd=REPO, timeout=1800)
+        r = _run([sys.executable, "-m", "pytest", "-q", "--no-header", *targets],
+                 cwd=REPO, timeout=1800)
     except subprocess.TimeoutExpired:
         return Result("tests", False, "TIMEOUT")
-    tail = (r.stdout or r.stderr).strip().splitlines()
+    out = (r.stdout or "") + (r.stderr or "")
+    tail = out.strip().splitlines()
     detail = " | ".join(tail[-3:]) if tail else ""
+    # "no tests ran" harus dianggap GAGAL (exit code pytest bisa 5).
+    if "no tests ran" in out:
+        return Result("tests", False, f"tidak ada test yang dikumpulkan | {detail}")
     return Result("tests", r.returncode == 0, detail,
                   seconds=time.perf_counter() - t0)
 
