@@ -28,6 +28,12 @@ pillow==12.1.0
 # Numerik: dipakai untuk analisis citra pada QA test (opsional di runtime).
 numpy==2.4.1
 
+# --- Ekspor Excel -----------------------------------------------------------
+# Dipakai tools/export_xlsx.py. WAJIB ada di CI: tanpa openpyxl alat itu
+# sengaja melewati ekspor (exit 0), sehingga uji tools/test_tools.py gagal
+# dengan pesan yang menyesatkan (tampak bug alat, padahal dependency).
+openpyxl==3.1.5
+
 # --- CAD opsional -----------------------------------------------------------
 # cadgen TIDAK dipin di sini secara default. Lihat DEPENDENCIES.md.
 # Untuk mengaktifkannya:
