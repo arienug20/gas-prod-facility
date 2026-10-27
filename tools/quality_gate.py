@@ -273,6 +273,42 @@ def terminate_negative_tests() -> Result:
                   seconds=time.perf_counter() - t0)
 
 
+def step_bom() -> Result:
+    """Konsistensi BOM vs geometri isometrik (tools/bom_extract.py)."""
+    script = Path(__file__).resolve().parent / "bom_extract.py"
+    if not script.is_file():
+        return Result("bom", True, "bom_extract.py tidak ada (DILEWATI)")
+    t0 = time.perf_counter()
+    try:
+        r = _run([sys.executable, str(script)], cwd=REPO, timeout=600)
+    except subprocess.TimeoutExpired:
+        return Result("bom", False, "TIMEOUT")
+    out = (r.stdout or "") + (r.stderr or "")
+    errs = [ln.strip() for ln in out.splitlines() if ln.startswith("[ERROR]")]
+    warns = [ln.strip() for ln in out.splitlines() if ln.startswith("[WARN ]")]
+    summary = next((ln.strip() for ln in out.splitlines()
+                    if ln.startswith("HASIL:")), "")
+    return Result("bom", r.returncode == 0, summary, errs, warns,
+                  time.perf_counter() - t0)
+
+
+def step_bom_negtest() -> Result:
+    """Uji negatif BOM: BOM yang salah harus terdeteksi."""
+    script = Path(__file__).resolve().parent / "test_bom_negative.py"
+    if not script.is_file():
+        return Result("bom-negtest", True, "tidak ada (DILEWATI)")
+    t0 = time.perf_counter()
+    try:
+        r = _run([sys.executable, str(script)], cwd=REPO, timeout=600)
+    except subprocess.TimeoutExpired:
+        return Result("bom-negtest", False, "TIMEOUT")
+    out = (r.stdout or "") + (r.stderr or "")
+    summary = next((ln.strip() for ln in out.splitlines()
+                    if ln.startswith("HASIL NEGATIVE TEST BOM")), "?")
+    return Result("bom-negtest", r.returncode == 0, summary,
+                  seconds=time.perf_counter() - t0)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -287,11 +323,13 @@ def main(argv=None) -> int:
     results.append(step_environment())
     results.append(step_hygiene())
     results.append(step_consistency())
+    results.append(step_bom())
     if args.build and not args.lint_only:
         results.extend(step_build())
     results.extend(step_lint())
     if not args.lint_only:
         results.append(terminate_negative_tests())
+        results.append(step_bom_negtest())
         results.append(step_tests())
 
     # --- verifikasi cakupan: 16 sheet wajib ada -----------------------------
