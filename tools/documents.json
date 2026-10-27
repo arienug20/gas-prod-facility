@@ -1,0 +1,31 @@
+{
+  "_comment": [
+    "Registri dokumen GPF. Satu sumber kebenaran untuk pemetaan file -> nomor dokumen.",
+    "Dipakai tools/consistency_check.py untuk memverifikasi title block.",
+    "Tambahkan entri setiap kali ada drawing baru. 'file' = nama tanpa .dxf di cad/."
+  ],
+  "schema": 1,
+  "documents": [
+    {"file": "pid_v101",          "doc_no": "GPF-00-PI-PID-0001", "sheet": "A1", "type": "P&ID"},
+    {"file": "routing_plan",      "doc_no": "GPF-00-PI-PLN-0002", "sheet": "A1", "type": "PIPING PLAN"},
+    {"file": "iso_go1002",        "doc_no": "GPF-00-PI-ISO-0003", "sheet": "A3", "type": "ISOMETRIC"},
+    {"file": "iso_co1003",        "doc_no": "GPF-00-PI-ISO-0004", "sheet": "A3", "type": "ISOMETRIC"},
+    {"file": "iso_co1004",        "doc_no": "GPF-00-PI-ISO-0005", "sheet": "A3", "type": "ISOMETRIC"},
+    {"file": "wellhead_demo",     "doc_no": "GPF-00-PI-PID-0011", "sheet": "A1", "type": "P&ID"},
+    {"file": "compression_demo",  "doc_no": "GPF-00-PI-PID-0012", "sheet": "A1", "type": "P&ID"},
+    {"file": "powergen_demo",     "doc_no": "GPF-00-PI-PID-0013", "sheet": "A1", "type": "P&ID"},
+    {"file": "air_system_demo",   "doc_no": "GPF-00-PI-PID-0014", "sheet": "A1", "type": "P&ID"},
+    {"file": "metering_demo",     "doc_no": "GPF-00-PI-PID-0015", "sheet": "A1", "type": "P&ID"},
+    {"file": "lbcv_demo",         "doc_no": "GPF-00-PI-PID-0016", "sheet": "A1", "type": "P&ID"},
+    {"file": "underground_demo",  "doc_no": "GPF-00-PI-PLN-0017", "sheet": "A1", "type": "PIPING PLAN"},
+    {"file": "supports_demo",     "doc_no": "GPF-00-PI-STD-0018", "sheet": "A1", "type": "STANDARD"},
+    {"file": "alignment_demo",    "doc_no": "GPF-00-PI-PLN-0019", "sheet": "A1", "type": "PIPING PLAN"},
+    {"file": "pid_recip_booster", "doc_no": "GPF-00-PI-PID-0020", "sheet": "A1", "type": "P&ID"},
+    {"file": "pid_centrifugal",   "doc_no": "GPF-00-PI-PID-0021", "sheet": "A1", "type": "P&ID"}
+  ],
+  "design_basis": {
+    "file": "dokumen/01-design-basis.md",
+    "doc_no": "GPF-00-DB-0001"
+  },
+  "_seq_rule": "Nomor urut dokumen unik dan tidak boleh dipakai dua file berbeda."
+}

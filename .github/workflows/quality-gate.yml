@@ -79,6 +79,9 @@ jobs:
         run: ruff check . --output-format=concise
         continue-on-error: true
 
+      - name: Konsistensi Design Basis <-> Drawing
+        run: python tools/consistency_check.py
+
       - name: Quality gate (sweep 16 DXF + tests)
         env:
           GPF_CAD_ALLOW_INSTALL: "0"

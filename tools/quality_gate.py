@@ -237,6 +237,42 @@ def step_tests() -> Result:
                   seconds=time.perf_counter() - t0)
 
 
+def step_consistency() -> Result:
+    """Konsistensi Design Basis <-> Drawing & title block (tools/consistency_check.py)."""
+    script = Path(__file__).resolve().parent / "consistency_check.py"
+    if not script.is_file():
+        return Result("consistency", True, "consistency_check.py tidak ada (DILEWATI)")
+    t0 = time.perf_counter()
+    try:
+        r = _run([sys.executable, str(script)], cwd=REPO, timeout=600)
+    except subprocess.TimeoutExpired:
+        return Result("consistency", False, "TIMEOUT")
+    out = (r.stdout or "") + (r.stderr or "")
+    errs = [ln.strip() for ln in out.splitlines() if ln.startswith("[ERROR]")]
+    warns = [ln.strip() for ln in out.splitlines() if ln.startswith("[WARN ]")]
+    summary = next((ln.strip() for ln in out.splitlines()
+                    if ln.startswith("HASIL:")), "")
+    return Result("consistency", r.returncode == 0, summary, errs, warns,
+                  time.perf_counter() - t0)
+
+
+def terminate_negative_tests() -> Result:
+    """Uji negatif validator konsistensi (validator harus bisa GAGAL)."""
+    script = Path(__file__).resolve().parent / "test_consistency_negative.py"
+    if not script.is_file():
+        return Result("consistency-negtest", True, "tidak ada (DILEWATI)")
+    t0 = time.perf_counter()
+    try:
+        r = _run([sys.executable, str(script)], cwd=REPO, timeout=900)
+    except subprocess.TimeoutExpired:
+        return Result("consistency-negtest", False, "TIMEOUT")
+    out = (r.stdout or "") + (r.stderr or "")
+    summary = next((ln.strip() for ln in out.splitlines()
+                    if ln.startswith("HASIL NEGATIVE TEST")), "?")
+    return Result("consistency-negtest", r.returncode == 0, summary,
+                  seconds=time.perf_counter() - t0)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -250,10 +286,12 @@ def main(argv=None) -> int:
     results: list[Result] = []
     results.append(step_environment())
     results.append(step_hygiene())
+    results.append(step_consistency())
     if args.build and not args.lint_only:
         results.extend(step_build())
     results.extend(step_lint())
     if not args.lint_only:
+        results.append(terminate_negative_tests())
         results.append(step_tests())
 
     # --- verifikasi cakupan: 16 sheet wajib ada -----------------------------
