@@ -92,25 +92,40 @@ def main():
                       "dilewati dengan benar"))
 
     # ---- export_xlsx
+    # openpyxl WAJIB: tanpa itu export_xlsx.py sengaja melewati ekspor
+    # (exit 0) sehingga uji ini gagal dengan pesan yang membingungkan.
+    # Deteksi lebih awal dan laporkan sebabnya secara eksplisit.
+    try:
+        import openpyxl  # noqa: F401
+        has_openpyxl = True
+    except ImportError:
+        has_openpyxl = False
+
     def xlsx_ok():
         repo = fresh()
         code, out = run("export_xlsx.py", "-o", str(repo / "dist" / "t.xlsx"),
                         cwd=repo)
         exists = (repo / "dist" / "t.xlsx").is_file()
         shutil.rmtree(repo.parent, ignore_errors=True)
+        if not has_openpyxl:
+            return False, "openpyxl TIDAK TERPASANG (pip install openpyxl)"
         return code == 0 and exists, "berkas dibuat" if exists else "tidak ada"
     case("export_xlsx: menghasilkan berkas", xlsx_ok)
 
     def xlsx_content():
+        if not has_openpyxl:
+            return False, "openpyxl TIDAK TERPASANG (pip install openpyxl)"
         from openpyxl import load_workbook
         repo = fresh()
         out_p = repo / "dist" / "t.xlsx"
         run("export_xlsx.py", "-o", str(out_p), cwd=repo)
+        if not out_p.is_file():
+            shutil.rmtree(repo.parent, ignore_errors=True)
+            return False, "berkas XLSX tidak terbentuk"
         wb = load_workbook(out_p)
         need = {"BOM per Lembar", "Komponen Gabungan", "Line List",
                 "Instrument Index", "Equipment Register", "Register Dokumen"}
         got = set(wb.sheetnames)
-        # minimal ada baris data
         rows = wb["BOM per Lembar"].max_row - 1
         shutil.rmtree(repo.parent, ignore_errors=True)
         return need <= got and rows > 0, f"{len(got)} sheet, {rows} baris BOM"
