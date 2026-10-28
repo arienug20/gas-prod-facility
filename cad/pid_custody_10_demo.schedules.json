@@ -1,0 +1,106 @@
+{
+  "equipment": [
+    {
+      "tag": "USM-9101",
+      "type": "ULTRASONIC GAS METER - SIZE AND CUSTODY QUALIFICATION TBD",
+      "x": 300,
+      "y": 320,
+      "conditioner": null,
+      "paths": null,
+      "symbol_length_sheet_mm": 44.0,
+      "physical_length": null
+    },
+    {
+      "tag": "AT-9101",
+      "type": "GAS ANALYZER PACKAGE - COMPOSITION AND H2S CAPABILITY TBD",
+      "x": 120,
+      "y": 205
+    }
+  ],
+  "valves": [
+    {
+      "tag": "DBB-9101",
+      "type": "DOUBLE BLOCK AND BLEED - QUALIFICATION TBD",
+      "orientation": "H",
+      "x": 190,
+      "y": 320
+    },
+    {
+      "tag": "DBB-9101-BLD",
+      "type": "CAVITY BLEED VALVE (PLUG)",
+      "orientation": "V",
+      "x": 190,
+      "y": 324.5
+    },
+    {
+      "tag": "DBB-9102",
+      "type": "DOUBLE BLOCK AND BLEED - QUALIFICATION TBD",
+      "orientation": "H",
+      "x": 525,
+      "y": 320
+    },
+    {
+      "tag": "DBB-9102-BLD",
+      "type": "CAVITY BLEED VALVE (PLUG)",
+      "orientation": "V",
+      "x": 525,
+      "y": 324.5
+    },
+    {
+      "tag": "GV-9101",
+      "type": "GATE VALVE",
+      "orientation": "V",
+      "x": 120,
+      "y": 270,
+      "flanged": true
+    }
+  ],
+  "instruments": [
+    {
+      "tag": "FT-9101",
+      "tag1": "FT",
+      "tag2": "9101",
+      "type": "FIELD INSTRUMENT",
+      "x": 300,
+      "y": 341.0
+    },
+    {
+      "tag": "FQI-9101",
+      "tag1": "FQI",
+      "tag2": "9101",
+      "type": "DCS SHARED DISPLAY",
+      "x": 300,
+      "y": 360.0
+    },
+    {
+      "tag": "PT-9101",
+      "tag1": "PT",
+      "tag2": "9101",
+      "type": "FIELD INSTRUMENT",
+      "x": 395,
+      "y": 355
+    },
+    {
+      "tag": "TT-9101",
+      "tag1": "TT",
+      "tag2": "9101",
+      "type": "FIELD INSTRUMENT",
+      "x": 470,
+      "y": 390
+    }
+  ],
+  "lines": [
+    {
+      "line_no": "XXX-MT-9101",
+      "spec": "TBD",
+      "service": "GAS INLET",
+      "dn": null
+    },
+    {
+      "line_no": "XXX-MT-9102",
+      "spec": "TBD",
+      "service": "METER OUTLET",
+      "dn": null
+    }
+  ]
+}

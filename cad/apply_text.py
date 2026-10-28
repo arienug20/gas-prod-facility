@@ -26,7 +26,7 @@ import ezdxf
 from cadgen.drawing_checks import validate_dxf_file
 
 PENS = {  # DXF lineweight = mm x 100 (company standard)
-    "REF-PROC": 50, "REF-EQUIP": 35, "REF-FRAME": 35, "REF-PROC-UG": 35, "REF-SYM": 25,
+    "REF-PROC": 50, "REF-PROC-MINOR": 25, "REF-EQUIP": 35, "REF-FRAME": 35, "REF-PROC-UG": 35, "REF-SYM": 25,
     "REF-TITLE": 25, "REF-TEXT": 18, "REF-ROAD": 18,
     "REF-SIG": 13, "REF-SIGP": 13, "REF-HATCH": 13, "REF-DIM": 9,
     "REF-FENCE": 13, "REF-GRID": 9,

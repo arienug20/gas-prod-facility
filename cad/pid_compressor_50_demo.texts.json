@@ -1,0 +1,3307 @@
+{
+  "texts": [
+    {
+      "t": "1",
+      "x": 53.458,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1",
+      "x": 53.458,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 120.375,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "2",
+      "x": 120.375,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 187.292,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "3",
+      "x": 187.292,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 254.208,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "4",
+      "x": 254.208,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 321.125,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "5",
+      "x": 321.125,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 388.042,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "6",
+      "x": 388.042,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 454.958,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "7",
+      "x": 454.958,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 521.875,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "8",
+      "x": 521.875,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 588.792,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "9",
+      "x": 588.792,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 655.708,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "10",
+      "x": 655.708,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 722.625,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "11",
+      "x": 722.625,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 789.542,
+      "y": 11.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "12",
+      "x": 789.542,
+      "y": 583.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 15.0,
+      "y": 543.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "A",
+      "x": 827.0,
+      "y": 543.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 15.0,
+      "y": 473.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "B",
+      "x": 827.0,
+      "y": 473.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 15.0,
+      "y": 402.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "C",
+      "x": 827.0,
+      "y": 402.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 15.0,
+      "y": 332.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "D",
+      "x": 827.0,
+      "y": 332.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 15.0,
+      "y": 261.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "E",
+      "x": 827.0,
+      "y": 261.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 15.0,
+      "y": 191.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "F",
+      "x": 827.0,
+      "y": 191.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 15.0,
+      "y": 120.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "G",
+      "x": 827.0,
+      "y": 120.75,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 15.0,
+      "y": 50.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "H",
+      "x": 827.0,
+      "y": 50.25,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NOTES",
+      "x": 739.0,
+      "y": 573.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "1. CONCEPT DEMONSTRATION; NOT FOR CONSTRUCTION.",
+      "x": 659.0,
+      "y": 560.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "2. 2 X 50% = 50 MMSCFD TOTAL; 25 MMSCFD / TRAIN",
+      "x": 659.0,
+      "y": 554.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   ASSUMED. STANDARD VOLUME REFERENCE TBD.",
+      "x": 659.0,
+      "y": 548.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "3. INLET 300 PSI; OUTLET 450 PSI. PRESSURE",
+      "x": 659.0,
+      "y": 542.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   BASIS PSIG / PSIA TO BE CONFIRMED.",
+      "x": 659.0,
+      "y": 536.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "4. RANGE 60-110% PER TRAIN IS A TARGET ONLY;",
+      "x": 659.0,
+      "y": 530.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   VALIDATE COMPRESSOR MAP, DRIVER AND CONTROL.",
+      "x": 659.0,
+      "y": 524.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "5. GAS COMPOSITION, TEMPERATURE, MOLECULAR WEIGHT,",
+      "x": 659.0,
+      "y": 518.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   Z, MATERIAL, LINE SIZES AND DESIGN P/T: TBD.",
+      "x": 659.0,
+      "y": 512.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "6. ASV RECYCLE, RELIEF, BLOWDOWN, ESD, SEALS AND",
+      "x": 659.0,
+      "y": 506.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   AUXILIARIES REQUIRE VENDOR / PROCESS DESIGN.",
+      "x": 659.0,
+      "y": 500.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "7. LSHH OR DISCHARGE PSHH: CLOSE SDV / TRIP TRAIN;",
+      "x": 659.0,
+      "y": 494.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "   C&E, TRIP SOLVER AND FINAL ACTIONS TO BE VERIFIED.",
+      "x": 659.0,
+      "y": 488.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "8. PSV SIZING, SET PRESSURE AND RELIEF BASIS: TBD.",
+      "x": 659.0,
+      "y": 482.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "9. ALL TAGS ARE DEMO; OUTSIDE GPF-00-DB-0001.",
+      "x": 659.0,
+      "y": 476.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "10. SCHEMATIC, NOT TO SCALE; NOT VENDOR APPROVED.",
+      "x": 659.0,
+      "y": 470.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "LEGEND / INTERFACES",
+      "x": 739.0,
+      "y": 425.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PROCESS: SOLID",
+      "x": 659.0,
+      "y": 410.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ELECTRICAL SIGNAL: DASHED",
+      "x": 659.0,
+      "y": 401.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "PNEUMATIC SIGNAL: LINE WITH SLASHES",
+      "x": 659.0,
+      "y": 392.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FIELD INSTRUMENT: CIRCLE",
+      "x": 659.0,
+      "y": 383.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DCS / CONTROL: CIRCLE IN BOX",
+      "x": 659.0,
+      "y": 374.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "FC: FAIL CLOSED; FO: FAIL OPEN",
+      "x": 659.0,
+      "y": 365.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TBD: TO BE DETERMINED",
+      "x": 659.0,
+      "y": 356.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "ESD SHOWN AS FUNCTION REFERENCES",
+      "x": 659.0,
+      "y": 347.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "TRAIN A/B: 25 MMSCFD NOMINAL EACH (ASSUMED)",
+      "x": 659.0,
+      "y": 338.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REFERENCE DRAWINGS",
+      "x": 739.0,
+      "y": 180.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GPF-00-PI-PID-0001 - P&ID V-101",
+      "x": 659.0,
+      "y": 169.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GPF-00-DB-0001 - PROJECT DESIGN BASIS",
+      "x": 659.0,
+      "y": 161.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "REV     DESCRIPTION                         DATE",
+      "x": 659.0,
+      "y": 141.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "A0       CONCEPT DEMONSTRATION      28 OCT 2026",
+      "x": 659.0,
+      "y": 126.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GAS PRODUCTION FACILITY - ONSHORE FIELD",
+      "x": 739.0,
+      "y": 106.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PIPING & INSTRUMENTATION DIAGRAM",
+      "x": 739.0,
+      "y": 86.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CENTRIFUGAL COMPRESSORS - DEMONSTRATION",
+      "x": 739.0,
+      "y": 79.0,
+      "h": 2.1,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "GPF-DEMO-PID-COMP-50",
+      "x": 739.0,
+      "y": 66.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "REV A0",
+      "x": 695.0,
+      "y": 53.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "NTS",
+      "x": 780.0,
+      "y": 53.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "28 OCT 2026",
+      "x": 695.0,
+      "y": 41.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SHEET 1 OF 1",
+      "x": 780.0,
+      "y": 41.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRAWN: CAD",
+      "x": 695.0,
+      "y": 29.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECKED: TBD",
+      "x": 780.0,
+      "y": 29.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "APPROVED: TBD",
+      "x": 780.0,
+      "y": 19.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "COMPRESSOR PACKAGE DATA - CONCEPT ONLY",
+      "x": 40.0,
+      "y": 564.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "2 X 50% PARALLEL; 50 MMSCFD TOTAL / 25 MMSCFD PER TRAIN ASSUMED",
+      "x": 40.0,
+      "y": 556.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "INLET 300 PSI / OUTLET 450 PSI; PSIG OR PSIA TBD",
+      "x": 40.0,
+      "y": 548.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "60-110% PER TRAIN IS A DESIGN TARGET; MAP / SURGE AND DRIVER TBD",
+      "x": 40.0,
+      "y": 540.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "GAS COMPOSITION / MOLECULAR WEIGHT / TEMPERATURE / DESIGN PRESSURE TBD",
+      "x": 40.0,
+      "y": 532.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 4
+    },
+    {
+      "t": "DEMO",
+      "x": 46.5,
+      "y": 135.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FROM GAS SUPPLY",
+      "x": 46.5,
+      "y": 142.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LINE / SIZE TBD",
+      "x": 46.5,
+      "y": 127.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DEMO",
+      "x": 606.5,
+      "y": 485.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO GAS SYSTEM",
+      "x": 606.5,
+      "y": 492.5,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LINE / SIZE TBD",
+      "x": 606.5,
+      "y": 477.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SUCTION HEADER - LINE / SPEC TBD",
+      "x": 65.0,
+      "y": 285.0,
+      "h": 1.8,
+      "rot": 90.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DISCHARGE HEADER - LINE / SPEC TBD",
+      "x": 551.0,
+      "y": 370.0,
+      "h": 1.8,
+      "rot": 90.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "S",
+      "x": 133.5,
+      "y": 415.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SDV-901",
+      "x": 125.0,
+      "y": 400.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FC",
+      "x": 125.0,
+      "y": 395.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD-901",
+      "x": 133.5,
+      "y": 432.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD FUNCTION",
+      "x": 133.5,
+      "y": 441.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FE-901",
+      "x": 230.0,
+      "y": 391.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FT",
+      "x": 240.0,
+      "y": 425.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 240.0,
+      "y": 420.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-901",
+      "x": 240.0,
+      "y": 434.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PT",
+      "x": 275.0,
+      "y": 425.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 275.0,
+      "y": 420.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-901",
+      "x": 275.0,
+      "y": 434.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "V-901",
+      "x": 205.0,
+      "y": 400.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SUCTION SCRUBBER",
+      "x": 150.0,
+      "y": 365.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PSV-901",
+      "x": 173.0,
+      "y": 458.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SIZE TBD",
+      "x": 173.0,
+      "y": 453.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SET TBD",
+      "x": 173.0,
+      "y": 449.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CAPPED / RELIEF DESTINATION TBD",
+      "x": 285.0,
+      "y": 452.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LV-901",
+      "x": 285.0,
+      "y": 336.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CAPPED / LIQUID DESTINATION TBD",
+      "x": 315.0,
+      "y": 351.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LT",
+      "x": 250.0,
+      "y": 387.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 250.0,
+      "y": 382.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LSHH",
+      "x": 250.0,
+      "y": 402.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 250.0,
+      "y": 397.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LIC",
+      "x": 285.0,
+      "y": 387.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 285.0,
+      "y": 382.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FY",
+      "x": 285.0,
+      "y": 371.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "921",
+      "x": 285.0,
+      "y": 366.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD-901",
+      "x": 285.0,
+      "y": 400.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "M",
+      "x": 311.0,
+      "y": 400.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "K-901-A",
+      "x": 330.0,
+      "y": 380.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "M DRIVER SYMBOL IS ILLUSTRATIVE",
+      "x": 330.0,
+      "y": 373.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRIVER TYPE TBD / ESD-901 TRIP",
+      "x": 330.0,
+      "y": 367.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECK VALVE",
+      "x": 475.0,
+      "y": 402.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PT",
+      "x": 405.0,
+      "y": 412.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "911",
+      "x": 405.0,
+      "y": 407.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-901",
+      "x": 405.0,
+      "y": 421.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TT",
+      "x": 435.0,
+      "y": 412.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "911",
+      "x": 435.0,
+      "y": 407.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-901",
+      "x": 435.0,
+      "y": 421.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PSHH",
+      "x": 455.0,
+      "y": 412.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 455.0,
+      "y": 407.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD-901",
+      "x": 455.0,
+      "y": 429.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TRIP K / CLOSE SDV",
+      "x": 455.0,
+      "y": 439.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ASV-901 (FO)",
+      "x": 365.0,
+      "y": 316.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RECYCLE / VALVE SIZE TBD",
+      "x": 300.0,
+      "y": 318.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "UIC",
+      "x": 365.0,
+      "y": 375.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 365.0,
+      "y": 370.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FY",
+      "x": 365.0,
+      "y": 355.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "901",
+      "x": 365.0,
+      "y": 350.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FROM FT / PT / TT: SEE TAGS",
+      "x": 405.0,
+      "y": 373.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "AS CONTROL / SURGE MAP TBD",
+      "x": 405.0,
+      "y": 367.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TRAIN A | 25 MMSCFD NOMINAL ASSUMED",
+      "x": 470.0,
+      "y": 304.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "K-901 PACKAGE: SEAL GAS / LUBE OIL / COOLING / DRIVER",
+      "x": 425.0,
+      "y": 295.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INTERFACES, TRIPS, BLOWDOWN AND UTILITIES - VENDOR TBD",
+      "x": 425.0,
+      "y": 289.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "S",
+      "x": 133.5,
+      "y": 235.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SDV-902",
+      "x": 125.0,
+      "y": 220.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FC",
+      "x": 125.0,
+      "y": 215.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD-902",
+      "x": 133.5,
+      "y": 252.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD FUNCTION",
+      "x": 133.5,
+      "y": 261.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FE-902",
+      "x": 230.0,
+      "y": 211.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FT",
+      "x": 240.0,
+      "y": 245.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 240.0,
+      "y": 240.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-902",
+      "x": 240.0,
+      "y": 254.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PT",
+      "x": 275.0,
+      "y": 245.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 275.0,
+      "y": 240.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-902",
+      "x": 275.0,
+      "y": 254.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "V-902",
+      "x": 205.0,
+      "y": 220.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SUCTION SCRUBBER",
+      "x": 150.0,
+      "y": 185.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PSV-902",
+      "x": 173.0,
+      "y": 278.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SIZE TBD",
+      "x": 173.0,
+      "y": 273.5,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "SET TBD",
+      "x": 173.0,
+      "y": 269.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CAPPED / RELIEF DESTINATION TBD",
+      "x": 285.0,
+      "y": 272.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LV-902",
+      "x": 285.0,
+      "y": 156.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CAPPED / LIQUID DESTINATION TBD",
+      "x": 315.0,
+      "y": 171.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LT",
+      "x": 250.0,
+      "y": 207.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 250.0,
+      "y": 202.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LSHH",
+      "x": 250.0,
+      "y": 222.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 250.0,
+      "y": 217.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "LIC",
+      "x": 285.0,
+      "y": 207.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 285.0,
+      "y": 202.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FY",
+      "x": 285.0,
+      "y": 191.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "922",
+      "x": 285.0,
+      "y": 186.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD-902",
+      "x": 285.0,
+      "y": 220.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "M",
+      "x": 311.0,
+      "y": 220.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "K-902-B",
+      "x": 330.0,
+      "y": 200.0,
+      "h": 2.5,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "M DRIVER SYMBOL IS ILLUSTRATIVE",
+      "x": 330.0,
+      "y": 193.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "DRIVER TYPE TBD / ESD-902 TRIP",
+      "x": 330.0,
+      "y": 187.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "CHECK VALVE",
+      "x": 475.0,
+      "y": 222.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PT",
+      "x": 405.0,
+      "y": 232.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "912",
+      "x": 405.0,
+      "y": 227.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-902",
+      "x": 405.0,
+      "y": 241.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TT",
+      "x": 435.0,
+      "y": 232.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "912",
+      "x": 435.0,
+      "y": 227.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TO UIC-902",
+      "x": 435.0,
+      "y": 241.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PSHH",
+      "x": 455.0,
+      "y": 232.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 455.0,
+      "y": 227.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ESD-902",
+      "x": 455.0,
+      "y": 249.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TRIP K / CLOSE SDV",
+      "x": 455.0,
+      "y": 259.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "ASV-902 (FO)",
+      "x": 365.0,
+      "y": 136.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "RECYCLE / VALVE SIZE TBD",
+      "x": 300.0,
+      "y": 138.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "UIC",
+      "x": 365.0,
+      "y": 195.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 365.0,
+      "y": 190.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FY",
+      "x": 365.0,
+      "y": 175.2,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "902",
+      "x": 365.0,
+      "y": 170.8,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FROM FT / PT / TT: SEE TAGS",
+      "x": 405.0,
+      "y": 193.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "AS CONTROL / SURGE MAP TBD",
+      "x": 405.0,
+      "y": 187.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "TRAIN B | 25 MMSCFD NOMINAL ASSUMED",
+      "x": 470.0,
+      "y": 124.0,
+      "h": 2.2,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "K-902 PACKAGE: SEAL GAS / LUBE OIL / COOLING / DRIVER",
+      "x": 425.0,
+      "y": 115.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "INTERFACES, TRIPS, BLOWDOWN AND UTILITIES - VENDOR TBD",
+      "x": 425.0,
+      "y": 109.0,
+      "h": 1.8,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "PACKAGE AND RELIEF DETAILS REQUIRE PROCESS / VENDOR DESIGN",
+      "x": 335.0,
+      "y": 73.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    },
+    {
+      "t": "FAIL ACTIONS SHOWN ARE CONCEPT ASSUMPTIONS / SUBJECT TO REVIEW",
+      "x": 335.0,
+      "y": 67.0,
+      "h": 2.0,
+      "rot": 0.0,
+      "layer": "REF-TEXT",
+      "att": 5
+    }
+  ],
+  "dims": [],
+  "solids": [
+    {
+      "pts": [
+        [
+          78,
+          135
+        ],
+        [
+          75.0,
+          136.0
+        ],
+        [
+          75.0,
+          134.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          85,
+          180
+        ],
+        [
+          84.0,
+          177.0
+        ],
+        [
+          86.0,
+          177.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          85,
+          320
+        ],
+        [
+          84.0,
+          317.0
+        ],
+        [
+          86.0,
+          317.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          560,
+          300
+        ],
+        [
+          559.0,
+          297.0
+        ],
+        [
+          561.0,
+          297.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          560,
+          440
+        ],
+        [
+          559.0,
+          437.0
+        ],
+        [
+          561.0,
+          437.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          575,
+          485
+        ],
+        [
+          572.0,
+          486.0
+        ],
+        [
+          572.0,
+          484.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          165,
+          407
+        ],
+        [
+          162.0,
+          408.0
+        ],
+        [
+          162.0,
+          406.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          305,
+          407
+        ],
+        [
+          302.0,
+          408.0
+        ],
+        [
+          302.0,
+          406.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205,
+          434
+        ],
+        [
+          204.25,
+          431.75
+        ],
+        [
+          205.75,
+          431.75
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          220,
+          440
+        ],
+        [
+          217.75,
+          440.75
+        ],
+        [
+          217.75,
+          439.25
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          185,
+          430
+        ],
+        [
+          184.25,
+          427.75
+        ],
+        [
+          185.75,
+          427.75
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          270,
+          446
+        ],
+        [
+          267.75,
+          446.75
+        ],
+        [
+          267.75,
+          445.25
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          286.3,
+          345.0
+        ],
+        [
+          285.919,
+          345.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          285.919,
+          345.919
+        ],
+        [
+          285.0,
+          346.3
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          285.0,
+          346.3
+        ],
+        [
+          284.081,
+          345.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          284.081,
+          345.919
+        ],
+        [
+          283.7,
+          345.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          283.7,
+          345.0
+        ],
+        [
+          284.081,
+          344.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          284.081,
+          344.081
+        ],
+        [
+          285.0,
+          343.7
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          285.0,
+          343.7
+        ],
+        [
+          285.919,
+          344.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          345
+        ],
+        [
+          285.919,
+          344.081
+        ],
+        [
+          286.3,
+          345.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205,
+          353
+        ],
+        [
+          204.25,
+          355.25
+        ],
+        [
+          205.75,
+          355.25
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          260,
+          345
+        ],
+        [
+          257.75,
+          345.75
+        ],
+        [
+          257.75,
+          344.25
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          470.9,
+          397.0
+        ],
+        [
+          470.636,
+          397.636
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          470.636,
+          397.636
+        ],
+        [
+          470.0,
+          397.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          470.0,
+          397.9
+        ],
+        [
+          469.364,
+          397.636
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          469.364,
+          397.636
+        ],
+        [
+          469.1,
+          397.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          469.1,
+          397.0
+        ],
+        [
+          469.364,
+          396.364
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          469.364,
+          396.364
+        ],
+        [
+          470.0,
+          396.1
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          470.0,
+          396.1
+        ],
+        [
+          470.636,
+          396.364
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          397.0
+        ],
+        [
+          470.636,
+          396.364
+        ],
+        [
+          470.9,
+          397.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          480.0,
+          391.0
+        ],
+        [
+          477.0,
+          391.0
+        ],
+        [
+          480.0,
+          394.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          380,
+          394
+        ],
+        [
+          377.0,
+          395.0
+        ],
+        [
+          377.0,
+          393.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          520,
+          394
+        ],
+        [
+          517.0,
+          395.0
+        ],
+        [
+          517.0,
+          393.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          366.3,
+          328.0
+        ],
+        [
+          365.919,
+          328.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          365.919,
+          328.919
+        ],
+        [
+          365.0,
+          329.3
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          365.0,
+          329.3
+        ],
+        [
+          364.081,
+          328.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          364.081,
+          328.919
+        ],
+        [
+          363.7,
+          328.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          363.7,
+          328.0
+        ],
+        [
+          364.081,
+          327.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          364.081,
+          327.081
+        ],
+        [
+          365.0,
+          326.7
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          365.0,
+          326.7
+        ],
+        [
+          365.919,
+          327.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          328
+        ],
+        [
+          365.919,
+          327.081
+        ],
+        [
+          366.3,
+          328.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          450,
+          358
+        ],
+        [
+          449.0,
+          361.0
+        ],
+        [
+          451.0,
+          361.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          410,
+          328
+        ],
+        [
+          413.0,
+          329.0
+        ],
+        [
+          413.0,
+          327.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          260,
+          328
+        ],
+        [
+          263.0,
+          329.0
+        ],
+        [
+          263.0,
+          327.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          180,
+          358
+        ],
+        [
+          179.0,
+          355.0
+        ],
+        [
+          181.0,
+          355.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          165,
+          227
+        ],
+        [
+          162.0,
+          228.0
+        ],
+        [
+          162.0,
+          226.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          305,
+          227
+        ],
+        [
+          302.0,
+          228.0
+        ],
+        [
+          302.0,
+          226.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205,
+          254
+        ],
+        [
+          204.25,
+          251.75
+        ],
+        [
+          205.75,
+          251.75
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          220,
+          260
+        ],
+        [
+          217.75,
+          260.75
+        ],
+        [
+          217.75,
+          259.25
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          185,
+          250
+        ],
+        [
+          184.25,
+          247.75
+        ],
+        [
+          185.75,
+          247.75
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          270,
+          266
+        ],
+        [
+          267.75,
+          266.75
+        ],
+        [
+          267.75,
+          265.25
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          286.3,
+          165.0
+        ],
+        [
+          285.919,
+          165.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          285.919,
+          165.919
+        ],
+        [
+          285.0,
+          166.3
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          285.0,
+          166.3
+        ],
+        [
+          284.081,
+          165.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          284.081,
+          165.919
+        ],
+        [
+          283.7,
+          165.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          283.7,
+          165.0
+        ],
+        [
+          284.081,
+          164.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          284.081,
+          164.081
+        ],
+        [
+          285.0,
+          163.7
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          285.0,
+          163.7
+        ],
+        [
+          285.919,
+          164.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          285,
+          165
+        ],
+        [
+          285.919,
+          164.081
+        ],
+        [
+          286.3,
+          165.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          205,
+          173
+        ],
+        [
+          204.25,
+          175.25
+        ],
+        [
+          205.75,
+          175.25
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          260,
+          165
+        ],
+        [
+          257.75,
+          165.75
+        ],
+        [
+          257.75,
+          164.25
+        ]
+      ],
+      "layer": "REF-PROC-MINOR"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          470.9,
+          217.0
+        ],
+        [
+          470.636,
+          217.636
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          470.636,
+          217.636
+        ],
+        [
+          470.0,
+          217.9
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          470.0,
+          217.9
+        ],
+        [
+          469.364,
+          217.636
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          469.364,
+          217.636
+        ],
+        [
+          469.1,
+          217.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          469.1,
+          217.0
+        ],
+        [
+          469.364,
+          216.364
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          469.364,
+          216.364
+        ],
+        [
+          470.0,
+          216.1
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          470.0,
+          216.1
+        ],
+        [
+          470.636,
+          216.364
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          470.0,
+          217.0
+        ],
+        [
+          470.636,
+          216.364
+        ],
+        [
+          470.9,
+          217.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          480.0,
+          211.0
+        ],
+        [
+          477.0,
+          211.0
+        ],
+        [
+          480.0,
+          214.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          380,
+          214
+        ],
+        [
+          377.0,
+          215.0
+        ],
+        [
+          377.0,
+          213.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          520,
+          214
+        ],
+        [
+          517.0,
+          215.0
+        ],
+        [
+          517.0,
+          213.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          366.3,
+          148.0
+        ],
+        [
+          365.919,
+          148.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          365.919,
+          148.919
+        ],
+        [
+          365.0,
+          149.3
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          365.0,
+          149.3
+        ],
+        [
+          364.081,
+          148.919
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          364.081,
+          148.919
+        ],
+        [
+          363.7,
+          148.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          363.7,
+          148.0
+        ],
+        [
+          364.081,
+          147.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          364.081,
+          147.081
+        ],
+        [
+          365.0,
+          146.7
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          365.0,
+          146.7
+        ],
+        [
+          365.919,
+          147.081
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          365,
+          148
+        ],
+        [
+          365.919,
+          147.081
+        ],
+        [
+          366.3,
+          148.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          450,
+          178
+        ],
+        [
+          449.0,
+          181.0
+        ],
+        [
+          451.0,
+          181.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          410,
+          148
+        ],
+        [
+          413.0,
+          149.0
+        ],
+        [
+          413.0,
+          147.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          260,
+          148
+        ],
+        [
+          263.0,
+          149.0
+        ],
+        [
+          263.0,
+          147.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    },
+    {
+      "pts": [
+        [
+          180,
+          178
+        ],
+        [
+          179.0,
+          175.0
+        ],
+        [
+          181.0,
+          175.0
+        ]
+      ],
+      "layer": "REF-PROC"
+    }
+  ]
+}

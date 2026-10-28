@@ -1,0 +1,162 @@
+{
+  "equipment": [
+    {
+      "tag": "V-901",
+      "type": "VERTICAL KO DRUM / SCRUBBER",
+      "x": 320,
+      "y": 330.0,
+      "y_bot": 230,
+      "y_top": 430,
+      "radius": 32,
+      "demister": true
+    }
+  ],
+  "valves": [
+    {
+      "tag": "SDV-901",
+      "type": "SHUTDOWN VALVE (SDV)",
+      "orientation": "H",
+      "x": 155,
+      "y": 360,
+      "fail": "FC"
+    },
+    {
+      "tag": "PSV-901",
+      "type": "PRESSURE SAFETY VALVE (PSV)",
+      "orientation": "ANGLE",
+      "x": 340,
+      "y": 470,
+      "size": "SIZE TBD",
+      "set_press": "SET TBD"
+    },
+    {
+      "tag": "GV-902",
+      "type": "GATE VALVE",
+      "orientation": "H",
+      "x": 375,
+      "y": 270,
+      "flanged": true
+    },
+    {
+      "tag": "GV-903",
+      "type": "GATE VALVE",
+      "orientation": "H",
+      "x": 375,
+      "y": 335,
+      "flanged": true
+    },
+    {
+      "tag": "GV-904",
+      "type": "GATE VALVE",
+      "orientation": "V",
+      "x": 395,
+      "y": 255,
+      "flanged": true
+    },
+    {
+      "tag": "LV-901",
+      "type": "CONTROL VALVE",
+      "orientation": "H",
+      "x": 470,
+      "y": 170,
+      "fail": "FC"
+    }
+  ],
+  "instruments": [
+    {
+      "tag": "PT-901",
+      "tag1": "PT",
+      "tag2": "901",
+      "type": "FIELD INSTRUMENT",
+      "x": 259,
+      "y": 390
+    },
+    {
+      "tag": "PI-901",
+      "tag1": "PI",
+      "tag2": "901",
+      "type": "DCS SHARED DISPLAY",
+      "x": 222,
+      "y": 390
+    },
+    {
+      "tag": "LT-901",
+      "tag1": "LT",
+      "tag2": "901",
+      "type": "FIELD INSTRUMENT",
+      "x": 415,
+      "y": 290
+    },
+    {
+      "tag": "LIC-901",
+      "tag1": "LIC",
+      "tag2": "901",
+      "type": "DCS SHARED DISPLAY",
+      "x": 470,
+      "y": 290
+    },
+    {
+      "tag": "LSHH-901",
+      "tag1": "LSHH",
+      "tag2": "901",
+      "type": "FIELD INSTRUMENT",
+      "x": 415,
+      "y": 320
+    },
+    {
+      "tag": "ESD-901",
+      "tag1": "ESD",
+      "tag2": "901",
+      "type": "SIS LOGIC SOLVER",
+      "x": 500,
+      "y": 320,
+      "reference_symbols": [
+        {
+          "type": "INTERLOCK LOGIC",
+          "x": 163.5,
+          "y": 390
+        }
+      ]
+    },
+    {
+      "tag": "FY-901",
+      "tag1": "FY",
+      "tag2": "901",
+      "type": "FIELD INSTRUMENT",
+      "x": 470,
+      "y": 205
+    },
+    {
+      "tag": "LG-901",
+      "type": "LEVEL GAUGE",
+      "x": 402,
+      "y": 302.5
+    }
+  ],
+  "lines": [
+    {
+      "line_no": "150-NG-9901",
+      "spec": "TBD",
+      "service": "GAS INLET",
+      "dn": 150
+    },
+    {
+      "line_no": "150-NG-9902",
+      "spec": "TBD",
+      "service": "GAS OUTLET",
+      "dn": 150
+    },
+    {
+      "line_no": "080-LQ-9904",
+      "spec": "TBD",
+      "service": "LIQUID OUTLET",
+      "dn": 80
+    },
+    {
+      "line_no": "XXX-FL-9903",
+      "spec": "TBD",
+      "service": "RELIEF; SIZE TBD",
+      "dn": null
+    }
+  ]
+}
