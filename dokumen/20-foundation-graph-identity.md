@@ -1,14 +1,16 @@
-# Foundation: graph identity and tag registry
+# Fondasi: identitas graph dan registry tag
 
-**Status:** implementation foundation only; not engineering semantic approval, design authorization, or evidence that the graph is complete.
+**Status:** fondasi implementasi; bukan persetujuan semantik engineering, otorisasi desain, atau bukti bahwa graph telah lengkap.
 
-`cad/roadmap_foundation/registry.py` provides a stdlib-only persistent tag registry and a conservative adapter to graph schema `1.0`.
+`cad/roadmap_foundation/registry.py` menyediakan registry tag persisten berbasis standard library Python dan adapter konservatif ke graph schema `1.0`.
 
-## Registry API
+## API registry
 
-Construct with `NamespaceTagRegistry(path, namespace, allocation)`. The allocation record must explicitly provide `id`, `approved_by`, `namespace`, `pattern`, `start`, and `scope`; it must match the registry namespace. `scope` must contain non-empty `prefixes` and/or `object_ids` lists. Allocation is limited to those prefixes/object IDs; reservation checks the supplied tag against the approved pattern/prefix and any object-ID scope. No allocation record means construction fails. A namespace is an administrative boundary, not proof that the same tag is globally unique across namespaces. `reserve(tag, object_id)` preserves supplied identities and rejects collisions and out-of-scope tags. `allocate(prefix, object_id)` is deterministic within the persisted registry. `save()` acquires an exclusive sibling lock before checking the on-disk hash and replacing atomically; contention beyond the bounded wait fails closed. A stale instance cannot overwrite a newer registry. A crashed writer may leave a lock file; resolve that operationally only after confirming no writer remains. `NamespaceTagRegistry.reopen(path, namespace, allocation)` reloads and validates the schema; malformed and unsupported data fails closed. `to_dict()` exposes the auditable record.
+Buat instance dengan `NamespaceTagRegistry(path, namespace, allocation)`. Record alokasi wajib menyediakan `id`, `approved_by`, `namespace`, `pattern`, `start`, dan `scope`; namespace-nya harus sama dengan namespace registry. `scope` wajib berisi daftar `prefixes` dan/atau `object_ids` yang tidak kosong. Alokasi dibatasi pada prefix/object ID tersebut. Reservasi memeriksa tag yang diberikan terhadap pola dan prefix yang disetujui serta cakupan object ID. Constructor gagal bila record alokasi tidak diberikan.
 
-Example (use only an actual approved allocation record):
+Namespace adalah batas administratif; namespace berbeda tidak membuktikan bahwa suatu tag unik secara global. `reserve(tag, object_id)` mempertahankan identitas yang diberikan dan menolak benturan maupun tag di luar cakupan. `allocate(prefix, object_id)` menghasilkan alokasi deterministik berdasarkan registry tersimpan. `save()` mengambil lock eksklusif pada file pendamping sebelum memeriksa hash di disk dan mengganti file secara atomik. Bila lock tetap tertahan melewati waktu tunggu, penulisan dibatalkan. Instance yang memakai salinan lama tidak dapat menimpa registry yang lebih baru. Proses yang berhenti mendadak dapat meninggalkan file lock; file itu hanya boleh ditangani setelah dipastikan tidak ada penulis yang masih berjalan. `NamespaceTagRegistry.reopen(path, namespace, allocation)` memuat ulang dan memvalidasi schema; data rusak atau versi yang tidak didukung ditolak. `to_dict()` menyediakan representasi untuk audit.
+
+Contoh berikut hanya berlaku jika record alokasi yang benar-benar disetujui tersedia:
 
 ```python
 from roadmap_foundation.registry import NamespaceTagRegistry
@@ -18,16 +20,18 @@ new_tag = registry.allocate(prefix, another_object_id)
 registry.save()
 ```
 
-Do not use the illustrative identifiers in tests as project allocation evidence. If allocation authority is absent, keep the tag unresolved; do not allocate or renumber.
+Jangan gunakan identifier ilustratif pada tes sebagai bukti alokasi proyek. Jika otorisasi alokasi belum tersedia, biarkan tag belum terselesaikan; jangan mengalokasikan atau mengganti nomor.
 
-## Graph adapter and audit
+## Adapter dan audit graph
 
-`adapt_legacy_model(model)` returns `{"model": ..., "findings": ...}` without mutating its input. It supports the phase1 `smart_qa` shape with top-level ports (`owner`, `point`, `dn`, `spec`) and connections (`from`, `to`, `dn`, `spec`), mapping only those known fields and retaining DN/spec/point as metadata. Canonical model sections are `objects` (`id`, `kind`, optional `tag`), `ports` (`id`, `owner_id`, `port_kind`, `direction`, nullable `service_ref`), and `connections` (`id`, `from_port`, `to_port`, `kind`). Nested and top-level duplicate ports are preserved and explicitly reported. Missing legacy ports/internal links remain findings; explicit assemblies without modeled internal links are `NOT ASSESSED`. Empty graph sections are explicitly incomplete. The adapter does not infer nozzles, valve internals, connections from line geometry, or junctions from crossings. `audit_graph(model)` checks IDs, tags, owner and endpoint references, and explicit kind compatibility. Unknown service/media is reported as `NOT ASSESSED`, not a mismatch or pass. Null DN/spec fields are not blanket errors. Process and signal kinds are distinct when explicitly supplied. No SIL, safety-function, or overall engineering-completeness claim is made.
+`adapt_legacy_model(model)` mengembalikan `{"model": ..., "findings": ...}` tanpa mengubah input. Adapter mendukung bentuk `smart_qa` fase 1 dengan port tingkat atas (`owner`, `point`, `dn`, `spec`) serta koneksi (`from`, `to`, `dn`, `spec`). Field yang dikenal dipetakan dan metadata DN/spec/point dipertahankan. Bagian model kanonis adalah `objects` (`id`, `kind`, `tag` opsional), `ports` (`id`, `owner_id`, `port_kind`, `direction`, `service_ref` nullable), dan `connections` (`id`, `from_port`, `to_port`, `kind`). Port tingkat atas dan port bersarang dengan ID duplikat tetap disertakan dan dilaporkan secara eksplisit.
 
-Run focused checks from the repository root:
+Port atau koneksi internal yang hilang tetap menghasilkan finding; assembly eksplisit tanpa koneksi internal yang dimodelkan mendapat status `NOT ASSESSED`. Bagian graph yang kosong dilaporkan sebagai tidak lengkap. Adapter tidak menyimpulkan nozzle, internals valve, koneksi dari geometri garis, atau junction dari persilangan. `audit_graph(model)` memeriksa ID, tag, referensi pemilik dan endpoint, serta kecocokan jenis koneksi yang dinyatakan eksplisit. Service/media yang belum diketahui berstatus `NOT ASSESSED`, bukan mismatch maupun pass. Field DN/spec yang null tidak otomatis menjadi error. Jenis proses dan sinyal dibedakan jika dinyatakan secara eksplisit. Tidak ada klaim tentang SIL, fungsi keselamatan, atau kelengkapan engineering secara keseluruhan.
+
+Jalankan pemeriksaan terfokus dari root repository:
 
 ```powershell
 python -m unittest cad.test_roadmap_registry -v
 ```
 
-The tests cover authorization, duplicate tags, persistence/reopen, stale write detection, atomic replacement failure, unsupported schema, legacy input immutability, unknown internal topology, and crossings not becoming connections.
+Tes mencakup otorisasi, tag duplikat, penyimpanan dan pemuatan ulang, deteksi penulisan dari salinan lama, kegagalan penggantian atomik, schema yang tidak didukung, input legacy tanpa mutasi, topologi internal yang belum diketahui, serta larangan mengubah persilangan menjadi koneksi.

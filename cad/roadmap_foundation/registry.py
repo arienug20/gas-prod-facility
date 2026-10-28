@@ -26,7 +26,7 @@ def _validate_tag_record(tag, object_id, allocation):
     _key(tag, "tag"); _key(object_id, "object_id")
     scope = allocation["scope"]
     if scope.get("object_ids") and object_id not in scope["object_ids"]:
-        raise ValueError(f"object is outside approved allocation scope: {object_id}")
+        raise ValueError(f"objek berada di luar cakupan alokasi yang disetujui: {object_id}")
     pieces, prefix_group, number_group = [], False, False
     number_spec = ""
     for literal, field, spec, _conversion in string.Formatter().parse(allocation["pattern"]):
@@ -38,64 +38,64 @@ def _validate_tag_record(tag, object_id, allocation):
             pieces.append(f"(?P<number>{number_chars})"); number_group = True
     match = re.fullmatch("".join(pieces), tag)
     if not match or not prefix_group or not number_group:
-        raise ValueError(f"tag does not match approved pattern: {tag}")
+        raise ValueError(f"tag tidak sesuai pola yang disetujui: {tag}")
     prefix, raw_number = match.group("prefix"), match.group("number")
     if scope.get("prefixes") and prefix not in scope["prefixes"]:
-        raise ValueError(f"tag prefix is outside approved allocation scope: {prefix}")
+        raise ValueError(f"prefiks tag berada di luar cakupan alokasi yang disetujui: {prefix}")
     base = 16 if number_spec.endswith(("x", "X")) else 8 if number_spec.endswith("o") else 10
     try: number = int(raw_number, base)
-    except ValueError: raise ValueError(f"tag number is invalid: {tag}") from None
+    except ValueError: raise ValueError(f"nomor tag tidak valid: {tag}") from None
     if number < allocation["start"]:
-        raise ValueError(f"tag number is below approved start: {tag}")
+        raise ValueError(f"nomor tag berada di bawah nomor awal yang disetujui: {tag}")
     if allocation["pattern"].format(prefix=prefix, number=number) != tag:
-        raise ValueError(f"tag is not canonically formatted: {tag}")
+        raise ValueError(f"format tag tidak kanonis: {tag}")
     return tag
 
 
 def _key(value, name):
     if not isinstance(value, str) or not value.strip():
-        raise ValueError(f"{name} must be a non-empty string")
+        raise ValueError(f"{name} harus berupa string yang tidak kosong")
     return value
 
 
 def _allocation(record, namespace):
     if not isinstance(record, dict):
-        raise ValueError("explicit approved allocation record is required")
+        raise ValueError("record alokasi yang disetujui secara eksplisit wajib tersedia")
     required = ("id", "approved_by", "namespace", "pattern", "start", "scope")
     if any(k not in record for k in required):
-        raise ValueError("allocation requires id, approved_by, namespace, pattern, start, and scope")
+        raise ValueError("allocation wajib memuat id, approved_by, namespace, pattern, start, dan scope")
     for field in ("id", "approved_by", "namespace", "pattern"):
         _key(record[field], f"allocation.{field}")
     scope = record["scope"]
     if not isinstance(scope, dict) or not any(k in scope for k in ("prefixes", "object_ids")):
-        raise ValueError("allocation.scope must authorize prefixes and/or object_ids")
+        raise ValueError("allocation.scope wajib mengotorisasi prefixes dan/atau object_ids")
     for field in ("prefixes", "object_ids"):
         if field in scope and (not isinstance(scope[field], list) or any(not isinstance(v, str) or not v.strip() for v in scope[field])):
-            raise ValueError(f"allocation.scope.{field} must be a list of non-empty strings")
+            raise ValueError(f"allocation.scope.{field} harus berupa daftar string yang tidak kosong")
     if not scope.get("prefixes") and not scope.get("object_ids"):
-        raise ValueError("allocation.scope must authorize at least one prefix or object_id")
+        raise ValueError("allocation.scope wajib mengotorisasi setidaknya satu prefix atau object_id")
     if record["namespace"] != namespace:
-        raise ValueError("allocation namespace does not match registry namespace")
+        raise ValueError("namespace allocation tidak sama dengan namespace registry")
     if isinstance(record["start"], bool) or not isinstance(record["start"], int) or record["start"] < 0:
-        raise ValueError("allocation.start must be a non-negative integer")
+        raise ValueError("allocation.start harus berupa bilangan bulat non-negatif")
     pattern = record["pattern"]
     try:
         parts = list(string.Formatter().parse(pattern))
         fields = [f for _, f, _, _ in parts if f is not None]
         if fields.count("prefix") != 1 or fields.count("number") != 1 or set(fields) != {"prefix", "number"}:
-            raise ValueError("pattern must include prefix and number exactly once")
+            raise ValueError("pattern wajib memuat prefix dan number masing-masing tepat satu kali")
         for _, field, spec, conv in parts:
             if field is not None and (conv or "{" in spec or "}" in spec):
-                raise ValueError("conversions and nested formats are unsupported")
+                raise ValueError("konversi dan format bersarang tidak didukung")
             if field == "prefix" and spec:
-                raise ValueError("prefix formatting is unsupported")
+                raise ValueError("formatting prefix tidak didukung")
             if field == "number" and not re.fullmatch(r"0?\d*[dxbXo]?", spec):
-                raise ValueError("invalid number format")
+                raise ValueError("format number tidak valid")
         examples = [pattern.format(prefix=p, number=n) for p, n in (("A", record["start"]), ("A", record["start"] + 1), ("B", record["start"]))]
         if len(set(examples)) != 3 or any(not x.strip() for x in examples):
-            raise ValueError("pattern must distinguish prefix and number")
+            raise ValueError("pattern wajib membedakan prefix dan number")
     except (ValueError, TypeError, KeyError, IndexError) as exc:
-        raise ValueError(f"invalid allocation pattern: {exc}") from exc
+        raise ValueError(f"pattern allocation tidak valid: {exc}") from exc
     return copy.deepcopy(record)
 
 
@@ -114,9 +114,9 @@ class NamespaceTagRegistry:
         tag, object_id = _key(tag, "tag"), _key(object_id, "object_id")
         _validate_tag_record(tag, object_id, self.allocation)
         if tag in self._by_tag and self._by_tag[tag] != object_id:
-            raise ValueError(f"duplicate tag: {tag}")
+            raise ValueError(f"tag duplikat: {tag}")
         if object_id in self._by_object and self._by_object[object_id] != tag:
-            raise ValueError(f"object already has a tag: {object_id}")
+            raise ValueError(f"objek sudah memiliki tag: {object_id}")
         self._by_tag[tag] = object_id
         self._by_object[object_id] = tag
         return tag
@@ -124,9 +124,9 @@ class NamespaceTagRegistry:
     def allocate(self, prefix, object_id):
         prefix, object_id = _key(prefix, "prefix"), _key(object_id, "object_id")
         if self.allocation["scope"].get("prefixes") and prefix not in self.allocation["scope"]["prefixes"]:
-            raise ValueError(f"prefix is outside approved allocation scope: {prefix}")
+            raise ValueError(f"prefix berada di luar cakupan alokasi yang disetujui: {prefix}")
         if self.allocation["scope"].get("object_ids") and object_id not in self.allocation["scope"]["object_ids"]:
-            raise ValueError(f"object is outside approved allocation scope: {object_id}")
+            raise ValueError(f"objek berada di luar cakupan alokasi yang disetujui: {object_id}")
         if object_id in self._by_object:
             return self._by_object[object_id]
         number = self._next.get(prefix, self.allocation["start"])
@@ -148,26 +148,26 @@ class NamespaceTagRegistry:
         try:
             data = json.loads(raw.decode("utf-8"))
         except (UnicodeError, json.JSONDecodeError) as exc:
-            raise ValueError(f"malformed registry: {exc}") from exc
+            raise ValueError(f"registry tidak valid: {exc}") from exc
         if not isinstance(data, dict) or data.get("schema_version") != SCHEMA_VERSION:
-            raise ValueError("unsupported or malformed registry schema")
+            raise ValueError("schema registry tidak didukung atau tidak valid")
         if data.get("namespace") != self.namespace or data.get("allocation") != self.allocation:
-            raise ValueError("registry namespace/allocation mismatch")
+            raise ValueError("namespace/allocation registry tidak cocok")
         tags, objects = {}, {}
         entries = data.get("tags")
         if not isinstance(entries, list) or not isinstance(data.get("next"), dict):
-            raise ValueError("malformed registry contents")
+            raise ValueError("isi registry tidak valid")
         for entry in entries:
             if not isinstance(entry, dict) or set(entry) != {"tag", "object_id"}:
-                raise ValueError("malformed tag entry")
+                raise ValueError("entri tag tidak valid")
             tag, oid = _key(entry["tag"], "tag"), _key(entry["object_id"], "object_id")
             _validate_tag_record(tag, oid, self.allocation)
             if tag in tags or oid in objects:
-                raise ValueError("duplicate tag or object in registry")
+                raise ValueError("tag atau objek duplikat di dalam registry")
             tags[tag], objects[oid] = oid, tag
         next_values = data["next"]
         if any(not isinstance(k, str) or not k.strip() or isinstance(v, bool) or not isinstance(v, int) or v < self.allocation["start"] for k, v in next_values.items()):
-            raise ValueError("malformed allocation counters")
+            raise ValueError("counter alokasi tidak valid")
         self._by_tag, self._by_object, self._next = tags, objects, dict(next_values)
         self._disk_hash = hashlib.sha256(raw).hexdigest()
         return self
@@ -187,13 +187,13 @@ class NamespaceTagRegistry:
                 lock_fd = os.open(lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
             except FileExistsError:
                 if time.monotonic() >= deadline:
-                    raise RuntimeError("registry lock unavailable; refusing write")
+                    raise RuntimeError("lock registry tidak tersedia; penulisan dibatalkan")
                 time.sleep(0.025)
         tmp = None
         try:
             current_hash = hashlib.sha256(self.path.read_bytes()).hexdigest() if self.path.exists() else None
             if current_hash != self._disk_hash:
-                raise RuntimeError("registry changed on disk; refusing stale write")
+                raise RuntimeError("registry di disk telah berubah; penulisan dari salinan lama dibatalkan")
             fd, tmp = tempfile.mkstemp(prefix=self.path.name + ".", suffix=".tmp", dir=str(self.path.parent))
             with os.fdopen(fd, "wb") as stream:
                 stream.write(payload)
@@ -222,11 +222,11 @@ def adapt_legacy_model(model):
     connections = []
     for item in source.get("objects", []) if isinstance(source.get("objects"), list) else []:
         if not isinstance(item, dict):
-            findings.append({"rule": "graph.legacy_unknown", "severity": "warning", "message": "Invalid legacy object; skipped", "object_ids": []})
+            findings.append({"rule": "graph.legacy_unknown", "severity": "warning", "message": "Objek legacy tidak valid; dilewati", "object_ids": []})
             continue
         oid = item.get("id") or item.get("tag")
         if not oid:
-            findings.append({"rule": "graph.legacy_unknown", "severity": "warning", "message": "Legacy object has no stable id", "object_ids": []})
+            findings.append({"rule": "graph.legacy_unknown", "severity": "warning", "message": "Objek legacy tidak memiliki id yang stabil", "object_ids": []})
             continue
         obj = {"id": str(oid), "kind": item.get("kind", "unknown")}
         if item.get("is_assembly") is True:
@@ -246,7 +246,7 @@ def adapt_legacy_model(model):
     # smart_qa-era models store ports at top level with `owner`, `point`, `dn`, `spec`.
     for p in source.get("ports", []) if isinstance(source.get("ports"), list) else []:
         if not isinstance(p, dict) or not p.get("id"):
-            findings.append({"rule": "graph.legacy_unknown", "severity": "warning", "message": "Invalid legacy port; skipped", "object_ids": []})
+            findings.append({"rule": "graph.legacy_unknown", "severity": "warning", "message": "Port legacy tidak valid; dilewati", "object_ids": []})
             continue
         port = {"id": str(p["id"]), "owner_id": p.get("owner_id", p.get("owner")),
                 "port_kind": p.get("port_kind", p.get("kind", "unknown")),
@@ -256,7 +256,7 @@ def adapt_legacy_model(model):
         ports.append(port)
     port_ids = [p["id"] for p in ports]
     for pid in sorted({p for p in port_ids if port_ids.count(p) > 1}):
-        findings.append({"rule": "graph.duplicate_id", "severity": "error", "message": f"Legacy ports share duplicate id {pid}", "object_ids": [pid]})
+        findings.append({"rule": "graph.duplicate_id", "severity": "error", "message": f"Beberapa port legacy menggunakan id duplikat {pid}", "object_ids": [pid]})
     for item in source.get("connections", []) if isinstance(source.get("connections"), list) else []:
         if isinstance(item, dict):
             connection = {"id": item.get("id"), "from_port": item.get("from_port", item.get("from")),
@@ -265,58 +265,58 @@ def adapt_legacy_model(model):
                 if field in item: connection[field] = copy.deepcopy(item[field])
             connections.append(connection)
     if not ports:
-        findings.append({"rule": "graph.incomplete", "severity": "warning", "assessment": "NOT ASSESSED", "message": "Legacy model has no explicit ports; internal ports are unknown", "object_ids": []})
+        findings.append({"rule": "graph.incomplete", "severity": "warning", "assessment": "NOT ASSESSED", "message": "Model legacy tidak memuat port eksplisit; port internal belum diketahui", "object_ids": []})
     if source.get("crossings") or source.get("lines"):
-        findings.append({"rule": "graph.crossing_not_connection", "severity": "info", "assessment": "NOT ASSESSED", "message": "Graphical crossings/lines were not converted to connections", "object_ids": []})
+        findings.append({"rule": "graph.crossing_not_connection", "severity": "info", "assessment": "NOT ASSESSED", "message": "Persilangan/garis grafis tidak dikonversi menjadi koneksi", "object_ids": []})
     return {"model": {"schema_version": SCHEMA_VERSION, "objects": objects, "ports": ports, "connections": connections}, "findings": _normalize_findings(findings)}
 
 
 def audit_graph(model):
     findings = []
     if not isinstance(model, dict) or model.get("schema_version") != SCHEMA_VERSION:
-        return _normalize_findings([{"rule": "graph.schema", "severity": "error", "message": "Expected graph schema_version 1.0", "object_ids": []}])
+        return _normalize_findings([{"rule": "graph.schema", "severity": "error", "message": "schema_version graph harus 1.0", "object_ids": []}])
     sections = {name: model.get(name) for name in ("objects", "ports", "connections")}
     for name, values in sections.items():
         if not isinstance(values, list):
-            findings.append({"rule": "graph.incomplete", "severity": "warning", "message": f"Missing or invalid {name}", "object_ids": []})
+            findings.append({"rule": "graph.incomplete", "severity": "warning", "message": f"Bagian {name} tidak tersedia atau tidak valid", "object_ids": []})
             sections[name] = []
         elif not values:
-            findings.append({"rule": "graph.incomplete", "severity": "warning", "assessment": "NOT ASSESSED", "message": f"Graph section {name} is empty; completeness is not assessed", "object_ids": []})
+            findings.append({"rule": "graph.incomplete", "severity": "warning", "assessment": "NOT ASSESSED", "message": f"Bagian graph {name} kosong; kelengkapan belum dinilai", "object_ids": []})
     ids, tags = {}, {}
     for section, items in sections.items():
         for item in items:
             if not isinstance(item, dict) or not isinstance(item.get("id"), str) or not item["id"].strip():
-                findings.append({"rule": "graph.invalid_id", "severity": "error", "message": f"Invalid ID in {section}", "object_ids": []}); continue
+                findings.append({"rule": "graph.invalid_id", "severity": "error", "message": f"ID pada bagian {section} tidak valid", "object_ids": []}); continue
             ident = item["id"]
-            if ident in ids: findings.append({"rule": "graph.duplicate_id", "severity": "error", "message": f"Duplicate ID {ident}", "object_ids": [ident]})
+            if ident in ids: findings.append({"rule": "graph.duplicate_id", "severity": "error", "message": f"ID duplikat: {ident}", "object_ids": [ident]})
             ids[ident] = section
             if section == "objects" and item.get("tag") is not None:
                 tag = str(item["tag"])
-                if tag in tags: findings.append({"rule": "graph.duplicate_tag", "severity": "error", "message": f"Duplicate tag {tag}", "object_ids": [tags[tag], ident]})
+                if tag in tags: findings.append({"rule": "graph.duplicate_tag", "severity": "error", "message": f"Tag duplikat: {tag}", "object_ids": [tags[tag], ident]})
                 tags[tag] = ident
     objects = {x["id"]: x for x in sections["objects"] if isinstance(x, dict) and isinstance(x.get("id"), str)}
     ports = {x["id"]: x for x in sections["ports"] if isinstance(x, dict) and isinstance(x.get("id"), str)}
     for port in ports.values():
         owner = port.get("owner_id")
-        if not isinstance(owner, str) or owner not in objects: findings.append({"rule": "graph.missing_owner", "severity": "error", "message": f"Port owner {owner!r} is unknown", "object_ids": [port["id"]]})
-        if port.get("service_ref") is None: findings.append({"rule": "graph.unknown_service", "severity": "info", "assessment": "NOT ASSESSED", "message": "Port service is unknown", "object_ids": [port["id"]]})
+        if not isinstance(owner, str) or owner not in objects: findings.append({"rule": "graph.missing_owner", "severity": "error", "message": f"Pemilik port {owner!r} tidak ditemukan", "object_ids": [port["id"]]})
+        if port.get("service_ref") is None: findings.append({"rule": "graph.unknown_service", "severity": "info", "assessment": "NOT ASSESSED", "message": "Service port belum diketahui", "object_ids": [port["id"]]})
     for conn in sections["connections"]:
         if not isinstance(conn, dict): continue
         for field in ("from_port", "to_port"):
-            if not isinstance(conn.get(field), str) or conn[field] not in ports: findings.append({"rule": "graph.missing_endpoint", "severity": "error", "message": f"Unknown {field} reference", "object_ids": [str(conn.get("id"))]})
+            if not isinstance(conn.get(field), str) or conn[field] not in ports: findings.append({"rule": "graph.missing_endpoint", "severity": "error", "message": f"Referensi port {field} tidak ditemukan", "object_ids": [str(conn.get("id"))]})
         conn_kind = conn.get("kind")
         if not isinstance(conn_kind, str) or conn_kind not in ("process", "signal", "utility", "unknown"):
-            findings.append({"rule": "graph.unknown_kind", "severity": "warning", "message": "Connection kind is unknown", "object_ids": [str(conn.get("id"))]})
+            findings.append({"rule": "graph.unknown_kind", "severity": "warning", "message": "Jenis koneksi belum diketahui", "object_ids": [str(conn.get("id"))]})
         a = ports.get(conn.get("from_port")) if isinstance(conn.get("from_port"), str) else None
         b = ports.get(conn.get("to_port")) if isinstance(conn.get("to_port"), str) else None
         if a and b and conn_kind in ("process", "signal"):
             ka, kb = a.get("port_kind"), b.get("port_kind")
             if not isinstance(ka, str) or not isinstance(kb, str):
-                findings.append({"rule": "graph.unknown_kind", "severity": "warning", "assessment": "NOT ASSESSED", "message": "Endpoint port kind is missing or malformed", "object_ids": [str(conn.get("id")), a["id"], b["id"]]})
+                findings.append({"rule": "graph.unknown_kind", "severity": "warning", "assessment": "NOT ASSESSED", "message": "Jenis port endpoint tidak tersedia atau tidak valid", "object_ids": [str(conn.get("id")), a["id"], b["id"]]})
             elif {ka, kb} == {"signal", "process"}:
-                findings.append({"rule": "graph.incompatible_kind", "severity": "error", "message": "Signal and process ports are connected", "object_ids": [str(conn.get("id")), a["id"], b["id"]]})
+                findings.append({"rule": "graph.incompatible_kind", "severity": "error", "message": "Port sinyal terhubung ke port proses", "object_ids": [str(conn.get("id")), a["id"], b["id"]]})
     for obj in objects.values():
-        if obj.get("kind") == "unknown": findings.append({"rule": "graph.unknown_kind", "severity": "info", "assessment": "NOT ASSESSED", "message": "Object kind is unknown", "object_ids": [obj["id"]]})
+        if obj.get("kind") == "unknown": findings.append({"rule": "graph.unknown_kind", "severity": "info", "assessment": "NOT ASSESSED", "message": "Jenis objek belum diketahui", "object_ids": [obj["id"]]})
         links = obj.get("internal_links")
         valid_links = isinstance(links, list) and bool(links) and all(
             isinstance(link, dict) and isinstance(link.get("id"), str) and link["id"].strip()
@@ -327,6 +327,6 @@ def audit_graph(model):
             for link in links
         )
         if obj.get("is_assembly") is True and not valid_links:
-            findings.append({"rule": "graph.assembly_incomplete", "severity": "warning", "assessment": "NOT ASSESSED", "message": "Assembly internal ports/links are not explicitly modeled", "object_ids": [obj["id"]]})
-    if not sections["ports"]: findings.append({"rule": "graph.incomplete", "severity": "warning", "message": "No explicit ports; topology is incomplete", "object_ids": []})
+            findings.append({"rule": "graph.assembly_incomplete", "severity": "warning", "assessment": "NOT ASSESSED", "message": "Port/koneksi internal assembly belum dimodelkan secara eksplisit", "object_ids": [obj["id"]]})
+    if not sections["ports"]: findings.append({"rule": "graph.incomplete", "severity": "warning", "message": "Tidak ada port eksplisit; topologi belum lengkap", "object_ids": []})
     return _normalize_findings(findings)

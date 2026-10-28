@@ -14,7 +14,7 @@ class StandardsBaselineTests(unittest.TestCase):
         self.assertTrue(all(x["status"] == "NOT ASSESSED" for x in report["catalog"]["standards"]))
         self.assertTrue(all(x["sha256"] for x in report["artifacts"] if x["status"] == "PRESENT_STATIC_REVIEW"))
         self.assertIn("AVAILABILITY_NOT_ASSESSED", [x["status"] for x in report["backend_observations"].values()])
-        self.assertTrue(any("No network" in x for x in report["limitations"]))
+        self.assertTrue(any("Tidak ada teks standar" in x for x in report["limitations"]))
 
     def test_missing_artifact_is_recorded_without_failure(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -42,6 +42,8 @@ class StandardsBaselineTests(unittest.TestCase):
                    "mappings": [{"id": "m", "standard_id": "S1", "symbol_id": "v", "support_evidence": evidence}]}
         findings = validate_catalog(catalog)
         self.assertIn("standard.evidence_verification_not_assessed", {x["rule"] for x in findings})
+        evidence_finding = next(x for x in findings if x["rule"] == "standard.evidence_verification_not_assessed")
+        self.assertIn("Verifikasi sumber/isi", evidence_finding["message"])
         self.assertNotIn("mapping.unsupported", {x["rule"] for x in findings})
 
     def test_empty_catalog_is_not_green_and_requires_schema_sections(self):
@@ -72,15 +74,18 @@ class StandardsBaselineTests(unittest.TestCase):
         self.assertIn("mapping.unsupported", {x["rule"] for x in validate_catalog(catalog)})
 
     def test_cli_refuses_existing_output(self):
+        import contextlib
+        import io
         from cad.roadmap_foundation import standards
         with tempfile.TemporaryDirectory() as tmp:
             existing = Path(tmp) / "drawing.dxf"
             existing.write_text("preserve", encoding="utf-8")
-            with patch("sys.argv", ["standards", "--repo-root", tmp, "--out", str(existing)]):
-                with self.assertRaises(SystemExit) as caught:
-                    standards.main()
+            error_output = io.StringIO()
+            with patch("sys.argv", ["standards", "--repo-root", tmp, "--out", str(existing)]), contextlib.redirect_stderr(error_output):
+                with self.assertRaises(SystemExit) as caught: standards.main()
             self.assertEqual(caught.exception.code, 2)
             self.assertEqual(existing.read_text(encoding="utf-8"), "preserve")
+            self.assertIn("file yang sudah ada tidak akan ditimpa", error_output.getvalue())
 
 
 if __name__ == "__main__":

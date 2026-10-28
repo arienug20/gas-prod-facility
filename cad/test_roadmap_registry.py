@@ -20,7 +20,8 @@ class RegistryTests(unittest.TestCase):
             with self.assertRaises(ValueError): NamespaceTagRegistry(Path(td) / "r.json", "TEST", None)
             r = NamespaceTagRegistry(Path(td) / "r.json", "TEST", allocation())
             r.reserve("P-001", "one")
-            with self.assertRaises(ValueError): r.reserve("P-001", "two")
+            with self.assertRaisesRegex(ValueError, "tag duplikat"):
+                r.reserve("P-001", "two")
 
     def test_persist_and_reopen_stable(self):
         with tempfile.TemporaryDirectory() as td:
@@ -142,6 +143,21 @@ class GraphTests(unittest.TestCase):
                  "ports": [{"id": "p", "owner_id": [], "port_kind": []}],
                  "connections": [{"id": "c", "from_port": [], "to_port": "p", "kind": []}]}
         self.assertTrue(audit_graph(model))
+
+    def test_invalid_port_messages_are_indonesian(self):
+        model = {"schema_version": "1.0", "objects": [{"id": "o", "kind": "x"}],
+                 "ports": [{"id": "p", "owner_id": "ghost", "port_kind": "process"}],
+                 "connections": [{"id": "c", "from_port": "missing", "to_port": "p", "kind": "process"}]}
+        messages = [f["message"] for f in audit_graph(model)]
+        self.assertTrue(any("Pemilik port" in m for m in messages))
+        self.assertTrue(any("Referensi port" in m for m in messages))
+
+    def test_duplicate_tag_message_is_indonesian(self):
+        model = {"schema_version": "1.0", "objects": [{"id": "a", "kind": "x", "tag": "P-001"},
+                                                           {"id": "b", "kind": "x", "tag": "P-001"}],
+                 "ports": [{"id": "pa", "owner_id": "a"}], "connections": [{"id": "c", "from_port": "pa", "to_port": "missing"}]}
+        duplicate = next(f for f in audit_graph(model) if f["rule"] == "graph.duplicate_tag")
+        self.assertEqual(duplicate["message"], "Tag duplikat: P-001")
 
     def test_audit_references_unknowns_and_signal_process(self):
         model = {"schema_version": "1.0", "objects": [{"id": "a", "kind": "x"}, {"id": "b", "kind": "x"}],

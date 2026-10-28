@@ -55,10 +55,10 @@ Findings use the shared fields `rule`, `category`, `severity`, `message`, and `o
 
 ## Family question prompts
 
-The API accepts a requirement's own `question`, which should be authored from the project-approved scope. Separator, reciprocating pump, and flare family questions may be supplied by a future profile or adapter; this core does not impose a universal function checklist and does not assert any process value, equipment tag, function, or applicability for those families.
+Pesan temuan dan pertanyaan otomatis ditulis dalam Bahasa Indonesia. Jika requirement sudah memuat `question`, teks tersebut dipertahankan persis seperti input dan tidak diterjemahkan diam-diam; isi pertanyaan itu sebaiknya disusun dari scope proyek yang disetujui. Pertanyaan keluarga separator, reciprocating pump, dan flare dapat disediakan profile atau adapter di masa depan; core ini tidak memberlakukan checklist fungsi universal dan tidak menetapkan nilai proses, tag equipment, fungsi, atau applicability untuk keluarga tersebut. Rule ID, field JSON, dan enum status tetap menggunakan identifier kontrak yang stabil.
 
 ## CLI and limits
 
-Run `python -m cad.roadmap_foundation.readiness INPUT.json DELIVERABLE_ID [--out REPORT.json]` from the repository root (or run the module file directly). The CLI prints structured JSON, returns zero only for `ready`, and refuses an output that aliases the input or already exists. The prototype does not create outputs in missing parent directories.
+Jalankan `python -m cad.roadmap_foundation.readiness INPUT.json DELIVERABLE_ID [--out REPORT.json]` dari root repository (atau jalankan file modul secara langsung). CLI menampilkan JSON terstruktur, memakai pesan bantuan dan kesalahan khusus dalam Bahasa Indonesia, mengembalikan kode nol hanya untuk status `ready`, dan menolak output yang sama dengan input atau sudah ada. Teks usage dan label opsi bawaan dari argparse dapat tetap berbahasa Inggris. Prototype tidak membuat output jika direktori induknya belum ada.
 
 This is a new, isolated schema and has no adapter to existing builders. It checks only declared links and decisions; it does not cover all roadmap deliverables, calculation validity, standards applicability, safety-critical classification, workflow roles, document approval, or authorization identity. A passing result therefore cannot be promoted to a project-wide readiness or engineering-compliance claim.

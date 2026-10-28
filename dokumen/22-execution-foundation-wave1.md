@@ -30,6 +30,8 @@ python -m cad.roadmap_foundation.workflow package.json --out report.json
 
 `--out` dibuat eksklusif: path yang sama dengan input, path yang sudah ada, atau parent yang belum ada ditolak. JSON rusak menampilkan lokasi parse error dan keluar nonzero (argparse code 2); section wajib yang missing/null menghasilkan package finding terstruktur dan exit code 1, sementara status komponen tetap terpisah dan `NOT ASSESSED`. Return code nol hanya berarti data readiness `ready` dan input section tersedia tanpa status invalid; itu tidak berarti catalog, graph, atau engineering review telah disetujui. Baca status per bagian pada report.
 
+Pesan temuan, pertanyaan otomatis, bantuan khusus, dan pesan kesalahan CLI foundation readiness/workflow menggunakan Bahasa Indonesia. Teks `question` yang diberikan pemanggil tetap persis seperti input. Key JSON, rule ID, dan enum status tidak diterjemahkan; usage dan label opsi bawaan argparse dapat tetap berbahasa Inggris.
+
 ## Verifikasi yang dijalankan
 
 - `python -m unittest cad.test_roadmap_readiness cad.test_roadmap_standards cad.test_roadmap_registry cad.test_roadmap_workflow -v`
@@ -47,6 +49,13 @@ Pemeriksaan ulang menggunakan Python dengan akses ke site-packages profil penggu
 - Warning summary: all 131 are `DeprecationWarning` emitted through installed `ezdxf`/`pyparsing` calls: 7 legacy parser API call sites in `ezdxf.queryparser`, 62 `parseString` calls, and 62 deprecated `parseAll` arguments during `cad/test_smart_qa.py`.
 - Pelaksana: Codex agent Luna; dijalankan pada runtime profil pengguna melalui eskalasi karena sandbox awal tidak dapat mengimpor pytest. Tidak ada paket yang dipasang dalam verifikasi ini.
 - Earlier local result `75 passed, 131 warnings` is superseded by the fresh `77 passed` run after adding deliverable-scope and numeric-unit tests. The `cad/test_smart_*` modules are legacy toolkit checks outside the four-module foundation release scope; their results are supplemental, not a full-repository or roadmap pass.
+
+### Verifikasi lokalisasi — 29 Oktober 2026
+
+- `python -m unittest cad.test_roadmap_readiness cad.test_roadmap_workflow -v` → `Ran 22 tests ... OK`.
+- Gabungan empat modul foundation: `python -m unittest cad.test_roadmap_readiness cad.test_roadmap_standards cad.test_roadmap_registry cad.test_roadmap_workflow -v` → `Ran 50 tests ... OK`.
+- `python -m py_compile` terhadap delapan file foundation source/test → exit code 0.
+- Tujuh modul pytest dengan 77 test dan 131 warning yang dicatat di atas dijalankan sebelum pembaruan pesan Bahasa Indonesia; hasil tersebut bukan pengganti verifikasi lokalisasi empat modul terbaru.
 
 Hasil ini terbatas pada tujuh modul yang disebutkan; tidak menyatakan seluruh repository, roadmap, atau engineering deliverable lulus. The standalone, reproducible foundation verification consists of the four roadmap unittest modules listed above.
 

@@ -23,7 +23,7 @@ def assess_package(payload: Any, catalog: Any, graph: Any, deliverable_id: str) 
     package_findings = []
     if not isinstance(payload, dict):
         package_findings.append({"rule": "package.basis_missing", "category": "schema", "severity": "error",
-                                 "message": "Basis payload must be an object.", "object_ids": []})
+                                 "message": "Payload basis harus berupa objek JSON.", "object_ids": []})
         basis_payload = None
     else:
         basis_payload = payload
@@ -43,25 +43,25 @@ def assess_package(payload: Any, catalog: Any, graph: Any, deliverable_id: str) 
         for key in ("schema_version", "sources", "basis_items", "authorizations", "deliverables"):
             if key not in payload:
                 package_findings.append({"rule": "package.basis_section_missing", "category": "schema",
-                                         "severity": "error", "message": f"Basis section {key!r} is missing.",
+                                         "severity": "error", "message": f"Bagian basis {key!r} belum tersedia.",
                                          "object_ids": []})
     if catalog_input == "MISSING":
         catalog_report = [{"rule": "catalog.section_missing", "category": "schema", "severity": "error",
-                           "message": "Catalog section is missing; catalog is NOT ASSESSED.", "object_ids": [], "location": None}]
+                           "message": "Bagian catalog tidak tersedia; status catalog tetap NOT ASSESSED.", "object_ids": [], "location": None}]
     if graph_input == "MISSING":
         graph_report = [{"rule": "graph.section_missing", "severity": "error", "assessment": "NOT ASSESSED",
-                         "message": "Graph section is missing; graph is NOT ASSESSED.", "object_ids": []}]
+                         "message": "Bagian graph tidak tersedia; status graph tetap NOT ASSESSED.", "object_ids": []}]
     if catalog_input == "MISSING":
         package_findings.append({"rule": "package.catalog_missing", "category": "schema", "severity": "error",
-                                 "message": "Catalog section is missing or null; catalog status remains NOT ASSESSED.",
+                                 "message": "Bagian catalog tidak tersedia atau bernilai null; status catalog tetap NOT ASSESSED.",
                                  "object_ids": []})
     if graph_input == "MISSING":
         package_findings.append({"rule": "package.graph_missing", "category": "schema", "severity": "error",
-                                 "message": "Graph section is missing or null; graph status remains NOT ASSESSED.",
+                                 "message": "Bagian graph tidak tersedia atau bernilai null; status graph tetap NOT ASSESSED.",
                                  "object_ids": []})
     if not isinstance(deliverable_id, str) or not deliverable_id.strip():
         package_findings.append({"rule": "package.deliverable_id", "category": "schema", "severity": "error",
-                                 "message": "deliverable_id must be a non-empty string.", "object_ids": []})
+                                 "message": "deliverable_id harus berupa string yang tidak kosong.", "object_ids": []})
     return {
         "schema_version": SCHEMA_VERSION,
         "deliverable_id": deliverable_id,
@@ -74,20 +74,20 @@ def assess_package(payload: Any, catalog: Any, graph: Any, deliverable_id: str) 
 
 
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("input", type=Path, help="package JSON with basis, catalog, graph, deliverable_id")
-    parser.add_argument("--out", type=Path, help="write report to a new path; existing paths are refused")
+    parser = argparse.ArgumentParser(description="Evaluasi kesiapan data, catalog, dan graph secara terpisah.")
+    parser.add_argument("input", type=Path, help="file package JSON berisi basis, catalog, graph, dan deliverable_id")
+    parser.add_argument("--out", type=Path, help="simpan report ke file baru; file yang sudah ada tidak ditimpa")
     args = parser.parse_args(argv)
     source = args.input.resolve()
     output = args.out.resolve() if args.out else None
     if output and (output == source or output.exists() or not output.parent.is_dir()):
-        parser.error("--out must be distinct from input, have an existing parent, and not already exist")
+        parser.error("--out harus berbeda dari input, direktori induknya harus tersedia, dan file tujuan belum boleh ada")
     try:
         raw = json.loads(source.read_text(encoding="utf-8"))
     except OSError as exc:
-        parser.error(f"cannot read input file: {exc}")
+        parser.error(f"gagal membaca file input: {exc}")
     except json.JSONDecodeError as exc:
-        parser.error(f"malformed JSON at line {exc.lineno}, column {exc.colno}: {exc.msg}")
+        parser.error(f"JSON tidak valid pada baris {exc.lineno}, kolom {exc.colno}.")
     if not isinstance(raw, dict):
         report = assess_package(raw, None, None, "")
     else:
@@ -95,7 +95,7 @@ def main(argv=None) -> int:
         for field in ("basis", "catalog", "graph", "deliverable_id"):
             if field not in raw:
                 report["package_findings"].append({"rule": "package.field_missing", "category": "schema", "severity": "error",
-                                                   "message": f"Package field {field!r} is missing.", "object_ids": []})
+                                                   "message": f"Field package {field!r} belum tersedia.", "object_ids": []})
         if "catalog" not in raw:
             report["catalog_assessment"].update(input_status="MISSING", status="NOT ASSESSED")
         if "graph" not in raw:
@@ -106,9 +106,9 @@ def main(argv=None) -> int:
             with output.open("x", encoding="utf-8", newline="\n") as stream:
                 stream.write(rendered)
         except FileExistsError:
-            parser.error("--out already exists; refusing to overwrite")
+            parser.error("file --out sudah ada; file yang ada tidak ditimpa")
         except OSError as exc:
-            parser.error(f"cannot write report: {exc}")
+            parser.error(f"gagal menulis report: {exc}")
     print(rendered, end="")
     if report["package_findings"] or report["data_readiness"]["status"] != "ready":
         return 1

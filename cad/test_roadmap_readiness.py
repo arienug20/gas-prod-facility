@@ -1,5 +1,7 @@
 """Contract tests using symbolic, synthetic IDs only."""
 import copy
+import contextlib
+import io
 import json
 import tempfile
 import unittest
@@ -169,13 +171,50 @@ class ReadinessTests(unittest.TestCase):
         data = payload()
         item = data["basis_items"][1]
         item.update(value=12.0, unit=None)
-        assert "basis.numeric_unit" in {f["rule"] for f in validate_basis(data)}
+        findings = validate_basis(data)
+        assert "basis.numeric_unit" in {f["rule"] for f in findings}
+        assert "harus mencantumkan satuan secara eksplisit" in next(f["message"] for f in findings if f["rule"] == "basis.numeric_unit")
         item.update(unit="1")
         assert "basis.dimensionless_explicit" in {f["rule"] for f in validate_basis(data)}
         item.update(quantity_kind="dimensionless")
         assert not validate_basis(data)
         item.update(value="symbolic narrative", unit=None)
         assert not validate_basis(data)
+
+    def test_default_questions_and_scope_messages_are_indonesian_but_input_question_is_preserved(self):
+        data = payload()
+        data["deliverables"][0]["requirements"][0].pop("question")
+        report = assess_readiness(data, "DEL-A")
+        self.assertTrue(report["questions"][0]["question"].startswith("Konfirmasikan basis item BASIS-A"))
+
+        data = payload()
+        data["basis_items"][1]["scope"] = ["OTHER-DEL"]
+        report = assess_readiness(data, "DEL-A")
+        scope_message = next(f["message"] for f in report["findings"] if f["rule"] == "basis.scope_mismatch")
+        self.assertIn("tidak mencakup deliverable", scope_message)
+        self.assertTrue(report["questions"][1]["question"].startswith("Konfirmasikan apakah basis item BASIS-B"))
+
+        data = payload()
+        self.assertEqual(assess_readiness(data, "DEL-A")["questions"][0]["question"], "Confirm symbolic basis A.")
+
+    def test_cli_help_and_malformed_json_use_indonesian_custom_text(self):
+        with contextlib.redirect_stdout(io.StringIO()) as help_output:
+            try:
+                main(["--help"])
+            except SystemExit as exc:
+                self.assertEqual(exc.code, 0)
+        self.assertIn("Periksa kesiapan basis", help_output.getvalue())
+        self.assertIn("simpan report JSON", help_output.getvalue())
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / "bad.json"
+            source.write_text("{", encoding="utf-8")
+            error_output = io.StringIO()
+            with contextlib.redirect_stderr(error_output):
+                try:
+                    main([str(source), "DEL-A"])
+                except SystemExit as exc:
+                    self.assertEqual(exc.code, 2)
+            self.assertIn("JSON tidak valid pada baris", error_output.getvalue())
 
 
     def test_conflicting_or_invalid_references_are_structural_and_nonmutating(self):

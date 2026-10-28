@@ -88,6 +88,12 @@ class WorkflowTests(unittest.TestCase):
             self.assertEqual(output.read_bytes(), before)
 
     def test_cli_malformed_json_reports_parse_location(self):
+        help_output = io.StringIO()
+        with contextlib.redirect_stdout(help_output), self.assertRaises(SystemExit) as help_exit:
+            main(["--help"])
+        self.assertEqual(help_exit.exception.code, 0)
+        self.assertIn("Evaluasi kesiapan data", help_output.getvalue())
+        self.assertIn("file package JSON", help_output.getvalue())
         with tempfile.TemporaryDirectory() as tmp:
             source = Path(tmp) / "broken.json"
             source.write_text('{"basis":', encoding="utf-8")
@@ -95,7 +101,7 @@ class WorkflowTests(unittest.TestCase):
             with self.assertRaises(SystemExit) as error, contextlib.redirect_stderr(error_output):
                 main([str(source)])
             self.assertEqual(error.exception.code, 2)
-            self.assertIn("malformed JSON at line", error_output.getvalue())
+            self.assertIn("JSON tidak valid pada baris", error_output.getvalue())
 
     def test_cli_ready_basis_with_null_catalog_and_graph_exits_nonzero(self):
         package = {"basis": basis(confirmed=True), "catalog": None, "graph": None,
@@ -112,6 +118,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(report["graph_assessment"]["status"], "NOT ASSESSED")
         self.assertTrue(any(f["rule"] == "package.catalog_missing" for f in report["package_findings"]))
         self.assertTrue(any(f["rule"] == "package.graph_missing" for f in report["package_findings"]))
+        self.assertIn("tidak tersedia atau bernilai null", next(f["message"] for f in report["package_findings"] if f["rule"] == "package.catalog_missing"))
 
 
 if __name__ == "__main__":
