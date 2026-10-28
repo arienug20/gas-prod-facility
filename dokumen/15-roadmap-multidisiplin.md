@@ -1,146 +1,108 @@
 # Roadmap Pengembangan Gas Production Facility — AI Engineering Multidisiplin
 
 **Dokumen:** GPF-00-PM-PLN-0015  
-**Revisi:** A0  
+**Revisi:** A1
 **Tanggal:** 28 Oktober 2026  
-**Status:** usulan roadmap untuk diskusi dan prioritisasi; bukan persetujuan desain atau jadwal proyek.
+**Status:** usulan roadmap untuk diskusi dan prioritisasi; bukan persetujuan desain, bukti compliance, atau jadwal proyek.
 
-## 1. Tujuan dan arah
+## 1. Tujuan dan hubungan dokumen
 
-Mengembangkan repositori GPF dari tooling yang saat ini berfokus pada process dan piping menjadi lingkungan kerja engineering multidisiplin yang dapat menghasilkan **draft terstruktur**, melakukan review dan memeriksa konsistensi antardokumen. Hasil dipakai untuk mendukung engineer; persetujuan dan keputusan keselamatan tetap berada pada personel yang berwenang.
+Roadmap mengembangkan tooling GPF dari fokus process/piping menjadi lingkungan engineering multidisiplin untuk menghasilkan draft yang terstruktur, menjaga keterlacakan, dan membantu review konsistensi. Keputusan dan persetujuan engineering tetap pada personel berwenang.
 
-Roadmap ini melengkapi, tidak menggantikan, `07-plan-process-piping-cad-suite.md`, `08-plan-pipeline-metering-lbcv-underground.md`, `09-plan-optimasi-tooling.md` dan rencana dua P&ID `14-rencana-eksekusi-pid-meter-kompresor.md`. Cakupan fasilitas, urutan prioritas, personel, biaya, waktu dan dokumen kontraktual perlu disepakati pada awal eksekusi.
+Roadmap ini melengkapi `07-plan-process-piping-cad-suite.md`, `08-plan-pipeline-metering-lbcv-underground.md`, `09-plan-optimasi-tooling.md`, `14-rencana-eksekusi-pid-meter-kompresor.md`, dan konsep P&ID general FEED/DED pada `15-konsep-pid-general-feed-ded.md`. Rincian eksekusi prioritas BFD/PFD/P&ID terdapat di `16-backlog-roadmap-bfd-pfd-pid.md`.
 
-**Prinsip:** engineering basis → hubungan antar-disiplin → draft dokumen/model → validasi sesuai cakupan → review independen → persetujuan manusia. Hasil CAD lulus tidak membuktikan kecukupan desain, kepatuhan standar, atau kelayakan konstruksi.
+**Arah prioritas:** kembangkan kualitas P&ID yang sistematis menurut ISO/ISA dan standar proyek yang telah diverifikasi, sambil menjalankan pengumpulan dan rekonsiliasi data proses secara paralel. Ketiadaan kalkulasi universal tidak otomatis memblokir seluruh P&ID; data yang wajib untuk fungsi atau keputusan tertentu tetap menjadi hold yang terlihat. General engine, profile company/client, dan data proyek GPF adalah lapisan terpisah.
 
-## 2. Kondisi awal yang teramati
+## 2. Prinsip kerja dan data-first
 
-- Sudah tersedia design basis proyek, contoh P&ID V-101, piping plan, isometric, model 3D, library simbol dan validator CAD; beberapa modul process/piping telah memiliki demo dan pengujian.
-- Dua demo custody metering dan kompresor, beserta review `13` dan rencana `14`, menunjukkan perlunya trace fungsi, acuan domain, pengelolaan data TBD dan review engineering terpisah dari QA drafting.
-- `REF-PROC-MINOR` belum tercakup seluruh pemeriksaan validator; kualitas geometri, akurasi process, dan konsistensi lintas disiplin perlu dilaporkan sebagai pemeriksaan yang berbeda.
-- Design basis `01-design-basis.md` adalah sumber kebenaran proyek untuk tag/line/koordinat/elevasi sesuai `AGENTS.md`. Paket demo di luar basis tidak boleh otomatis menjadi bagian plant. Konflik dalam basis harus diangkat untuk keputusan engineer; jangan mengubah data otoritatif berdasarkan tebakan.
-- Klaim lama seperti “zero-defect” dan target waktu dalam rencana historis adalah target/hasil pada cakupan uji masing-masing, bukan jaminan engineering untuk proyek atau disiplin baru.
+1. Baca dan inventarisasi sumber yang berlaku, termasuk design basis, dokumen proyek, vendor, standar kontraktual, serta revisinya. Ajukan pertanyaan data primer secara adaptif sampai input wajib untuk deliverable, sistem, dan fase terkait lengkap serta konsisten.
+2. Konfirmasi basis dan batas sistem sebelum menetapkan desain. Diam bukan persetujuan. Jangan membuat angka, tag, design pressure, set point, nozzle, ukuran, fungsi proteksi, atau koneksi seolah-olah fakta.
+3. Asumsi atau keluaran parsial berstatus TBD hanya boleh dipakai setelah persetujuan eksplisit untuk tujuan dan batas penggunaan tertentu. Inventaris independen, daftar pertanyaan, pemetaan sumber, dan pekerjaan yang tidak bergantung pada jawaban dapat berjalan terus.
+4. Otomatisasi tag hanya mengikuti aturan penomoran dan alokasi yang telah disetujui; identifier sementara harus jelas bukan tag proyek.
+5. Pisahkan status kepastian data (sumber/fakta/asumsi/TBD), keputusan engineering (opsi, alasan, owner, bukti), dan approval dokumen (author/checker/approver, issue purpose, revisi). Satu status tidak menyiratkan status lainnya.
+6. Readiness ditentukan per deliverable dan fase melalui applicability serta bukti. FEED tidak memerlukan semua detail konstruksi DED, tetapi tidak boleh menghilangkan fungsi relevan atau menyembunyikan ketidakpastian. `Unknown`/`not assessed` bukan `pass`.
+7. Hasil lint, tes, model atau drawing tidak membuktikan keselamatan, kecukupan desain, konstruktabilitas, atau compliance standar.
 
-## 3. Cakupan disiplin dan hubungan awal
+Untuk tag, line, koordinat, dan elevasi GPF, `dokumen/01-design-basis.md` tetap sumber kebenaran. Konflik diangkat sebagai deviation/decision; jangan mengubah basis secara sepihak. Pilot sintetik tidak ditambahkan ke basis GPF.
 
-| Disiplin | Keluaran awal yang dituju | Input utama dan interface |
+## 3. Batas awal dan bukti yang tersedia
+
+- Tersedia design basis dan contoh P&ID V-101, piping plan, isometric, model 3D, library simbol serta validator CAD; cakupan engineering dan versi tool harus dinilai per artefak.
+- Laporan tooling fase 1 (`11-report-tooling-phase1.md`) mencatat prototipe builder, router, anotasi, dan QA; 71 tes lulus secara historis pada sesi laporan. Angka tersebut bukan hasil uji kondisi saat ini atau jaminan cakupan engineering.
+- Builder tahap 1 menunjukkan control-valve station dan transfer-line typical, tetapi port internal setiap valve belum dimodelkan lengkap. Tag registry belum persisten lintas proses. Label menggunakan bounding box perkiraan.
+- Validasi fase 1 tercatat memakai cadshim/ezdxf; `validate_dxf_file` shim adalah stub dan bukan bukti bahwa cadgen asli telah divalidasi. Demo drawing lain yang memakai cadgen nyata tidak boleh digeneralisasi sebagai stub.
+- Prioritas P&ID adalah melengkapi representasi instrumentasi dan kontrol (PI/PT beserta tag/fungsi sesuai basis, signal/loop, BPCS/SIS yang jelas), valve, drain, vent, seal, tie-in, serta kebutuhan operasi/maintenance yang applicable. Tidak ada simbol generik yang menggantikan keputusan proses atau safety.
+- Typical dua P&ID pada rencana 14, demo metering/kompresor, dan basis flare memiliki status/tujuan masing-masing. Jangan menggabungkan data contoh dengan data GPF tanpa keputusan eksplisit.
+
+## 4. Standar, otoritas dan pemeriksaan
+
+Sebelum rule otomatis atau klaim kesesuaian dibuat, susun matriks standar per deliverable dengan edisi/addendum, kontrak, applicability, salinan resmi yang berhak digunakan, owner reviewer, tanggal pemeriksaan, dan status. Pemeriksaan klausul harus menggunakan salinan sah/terkendali; jangan mengklaim nomor klausul atau compliance berdasarkan ingatan.
+
+| Rujukan awal untuk verifikasi | Penggunaan yang direncanakan | Status sampai verifikasi sumber berlaku |
 |---|---|---|
-| Process | Design basis, PFD/H&MB, P&ID, equipment/line list, relief dan operasi sebagai draft terstruktur | Komposisi, laju dan P/T dari basis; menyediakan kondisi proses untuk seluruh disiplin. |
-| Piping & layout | Line list/spec, plot/piping plan, isometric, model/coordinate register dan support interface | P&ID, equipment nozzle, design P/T, layout; berkoordinasi dengan mechanical, civil dan structural. |
-| Mechanical/static | Equipment datasheet, nozzle schedule, vessel/tank/exchanger interface, daftar vendor data | Process conditions, material/pressure design, nozzle dan beban untuk piping/structural. |
-| Mechanical/rotating | Datasheet dan interface pompa/kompresor, package boundary, utilities, vendor document register | Process envelope, performance map, loads, electrical driver, instrument dan protection interface. |
-| Instrument & control | Instrument index, datasheet, I/O list, loop interface, control narrative dan hook-up register | P&ID, equipment/vendor, utilities, electrical power dan control system. |
-| SIS & process safety | C&E/SRS draft, safety-function register, relief/flare and hazard-study interface, open action register | Process scenarios, P&ID, instrument, electrical dan operating philosophy. HAZOP/LOPA/SIL formal tetap kerja tim berwenang. |
-| Electrical | Load list, power balance, SLD draft, equipment/MCC interface, cable dan earthing register | Mechanical drivers, utility loads, hazardous-area classification dan control power. |
-| Civil & structural | Plot/grade interfaces, foundation load register, structure/support and access interfaces | Equipment and piping loads, coordinates, geotechnical data, layout dan operating access. |
-| Pipeline, corrosion & materials | Interface route, line/service/spec, coating/CP and materials-selection registers | Composition, H2S/water, pressure, route, soil/environment, corrosion study dan piping boundary. |
-| Telecom, fire & gas | Detection and communication interface, device/location and system interface registers | Safety studies, hazardous-area data, layout, electrical power dan control system. |
-| Project engineering & document control | Master document register, interfaces, review comments, revision/change and vendor data register | Status dan persetujuan semua disiplin; menjaga keterlacakan baseline. |
-| Construction, commissioning & operations | Draft system/subsystem boundary, interface and outstanding-action register | Dokumen desain yang telah dikendalikan, operating philosophy dan input lapangan; bukan instruksi eksekusi lapangan otomatis. |
+| ISO 10628-1 dan ISO 10628-2 | Diagram process industry: klasifikasi/isi dan simbol | Matriks perlu menetapkan bagian/edisi serta batas penerapan. |
+| ISA 5.1; ISA-TR5.1.02 dan ISA-TR5.1.03 | Instrumentation symbols/identification dan panduan penerapannya | Verifikasi edisi, kontrak, dan interpretasi project legend. |
+| ISO 15519; ISO 14617 bagian relevan | Presentasi diagram process engineering dan simbol grafis | Identifikasi bagian yang benar-benar applicable; jangan menganggap semua bagian berlaku. |
+| PIP PIC001 | Kandidat praktik P&ID hanya jika diadopsi proyek/klien | `NOT ASSESSED` sampai adopsi dan salinan terkendali dikonfirmasi. |
+| ISA 5.4; IEC 62424 | Interface diagram loop/control engineering pada tahap lanjut | Bukan pengganti P&ID; cakupan interface dan fase ditetapkan kemudian. |
+| IEC 61511 / ISA 61511 | Siklus hidup SIS dan interface safety | Wajib review disiplin berwenang; tool tidak menetapkan SIL atau membuktikan independensi. |
+| API/ASME spesifik lingkup | Process equipment, relief, piping, metering, machinery sesuai scope | Standar dipilih per keputusan/perhitungan dan basis kontraktual; tidak ada penerapan blanket. |
 
-Daftar tersebut menunjukkan tujuan, bukan pernyataan bahwa skill, library atau template untuk semua disiplin sudah tersedia. PFD/P&ID, data listrik, mekanikal, sipil dan safety harus berbagi referensi namun tetap memiliki penanggung jawab disiplin masing-masing.
+Legenda, template, dan konvensi perusahaan adalah persyaratan drafting/proyek jika disetujui; hal tersebut tidak otomatis sama dengan persyaratan ISO/ISA. Standar yang belum tersedia/ditinjau dilaporkan `NOT ASSESSED`, bukan dianggap dipenuhi atau tidak dipenuhi.
 
-## 4. Tahapan dan dependency
+## 5. Work packages dan dependency
 
-### Fase 0 — Baseline dan tata kelola
+Backlog task-level, acceptance test positif/negatif, dependency, evidence, status dan owner role ada di dokumen 16. Urutan berikut adalah dependency, bukan estimasi kalender.
 
-**Tujuan:** memastikan bahan yang dipakai, scope dan statusnya dapat dipercaya sebelum ekspansi.
+| WP | Tujuan dan keluaran utama | Gate |
+|---|---|---|
+| WP0 — Baseline dan tata kelola | Inventaris sumber, tool, skill, standar, status data, konflik, owner/decision register dan baseline evidence | Sumber/revisi/status serta batas tiap demo dapat ditelusuri; konflik punya owner. |
+| WP1 — Standar, legend dan drafting | Matriks applicability/adopsi dan manual review; mapping legend/project profile/company-client; P&ID A3 V-101 sebagai acuan drafting; alur MTEXT/QA | Scope adopsi dan legend tersedia disetujui; standar yang belum dinilai ditandai `NOT ASSESSED`, dengan hold hanya pada bagian scope yang terdampak; tidak ada klaim compliance. |
+| WP2 — Data contract dan readiness | Schema data-first berversi; pertanyaan adaptif; readiness per design basis/BFD/PFD/P&ID FEED/DED berdasarkan applicability | Sistem tidak mengisi nilai kosong; hold/readiness dapat dijelaskan dengan bukti dan owner. |
+| WP3 — Graph, ports, connections dan tag | Model graph equipment/valve/instrument/ports; koneksi internal; persistent identity/tag registry; adapter ke manifest/schedule | Positif/negatif membuktikan kontinuitas dan stabilitas; tag hanya dari alokasi disetujui. |
+| WP4 — P&ID FEED/DED | Library/assembly dan fungsi lintas sistem, loop/signal, valve/drain/vent/seal, operasi, SIS interface, change impact | Pilot separator/scrubber sintetik lolos engineering review serta minimum semantic/drafting QA; agregasi QA dan release gate dilakukan WP6; batas FEED/DED berlaku. |
+| WP5 — BFD/PFD/H&MB/kalkulasi | Alur BFD/PFD serta import H&MB CSV/JSON dan hasil kalkulasi yang diverifikasi; API simulator kelak | Nilai/satuan/sumber/revisi dan perubahan direkonsiliasi; hasil simulator bukan source tanpa review. |
+| WP6 — QA, change dan issue bundle | Checks, delta impact, evidence, revision/issue package berversi dan reproducible | Paket satu versi input/model/rule/output; status engineering/model/drafting/approval terpisah. |
+| WP7 — Multidisiplin dan integrasi | Integrasi interface process ke piping, mechanical/static & rotating, instrument/control, SIS/safety, electrical, civil/structural, corrosion/materials, pipeline, F&G/telecom, document control, construction/commissioning/operations | Pilot end-to-end menunjukkan owner, interface, gap, provenance dan approval untuk semua interface applicable. |
 
-- Inventaris dokumen, skill terpasang/salinan repo, tool dan demo: nomor, rev, status, lokasi, pemilik, dependensi dan keterbatasan. Identifikasi source canonical dan salinan distribusi; ukur perbedaan sebelum mengubah installer.
-- Audit konflik internal basis dan drawing yang sudah diketahui; daftar sebagai isu, tetapkan pemilik dan keputusan tanpa mengubah design basis sepihak.
-- Buat master document register, action/decision register dan matriks RACI awal. Tetapkan definisi demo, concept, IFR, IFC dan as-built sesuai prosedur proyek; kode revisi mengikuti `AGENTS.md`.
-- Tentukan standar/edisi kontraktual per domain, sumber resmi dan tanggal verifikasi; jangan menyimpulkan kepatuhan dari nama standar pada template.
+WP4 dimulai dengan kualitas P&ID dan fixture separator/scrubber sintetik berorientasi V-101. Fixture ditandai test-only dan memiliki scope yang disetujui; angka/tag di dalamnya tidak menjadi data GPF. Minimum validator dan drafting lifecycle menjadi prasyarat pilot; agregasi QA lintas package dan issue/release gate dilakukan kemudian di WP6. Pump dan flare dipertahankan sebagai regresi, dengan cakupan aktual dinyatakan. Data process dan P&ID dikerjakan paralel melalui WP2/WP5. Kalkulasi atau simulator hanya menjadi input/gate bila applicable pada keputusan dan deliverable terkait; tidak ada kalkulasi universal sebagai blocker.
 
-**Gate:** baseline dan daftar konflik disetujui pemilik proyek; item belum selesai tetap mempunyai owner dan status. Hasil: laporan baseline dan daftar prioritas yang dapat diaudit.
+## 6. Interface lintas disiplin (ekspansi WP7)
 
-### Fase 1 — Fondasi data dan QA lintas disiplin
+Core menyimpan interface dan provenance, bukan menggantikan metode/perangkat engineering disiplin. Tiap disiplin menyuplai deliverable terkendali, status, owner, assumptions/TBD, interface ID dan perubahan yang terdampak.
 
-**Tujuan:** setiap fakta memiliki identitas, asal dan status yang jelas sebelum dipakai berulang.
+| Disiplin | Interface awal dan gate ringkas |
+|---|---|
+| Piping/layout | P&ID ↔ line list ↔ plan/iso/model ↔ nozzle; line spec/P-T dan lokasi disinkronkan dari basis yang disetujui; geometry dan hydraulic/stress review terpisah. |
+| Mechanical/static | Equipment datasheet, nozzle schedule, vessel/tank/exchanger dan vendor loads; equipment/nozzle basis direkonsiliasi dengan process/piping. |
+| Mechanical/rotating | Pump/compressor duty, package boundary, driver, utilities dan vendor data; pump regression menjadi salah satu fixture, bukan desain proyek. |
+| Instrument/control | Instrument index, PI/PT/tag, I/O/loop, control narrative, signal dan final element; trace measurement→logic→action sesuai fase dan evidence. |
+| SIS/process safety | C&E/SRS, safety function, HAZOP/LOPA/SIL dan relief/flare interface; approval oleh tim berwenang, tidak disimpulkan dari simbol. |
+| Electrical | Load list, power balance, SLD, MCC/driver, hazardous area, cable/earthing; equipment ↔ load ↔ supply dapat ditelusuri. |
+| Civil/structural | Plot/grade, geotechnical basis, foundation/support loads, access; load/coordinate source serta design check tercatat. |
+| Corrosion/materials | Fluida, water/H2S, material, corrosion allowance, coating/CP dan compatibility; basis/material selection review sesuai scope. |
+| Pipeline | Route, boundaries, operating envelope, line/service/spec dan tie-in; interface ke facility dan crossing/ROW/study dicatat. |
+| Telecom, fire & gas | Detection, communication, device/location, cause/effect interface dan power/control; kebutuhan mengikuti safety study dan layout. |
+| Project engineering/document control | Master document register, revision, transmittal, comment/action/decision/vendor register; approval aktual dan issue purpose terkendali. |
+| Construction/commissioning/operations | System/subsystem, isolation, startup/shutdown, commissioning, maintenance dan field feedback; dokumen terkendali dan sign-off sesuai prosedur. |
 
-- Rancang register bersama minimal: equipment, nozzle, line, instrument, stream, load, document dan interface. Setiap record memiliki tag/ID, nilai, unit/basis, sumber/revisi, status (`given`, `assumption`, `TBD`, `approved`), penanggung jawab dan referensi perubahan. Tidak menyimpan nilai default simbol sebagai nilai desain.
-- Tetapkan aturan nomor unik, satuan, referensi lintas dokumen, perubahan dan konflik. Struktur baru harus kompatibel dengan manifest/schedule yang ada melalui adapter dan pengujian; jangan menyalin data proyek sebagai fakta otomatis.
-- Perluas validator ke proses minor, konsistensi tag/schedule, revisi dan interface. Laporkan cakupan, false positive/negative dan `NOT ASSESSED`; bangun fixture positif/negatif berdasarkan kasus P&ID sebelumnya. Status QA CAD, konsistensi data dan review engineering harus terpisah.
-- Definisikan workflow membuat, meninjau, merilis draft dan merekonsiliasi salinan skill pada Linux/Windows; perubahan skill/tool dicatat dan diuji sebelum distribusi.
+## 7. Aturan mutu drawing dan issue
 
-**Gate:** contoh perubahan tag/line dapat ditelusuri ke dokumen terkait; konflik/TBD terdeteksi tanpa diam-diam mengubah basis; suite regresi dan pemeriksaan visual yang relevan lulus. Penilaian engineering tetap terpisah.
+Setiap P&ID A3 untuk acuan V-101 tetap mematuhi `AGENTS.md`: skill `company-cad-standard` dan `dxf` dipakai saat drawing; company override dipastikan aktif; teks berupa native MTEXT ARIAL melalui manifest dan `cad/apply_text.py`, lineweight dipasang oleh post-processor, collision dicegah, garis minor crossing diberi gap 3 mm sedangkan process major line utuh, dan setiap process line menunjukkan flow arrow. Urutan: build → apply_text → validasi 0 error → snapshot → visual check independen oleh pembaca gambar. Catat backend yang benar-benar berjalan; stub bukan bukti. Setiap revisi drawing menaikkan REV dan mencatat perubahan pada title block/revision table.
 
-### Fase 2 — Process/PFD/P&ID dan metering/kompresi
+Satu issue bundle mengikat versi/hash input, schema/rules/library, graph, manifest, register, findings, assumptions/TBD, drawing, snapshot dan approval aktual. Kriteria readiness untuk design basis, BFD, PFD, P&ID FEED dan P&ID DED dirinci di backlog. Penerbitan IFR/IFC/as-built tunduk pada prosedur proyek; output tooling bukan approval.
 
-**Tujuan:** membangun referensi engineering yang dalam sebelum memperluas ke disiplin pengguna data.
+## 8. Prioritas, ukuran hasil dan batas klaim
 
-- Pisahkan workflow PFD/H&MB dan P&ID; tambahkan trace table proses, kontrol, shutdown, relief dan interface sebelum membuat drawing. Gunakan V-101 sebagai acuan detail dan `dokumen/14` untuk dua pilot.
-- Perkuat review P&ID: pisahkan dampak dari keyakinan bukti, nyatakan referensi yang hilang, dan tambahkan panduan metering, separator serta compressor. Sebut AGA 9/8 dan API MPMS sesuai teknologi dan kontrak; jangan menganggap ada kesesuaian tanpa data/calibration.
-- Uji pilot custody 10 MMSCFD dan compressor 2 × 50% sebagai contoh mandiri. Basis psi, kapasitas, gas kompresor, H2S service, PSV sizing dan performa vendor tetap TBD sampai dikonfirmasi. Cap/sambungan dan ESD references harus jelas.
-- Kembangkan register asumsi, C&E dan interface yang terhubung ke temuan review, tanpa menggantikan HAZOP, relief study, SRS atau persetujuan spesialis.
+Prioritas eksekusi: WP0 → WP1/WP2 → WP3 → WP4, dengan WP5 data/process berjalan paralel sesuai input; WP6 mengikat issue; WP7 memperluas secara bertahap. Urutan ini tidak mengasumsikan tanggal, biaya, atau jumlah personel.
 
-**Gate:** reviewer process, metering, machinery dan instrument dapat menelusuri fungsi dari sumber ke tujuan dan mengidentifikasi setiap data yang belum diketahui. Demo tidak diklaim sebagai desain konstruksi.
+Ukuran hasil mencakup coverage evidence/applicability, jumlah pertanyaan dan hold yang ditutup/terbuka, kesalahan semantik yang tertangkap pada fixture, dampak perubahan lintas artefak, hasil drafting/visual QA, dan waktu authoring setelah baseline kualitas. Hindari klaim “zero-defect”, “fully compliant”, atau otomatisasi keselamatan tanpa cakupan dan bukti yang sesuai.
 
-### Fase 3 — Piping dan mechanical terintegrasi
+HAZOP/HAZID, relief sizing, SIL/LOPA, electrical protection, equipment/mechanical design, structural calculation, material selection dan persetujuan IFC tetap memerlukan sumber, proses, kompetensi, serta persetujuan berwenang. Yang belum dinilai dilabel `NOT ASSESSED`.
 
-**Tujuan:** konsistensi antara proses, peralatan, ruang dan piping.
+## 9. Riwayat revisi
 
-- Sinkronkan equipment/nozzle/line dan design P/T dari baseline; cocokkan P&ID ↔ line list ↔ plan/model ↔ isometric ↔ datasheet dengan identitas dan revisi sumber.
-- Tambahkan interface untuk vessel, pumps, compressor packages, nozzle orientation, maintenance/access dan vendor loads. Identifikasi perbedaan konseptual, geometris dan data vendor tanpa menyimpulkan kebenaran desain dari model semata.
-- Sediakan review untuk akses, clash, support interface dan constructability; pastikan keterbatasan model, toleransi dan cakupan tertera.
-
-**Gate:** satu pilot equipment-to-line dapat ditelusuri pada dokumen terkait, termasuk satu perubahan nozzle dan konsekuensinya; isu yang membutuhkan perhitungan piping/mechanical tetap open sampai diverifikasi engineer.
-
-### Fase 4 — Instrument, control dan process safety
-
-**Tujuan:** membuat interface fungsi kontrol dan keselamatan dapat ditelusuri.
-
-- Bangun instrument index, I/O dan loop reference dari data yang disetujui; tampilkan `sensor → logic/controller → final element → action` beserta referensi P&ID/C&E/SRS dan interface vendor.
-- Buat C&E drafting, alarm/trip dan safety-function registers dengan status bukti, independensi dan keputusan manusia; bedakan BPCS, SIS dan protection lain. Jangan menyimpulkan SIL atau independensi hanya dari tag/simbol.
-- Siapkan interface relief, flare/blowdown, fire and gas dan hazardous-area study; catat pressure scenarios, tujuan disposal dan kebutuhan calculation/vendor sebagai open item bila belum tersedia.
-
-**Gate:** satu loop kontrol dan satu fungsi shutdown ditelusuri antar P&ID, index, C&E dan vendor interface; seluruh keputusan keselamatan memiliki pemilik, sumber dan verifikasi manusia.
-
-### Fase 5 — Electrical, civil/structural dan pendukung
-
-**Tujuan:** memvalidasi beban dan interface lintas disiplin untuk pilot yang sama.
-
-- Electrical: hubungkan equipment/driver ke load list, power supply dan SLD draft; klasifikasi area, starting, critical loads, UPS dan ratings berdasar data yang disetujui.
-- Civil/structural: hubungkan koordinat, elevasi, equipment/support loads, foundation, access dan geotechnical basis; perhitungan desain tetap di alat dan proses disiplin masing-masing.
-- Kembangkan interface corrosion/materials, pipeline, telecom dan fire & gas berdasarkan prioritas proyek; jangan mengasumsikan scope atau geoteknik dari simbol.
-
-**Gate:** pilot mencocokkan satu driver P&ID ↔ equipment list ↔ load list ↔ SLD serta satu equipment ↔ loads ↔ foundation interface; mismatch dan sumber revisi tercatat.
-
-### Fase 6 — Pilot end-to-end, distribusi dan operasi berkelanjutan
-
-- Jalankan satu kasus end-to-end dari basis → PFD → P&ID → datasheet → piping/model → instrument/C&E → electrical/civil interface, sesuai data yang tersedia. Lakukan review independen dan uji perubahan satu parameter terhadap artefak terkait.
-- Paketkan dokumentasi, versi tool/skill, contoh, hasil uji dan cara instalasi; verifikasi distribusi dari repo ke workstation terisolasi, termasuk rollback dan hak akses. Data kredensial/komersial tidak masuk repo.
-- Dokumentasikan known limitations, support owner dan mekanisme menerima temuan. Validasi dampak perubahan setiap kali referensi standar, helper, skill atau baseline proyek diperbarui.
-
-**Gate:** tim lintas disiplin menerima hasil pilot dan catatan gap; tidak ada item keselamatan berstatus selesai tanpa bukti dan persetujuan pemiliknya. Ekspansi disiplin dan penggunaan proyek nyata diputuskan berdasarkan hasil pilot.
-
-## 5. Prinsip review dan penerimaan
-
-1. Tiap deliverable memiliki nomor, revisi, status, batas ruang lingkup, sumber, author, checker dan approver sesuai proses proyek. AI tidak menandatangani sebagai engineer yang telah menyetujui desain.
-2. Temuan memiliki ID, lokasi, fakta terlihat, implikasi, tingkat dampak, keyakinan bukti, rekomendasi, owner, status dan referensi; `TBD` yang berpotensi berdampak tinggi tidak diturunkan hanya karena dokumen pendukung belum tersedia.
-3. Bukti dan persetujuan dibedakan: linter/tes = cakupan otomatis; visual = keterbacaan dan geometri yang diamati; cross-check = atribut yang benar-benar dibandingkan; engineer/vendor = keputusan disiplin dalam batas otoritas mereka.
-4. Setiap gambar P&ID/piping/iso mengikuti `AGENTS.md`: skill perusahaan + dxf, build → apply_text → validasi → snapshot → visual review independen; revisi dan deviasi dicatat. Laporan sisa keterbatasan dan layer yang tidak tercakup harus terlihat.
-5. HAZOP/HAZID, relief sizing, SIL/LOPA, electrical protection, vessel design, structural calculations, material selection dan persetujuan IFC memerlukan proses, data dan penanggung jawab yang sesuai; roadmap tidak mengotomatisasi klaimnya.
-
-## 6. Prioritas, pemilik dan ukuran keberhasilan
-
-| Prioritas | Pekerjaan | Pemilik yang diperlukan | Bukti selesai |
-|---|---|---|---|
-| P0 | Baseline dokumen, konflik design basis, status demo dan kepemilikan | Project engineering + Process + document control | Register versi dan keputusan konflik; asumsi/TBD dapat ditelusuri. |
-| P1 | Data bersama dan QA, termasuk layer minor serta risiko/bukti review | Tooling + Process/Piping + QA | Fixture positif/negatif; laporan cakupan dan dampak perubahan pada dokumen. |
-| P2 | PFD/P&ID mendalam; pilot metering dan kompresor | Process + Metering + Machinery + Instrument + Safety | Trace functions, catatan standar/kontrak, review independen dan daftar gap terbuka. |
-| P3 | Integrasi nozzle/line, mechanical dan model | Piping + Mechanical + Structural | Pilot perubahan lintas P&ID/datasheet/model/plan dapat ditelusuri. |
-| P4 | Instrument/SIS serta interface listrik dan sipil | Instrument + Safety + Electrical + Civil/Structural | Pilot loop/C&E, driver/load/SLD, equipment/load/foundation terhubung. |
-| P5 | Pilot menyeluruh dan distribusi skill/tool | Engineering leads + QA + IT/document control | Laporan pilot, tes distribusi, keterbatasan dan keputusan ekspansi. |
-
-Urutan adalah dependensi yang direkomendasikan, bukan jadwal kalender. Aktivitas disiplin dapat berjalan paralel setelah input bersama disepakati. Ukuran utama: keterlacakan dan penyelesaian temuan kritis berdasarkan bukti; penghematan waktu/token baru diukur setelah baseline kualitas ditetapkan. Tidak menjanjikan “zero-defect”.
-
-## 7. Keputusan yang perlu disepakati untuk memulai
-
-1. Pilih pilot terpadu: V-101 existing atau salah satu contoh metering/kompresor; tetapkan apakah demo terhubung dengan plant dan sumber data yang berlaku.
-2. Tentukan disiplin tahap pertama dan engineering lead/checker untuk masing-masing; tentukan sumber standar berlisensi, sistem penyimpanan dan kewenangan persetujuan.
-3. Tentukan apakah model data/referensi dipakai hanya untuk contoh atau untuk project deliverables, serta format dan kebijakan revisi/change control.
-4. Setelah scope dan sumber tersedia, uraikan fase prioritas menjadi backlog terukur dengan estimasi yang disepakati; roadmap ini belum mengasumsikan biaya atau tanggal selesai.
-
-## 8. Langkah pertama yang dapat dieksekusi
-
-Mulai dari **Fase 0 dan Fase 1**: inventaris baseline; daftar konflik dan data yang hilang; rancangan kecil register lintas disiplin; proof-of-concept pada satu jalur V-101; cakupan validator minor dan tes regresi. Laporkan opsi dan bukti sebelum memperluas template atau skill ke disiplin lain. Pertahankan gambar dan perubahan pengguna yang ada selama inventaris.
+| Revisi | Tanggal | Perubahan |
+|---|---|---|
+| A0 | 28 Oktober 2026 | Roadmap multidisiplin awal. |
+| A1 | 28 Oktober 2026 | Memprioritaskan P&ID ISO/ISA dengan workflow data-first; menambahkan standar review matrix, readiness per deliverable/fase, pemisahan engine/profile/data, status fakta kode fase 1, WP0–WP7, pilot sintetik V-101, integrasi H&MB, dan referensi backlog rinci. |
