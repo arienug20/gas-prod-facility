@@ -4,6 +4,12 @@ Repositori lengkap fasilitas produksi gas (*Onshore Gas Production Facility*), m
 
 ---
 
+## Konfigurasi proyek dan design basis
+
+Proyek GPF menggunakan `project.gpf.json` dan basis GPF yang ada. Untuk proyek lain, pilih konfigurasi proyek secara eksplisit dengan `--project`; tentukan basis, registri, HMB bila tersedia, pola penomoran, dan identitas lembar proyek tersebut. Petunjuk dan batas adapter ada di [konfigurasi proyek](dokumen/25-konfigurasi-proyek.md). Basis dan tag GPF tidak menjadi data proyek lain.
+
+---
+
 ## 📁 Struktur Repositori
 
 ```text

@@ -6,10 +6,10 @@ karangan:
 
   1. Bill of Materials   — dibaca dari tabel BOM pada tiap lembar isometrik
   2. Komponen Tercatat   — gabungan semua baris BOM lintas lembar (pivot)
-  3. Line List           — dari `dokumen/01-design-basis.md` §4
-  4. Instrument Index    — dari `dokumen/01-design-basis.md` §5
-  5. Equipment Register  — dari `dokumen/01-design-basis.md` §3
-  6. Register Dokumen    — dari `tools/documents.json`
+  3. Line List           — dari design basis proyek aktif
+  4. Instrument Index    — dari design basis proyek aktif
+  5. Equipment Register  — dari design basis proyek aktif
+  6. Register Dokumen    — dari registri proyek aktif
   7. Ringkasan QA        — status tiap pemeriksa (linter, konsistensi, BOM,
                            title block) bila tersedia
 
@@ -19,6 +19,7 @@ take-off berbayar — datanya tidak ada di repo.
 Pemakaian:
     python tools/export_xlsx.py                    # -> dist/gpf-register.xlsx
     python tools/export_xlsx.py -o laporan.xlsx
+    python tools/export_xlsx.py --project /path/project.json -o laporan.xlsx
 """
 from __future__ import annotations
 
@@ -27,6 +28,10 @@ import json
 import re
 import sys
 from pathlib import Path
+try:
+    from .project_config import load_project, load_register_json
+except ImportError:
+    from project_config import load_project, load_register_json
 
 REPO = Path(__file__).resolve().parent.parent
 CAD = REPO / "cad"
@@ -89,14 +94,17 @@ def classify(desc: str) -> str:
 
 
 # --------------------------------------------------------------------------- DB
-def parse_design_basis() -> dict:
+def parse_design_basis(path=DB) -> dict:
     out = {"equipment": [], "lines": [], "instruments": [], "meta": {}}
-    if not DB.is_file():
-        return out
-    md = DB.read_text(encoding="utf-8")
+    path = Path(path)
+    if not path.is_file(): raise ValueError(f'design basis tidak ditemukan: {path}')
+    md = path.read_text(encoding="utf-8")
+    if any(section not in md for section in ('## 3. DAFTAR EQUIPMENT','## 4. LINE LIST','## 5. INSTRUMENT INDEX','## 6.')):
+        raise ValueError('Format design basis bukan gpf-markdown-v1; pemetaan diperlukan')
     m = re.search(r"Dok\s*:\s*(GPF-[\w-]+),\s*Rev\s*(\w+)", md)
-    if m:
-        out["meta"]["doc_no"], out["meta"]["rev"] = m.group(1), m.group(2)
+    if not m:
+        raise ValueError('Nomor dokumen dan revisi design basis GPF tidak ditemukan')
+    out["meta"]["doc_no"], out["meta"]["rev"] = m.group(1), m.group(2)
 
     def table(section: str, next_sec: str) -> list[list[str]]:
         try:
@@ -138,11 +146,29 @@ def parse_design_basis() -> dict:
                 "loop": r[0], "tag": r[1].strip(), "function": r[2],
                 "location": r[3] if len(r) > 3 else "",
                 "action": r[4] if len(r) > 4 else ""})
+    if not (out['equipment'] or out['lines'] or out['instruments']):
+        raise ValueError('Register design basis kosong atau gagal dipetakan')
     return out
 
 
 # --------------------------------------------------------------------------- xlsx
-def build_workbook(out_path: Path) -> dict:
+def build_workbook(out_path: Path, project=None) -> dict:
+    project = project or load_project()
+    target = Path(out_path).resolve()
+    protected = {project.config_path, project.basis, project.registry}
+    if project.hmb: protected.add(project.hmb)
+    if target in protected or target.is_relative_to(project.cad_dir):
+        raise ValueError('output tidak boleh menimpa sumber proyek atau berada di direktori drawing')
+    if not project.registry.is_file(): raise ValueError(f'registri dokumen tidak ditemukan: {project.registry}')
+    try:
+        reg = json.loads(project.registry.read_text(encoding='utf-8'))
+    except (OSError, ValueError) as exc: raise ValueError(f'registri dokumen tidak valid: {exc}') from exc
+    if not isinstance(reg,dict) or not isinstance(reg.get('documents'),list): raise ValueError('registri documents harus berupa daftar')
+    if not project.cad_dir.is_dir(): raise ValueError(f'direktori drawing tidak ditemukan: {project.cad_dir}')
+    db = parse_design_basis(project.basis) if project.basis_format == 'gpf-markdown-v1' else load_register_json(project.basis)
+    expected_doc = reg.get('design_basis', {}).get('doc_no')
+    if expected_doc and expected_doc != db['meta']['doc_no']:
+        raise ValueError('nomor dokumen design basis tidak cocok dengan registri proyek')
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.utils import get_column_letter
@@ -178,7 +204,7 @@ def build_workbook(out_path: Path) -> dict:
     composite: dict[tuple, dict] = {}
     try:
         import ezdxf
-        for p in sorted(CAD.glob("iso_*.dxf")):
+        for p in sorted(project.cad_dir.glob("iso_*.dxf")):
             msp = ezdxf.readfile(str(p)).modelspace()
             for r in parse_bom_rows(msp):
                 cat = classify(r["description"])
@@ -207,18 +233,17 @@ def build_workbook(out_path: Path) -> dict:
     summary["composite_items"] = len(comp_rows)
 
     # ---- 3-5. design basis
-    db = parse_design_basis()
     sheet("Equipment Register",
           ["Tag", "Deskripsi", "Posisi Plant", "Elevasi"],
-          [[e["tag"], e["description"], e["position"], e["elevation"]]
+          [[e["tag"], e.get("description", ""), e.get("position", ""), e.get("elevation", "")]
            for e in db["equipment"]], [12, 46, 40, 20])
     sheet("Line List",
           ["No. Line", "DN", "Dari -> Ke", "Valve/Spesial", "Keterangan"],
-          [[l["line_no"], l["dn"], l["from_to"], l["valves"], l["note"]]
+          [[l["line_no"], l["dn"], l.get("from_to", ""), l.get("valves", ""), l.get("note", "")]
            for l in db["lines"]], [16, 7, 46, 40, 22])
     sheet("Instrument Index",
           ["Loop", "Tag", "Fungsi", "Lokasi", "Output/Aksi"],
-          [[i["loop"], i["tag"], i["function"], i["location"], i["action"]]
+          [[i.get("loop", ""), i["tag"], i.get("function", ""), i.get("location", ""), i.get("action", "")]
            for i in db["instruments"]], [8, 14, 34, 30, 30])
     summary["equipment"] = len(db["equipment"])
     summary["lines"] = len(db["lines"])
@@ -226,17 +251,17 @@ def build_workbook(out_path: Path) -> dict:
 
     # ---- 6. register dokumen
     doc_rows = []
-    if REGISTRY.is_file():
-        reg = json.loads(REGISTRY.read_text(encoding="utf-8"))
-        for d in reg.get("documents", []):
-            doc_rows.append([d["doc_no"], d["file"], d["type"], d["sheet"]])
+    for d in reg.get("documents", []):
+        doc_rows.append([d["doc_no"], d["file"], d["type"], d["sheet"]])
     sheet("Register Dokumen",
           ["Nomor Dokumen", "File", "Jenis", "Lembar"], doc_rows,
           [24, 22, 16, 9])
     summary["documents"] = len(doc_rows)
 
     # ---- 7. ringkasan QA
-    qa = [["Dibuat oleh", "tools/export_xlsx.py (GPF CAD Suite)"],
+    qa = [["Dibuat oleh", "tools/export_xlsx.py"],
+          ["Proyek", project.project_id],
+          ["HMB", project.hmb_status + (f' ({project.hmb})' if project.hmb else '')],
           ["Design basis", db["meta"].get("doc_no", "-") +
            " Rev " + db["meta"].get("rev", "-")],
           ["Baris BOM", summary["bom_rows"]],
@@ -261,17 +286,22 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("-o", "--out", default=str(REPO / "dist" / "gpf-register.xlsx"))
+    ap.add_argument("-o", "--out", help='path output; default dist/<project_id>-register.xlsx di folder konfigurasi')
+    ap.add_argument('--project', help='path konfigurasi proyek; default project.gpf.json untuk repo GPF')
     args = ap.parse_args(argv)
 
     try:
-        import openpyxl  # noqa: F401
-    except ImportError:
-        print("openpyxl tidak terpasang — ekspor XLSX dilewati", file=sys.stderr)
-        return 0
-
-    out = Path(args.out)
-    summary = build_workbook(out)
+        project = load_project(args.project)
+        out = Path(args.out) if args.out else project.config_path.parent / 'dist' / (project.project_id.lower() + '-register.xlsx')
+        try:
+            import openpyxl  # noqa: F401
+        except ImportError:
+            print("openpyxl tidak terpasang — ekspor XLSX dilewati", file=sys.stderr)
+            return 0
+        summary = build_workbook(out, project)
+    except (ValueError, OSError, KeyError) as exc:
+        print(f'Ekspor gagal: {exc}', file=sys.stderr)
+        return 2
     print("=" * 70)
     print("EKSPOR EXCEL")
     print("=" * 70)

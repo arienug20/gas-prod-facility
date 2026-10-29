@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "project_id": "GPF",
+  "cad_dir": "cad",
+  "documents_registry": "tools/documents.json",
+  "design_basis": {"file": "dokumen/01-design-basis.md", "format": "gpf-markdown-v1"},
+  "hmb": null,
+  "numbering": {
+    "document_regex": "GPF-\\d{2}-[A-Z]{2}-[A-Z]{3}-\\d{4}",
+    "tag_regex": "\\b([A-Z]{1,4}(?:/[A-Z]{1,4})?)-(\\d{3}[A-Z]?)\\b",
+    "line_regex": "\\b(\\d{3}-[A-Z]{2}-\\d{4})\\b"
+  },
+  "consistency": {
+    "core_files": ["pid_v101", "routing_plan", "iso_go1002", "iso_co1003", "iso_co1004"],
+    "equipment_scope": {"pid_v101": ["V-101", "P-101", "T-101"]},
+    "unknown_tags_pid": "pid_v101"
+  },
+  "sheet_profile": {"project": "GAS PRODUCTION FACILITY - ONSHORE FIELD", "company": "PM OIL & GAS SURFACE FACILITY", "consultant": "REKAYASA ENGINEERING"}
+}

@@ -15,7 +15,7 @@ class Revision:
 
 def draw_sheet(ctx, *, line, rect, title, number, revisions, date,
                notes=(), legend=(), references=(), designed='TBD', drawn='CAD',
-               checked='TBD', approved='TBD', sheet='1 OF 1'):
+               checked='TBD', approved='TBD', sheet='1 OF 1', sheet_profile=None):
     """Render A1 frame and furniture on a PIDContext; revisions oldest first.
 
     Input is presentation metadata, not approval or engineering evidence.
@@ -24,6 +24,10 @@ def draw_sheet(ctx, *, line, rect, title, number, revisions, date,
         raise ValueError('Berikan satu sampai enam revisi, urutan terlama dahulu')
     if len(notes) > 12 or len(legend) > 20 or len(references) > 4:
         raise ValueError('Isi furniture melampaui kapasitas lembar')
+    if sheet_profile is None:
+        sheet_profile = {'project':'GAS PRODUCTION FACILITY - ONSHORE FIELD', 'company':'PM OIL & GAS SURFACE FACILITY', 'consultant':'REKAYASA ENGINEERING'}
+    if not isinstance(sheet_profile,dict) or any(not isinstance(sheet_profile.get(k),str) or not sheet_profile[k].strip() for k in ('project','company','consultant')):
+        raise ValueError('sheet_profile wajib memuat project, company dan consultant')
     ctx.frame += rect(10, 7, 831, 587) + rect(20, 15, 823, 579)
     for i in range(1, 12):
         x = 20 + 803*i/12
@@ -50,9 +54,9 @@ def draw_sheet(ctx, *, line, rect, title, number, revisions, date,
         y=118.3+4.6*i
         ctx.text(r.rev,665,y,size=1.8); ctx.text(r.description,678,y,size=1.8,left=True)
         ctx.text(r.date,779,y,size=1.8); ctx.text(r.checked,802,y,size=1.8); ctx.text(r.approved,816,y,size=1.8)
-    ctx.text('GAS PRODUCTION FACILITY - ONSHORE FIELD',739,108.5,size=2.8)
-    ctx.text('PM OIL & GAS SURFACE FACILITY',739,102.5,size=2.2)
-    ctx.text('REKAYASA ENGINEERING',739,98,size=2)
+    ctx.text(sheet_profile['project'],739,108.5,size=2.8)
+    ctx.text(sheet_profile['company'],739,102.5,size=2.2)
+    ctx.text(sheet_profile['consultant'],739,98,size=2)
     ctx.text('PIPING & INSTRUMENTATION DIAGRAM',739,87,size=2.8)
     ctx.text(title,739,80,size=2.5)
     ctx.text('DRAWING NO:',658,70,size=1.8,left=True); ctx.text(number,739,65.5,size=2.5)

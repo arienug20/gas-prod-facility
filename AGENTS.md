@@ -22,8 +22,16 @@ pekerjaan di dalam folder ini.
    - Setiap line proses wajib punya panah aliran.
 2. Urutan build per drawing: build → `apply_text.py` (MTEXT + pens) →
    validasi (0 error) → snapshot → visual check (subagent pembaca gambar).
-3. Sumber kebenaran tag/line/koordinat/elevasi: `dokumen/01-design-basis.md`.
-   Konflik apa pun → design basis menang; catat deviation di laporan.
+3. Pilih konfigurasi proyek aktif dan baca design basis, HMB bila ada, serta
+   sumber/revisi yang berlaku sebelum menentukan tag, line, koordinat, elevasi,
+   dan data proses. Repo GPF ini menggunakan `project.gpf.json`, yang menunjuk
+   ke `dokumen/01-design-basis.md`; proyek lain wajib memakai basisnya sendiri.
+   Bila basis/HMB atau data yang dibutuhkan belum tersedia, tanyakan data primer
+   yang relevan; catat asumsi, TBD dan konflik dengan sumber serta owner. Gunakan
+   asumsi/keluaran parsial hanya dalam lingkup yang diotorisasi secara eksplisit.
+   Konflik dengan basis yang berlaku dicatat sebagai deviation, bukan diubah diam-diam.
+   Tag proyek hanya dibuat mengikuti aturan/alokasi yang disetujui; tag demo
+   sementara harus jelas bukan tag proyek dan tidak masuk registry proyek.
 4. Kontrol revisi: bump REV pada title block + rev table (A0→A1→…; B0 IFC;
    C0 as-built) dengan keterangan perubahan.
 

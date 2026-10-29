@@ -53,12 +53,21 @@ def _artifact(root: Path, relative: str) -> dict[str, Any]:
     return {"path": relative, "sha256": digest, "status": "PRESENT_STATIC_REVIEW", "known_limitations": limits}
 
 
-def build_baseline(repo_root: str | Path) -> dict[str, Any]:
+def build_baseline(repo_root: str | Path, project_path: str | Path | None = None) -> dict[str, Any]:
     """Inventory selected sources without importing or executing CAD generators."""
     root = Path(repo_root).resolve()
     if not root.is_dir():
         raise ValueError(f"repo root bukan direktori: {root}")
-    artifacts = [_artifact(root, rel) for rel in ARTIFACT_PATHS]
+    config_path = Path(project_path) if project_path is not None else root / 'project.gpf.json'
+    project = None
+    if project_path is not None or config_path.is_file():
+        from tools.project_config import load_project
+        project = load_project(config_path)
+    artifact_paths = [p for p in ARTIFACT_PATHS if p != 'dokumen/01-design-basis.md']
+    if project is not None:
+        artifact_paths.append(str(project.basis))
+        if project.hmb is not None: artifact_paths.append(str(project.hmb))
+    artifacts = [_artifact(root, rel) for rel in artifact_paths]
     # The candidates deliberately carry no edition or adoption assertion.
     catalog = {
         "schema_version": SCHEMA_VERSION,
@@ -69,6 +78,7 @@ def build_baseline(repo_root: str | Path) -> dict[str, Any]:
     }
     return {
         "schema_version": SCHEMA_VERSION,
+        "project": {"id": project.project_id, "config": str(project.config_path), "hmb_status": project.hmb_status} if project else {"id": None, "config": None, "hmb_status": "NOT ASSESSED"},
         "status": "BOUNDED_STATIC_INVENTORY",
         "artifacts": artifacts,
         "catalog": catalog,
@@ -166,9 +176,13 @@ def _valid_evidence(value: dict[str, Any], fields: tuple[str, ...]) -> bool:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Inventaris terbatas baseline standar dan drafting CAD.")
     parser.add_argument("--repo-root", required=True, type=Path, help="Path root repository")
+    parser.add_argument('--project', type=Path, help='Path konfigurasi proyek; default project.gpf.json dalam repo GPF')
     parser.add_argument("--out", type=Path, help="Path laporan JSON (harus belum ada)")
     args = parser.parse_args()
-    report = build_baseline(args.repo_root)
+    try:
+        report = build_baseline(args.repo_root, args.project)
+    except ValueError as exc:
+        parser.error(str(exc))
     report["catalog_findings"] = validate_catalog(report["catalog"])
     rendered = json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     if args.out:

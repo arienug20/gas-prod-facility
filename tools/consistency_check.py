@@ -5,7 +5,7 @@ Memvalidasi hal yang TIDAK bisa ditangkap linter geometri
 (validate_cad_rules.py) karena bukan soal geometri, melainkan kesesuaian
 isi antar dokumen:
 
-  D1  Nomor dokumen di title block cocok dengan registri (tools/documents.json)
+  D1  Nomor dokumen di title block cocok dengan registri proyek aktif
   D2  Nomor dokumen unik — satu nomor tidak dipakai dua file
   D3  Registri <-> manifest saling cocok (tidak ada file liar / entri basi)
   R1  Sel revisi tertinggi == deklarasi "REV: Xn"
@@ -25,6 +25,7 @@ Pemakaian:
     python tools/consistency_check.py
     python tools/consistency_check.py --json
     python tools/consistency_check.py --strict   # warning = gagal
+    python tools/consistency_check.py --project /path/project.json --json
 """
 from __future__ import annotations
 
@@ -35,6 +36,10 @@ import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
+try:
+    from .project_config import load_project, load_register_json
+except ImportError:
+    from project_config import load_project, load_register_json
 
 REPO = Path(__file__).resolve().parent.parent
 CAD = REPO / "cad"
@@ -128,11 +133,15 @@ def parse_design_basis(path: Path) -> dict:
     m = re.search(r"Dok\s*:\s*(GPF-[\w-]+),\s*Rev\s*(\w+)", md)
     if m:
         out["doc_no"], out["rev"] = m.group(1), m.group(2)
+    else:
+        out['ok'] = False
+    if not (out['equipment'] or out['lines'] or out['instruments']):
+        out['ok'] = False
     return out
 
 
 # --------------------------------------------------------------------------- tags
-def collect_tags(texts: list[dict]) -> set[str]:
+def collect_tags(texts: list[dict], tag_re=TAG_RE, legacy=True) -> set[str]:
     """Kumpulkan tag; satukan pasangan bubble ISA (fungsi + nomor loop).
 
     Dua pola penulisan yang sah di repo ini:
@@ -145,9 +154,13 @@ def collect_tags(texts: list[dict]) -> set[str]:
     """
     tags: set[str] = set()
     for t in texts:
-        for pre, num in TAG_RE.findall(t["t"]):
-            if pre not in IGNORE_PREFIX:
-                tags.add(f"{pre}-{num}")
+        for match in tag_re.finditer(t["t"]):
+            pre = match.group(1)
+            if not legacy or pre not in IGNORE_PREFIX:
+                tags.add(match.group(0))
+
+    if not legacy:
+        return tags
 
     # Pasangan bubble: fungsi berdiri sendiri + nomor 3 digit berdekatan.
     funcs = [t for t in texts if t["t"] in ISA_FUNCS]
@@ -168,8 +181,8 @@ def collect_tags(texts: list[dict]) -> set[str]:
     return tags
 
 
-def collect_lines(texts: list[dict]) -> set[str]:
-    return {m.group(1) for t in texts for m in LINE_RE.finditer(t["t"])}
+def collect_lines(texts: list[dict], line_re=LINE_RE) -> set[str]:
+    return {m.group(1) for t in texts for m in line_re.finditer(t["t"])}
 
 
 def tag_satisfied(tag: str, drawn: set[str]) -> bool:
@@ -188,7 +201,7 @@ def tag_satisfied(tag: str, drawn: set[str]) -> bool:
 
 
 # --------------------------------------------------------------------------- rules
-def check_doc_no(reg, manifests, rep: Report):
+def check_doc_no(reg, manifests, rep: Report, doc_re=DOCNO_ANY):
     by_file = {d["file"]: d for d in reg["documents"]}
 
     for f in sorted(set(manifests) - set(by_file)):
@@ -199,9 +212,9 @@ def check_doc_no(reg, manifests, rep: Report):
     seen: dict[str, str] = {}
     for d in reg["documents"]:
         no = d.get("doc_no", "")
-        if not DOCNO_RE.match(no):
+        if not doc_re.fullmatch(no):
             rep.err("D1", d["file"],
-                    f"format nomor tidak sah: {no!r} (pola GPF-NN-XX-XXX-NNNN)")
+                    f"format nomor tidak sah: {no!r} (pola proyek)")
         if no in seen:
             rep.err("D2", d["file"], f"nomor {no} sudah dipakai {seen[no]}")
         else:
@@ -216,7 +229,7 @@ def check_doc_no(reg, manifests, rep: Report):
         # -> cari pola di dalam teks, bukan hanya fullmatch.
         found: set[str] = set()
         for t in texts:
-            found.update(DOCNO_ANY.findall(t["t"]))
+            found.update(doc_re.findall(t["t"]))
         if not found:
             rep.err("D1", f, f"tidak ada nomor dokumen pada title block "
                              f"(diharapkan {no})")
@@ -261,7 +274,7 @@ def fmtid(t: tuple[int, int]) -> str:
     return f"{chr(ord('A') + t[0])}{t[1]}"
 
 
-def check_design_basis(db, reg, manifests, rep: Report):
+def check_design_basis(db, reg, manifests, rep: Report, project=None):
     if not db["ok"]:
         rep.err("T0", "design basis", "gagal mem-parse tabel design basis")
         return
@@ -274,26 +287,37 @@ def check_design_basis(db, reg, manifests, rep: Report):
         "pid_v101": {"V-101", "P-101", "T-101"},
         "routing_plan": set(db["equipment"]),
     }
+    core_files = CORE_FILES
+    pid_file = 'pid_v101'
+    tag_re, line_re = TAG_RE, LINE_RE
+    legacy = True
+    if project is not None:
+        core_files = project.consistency['core_files']
+        EQUIP_SCOPE = {k: set(v) for k,v in project.consistency.get('equipment_scope', {}).items()}
+        pid_file = project.consistency.get('unknown_tags_pid')
+        tag_re = re.compile(project.numbering['tag_regex'])
+        line_re = re.compile(project.numbering['line_regex'])
+        legacy = project.basis_format == 'gpf-markdown-v1'
     INSTR_SCOPE_PID = set(db["instruments"])
 
-    for f in CORE_FILES:
+    for f in core_files:
         texts = manifests.get(f)
         if texts is None:
             rep.err("T0", f, "manifest tidak ada — konsistensi tak dapat dicek")
             continue
-        drawn = collect_tags(texts)
+        drawn = collect_tags(texts, tag_re, legacy)
         dtype = by_file.get(f, {}).get("type", "")
 
         if dtype == "P&ID":
             expect = (EQUIP_SCOPE.get(f, set(db["equipment"]))
                       | INSTR_SCOPE_PID)
             for tag in sorted(expect):
-                if tag_satisfied(tag, drawn):
+                if (tag_satisfied(tag, drawn) if legacy else tag in drawn):
                     continue
                 rep.err("T1", f, f"tag {tag} ada di design basis "
                                  f"tetapi tidak ditemukan di drawing")
 
-        drawn_lines = collect_lines(texts)
+        drawn_lines = collect_lines(texts, line_re)
         for no in sorted(db["lines"]):
             if no in drawn_lines:
                 continue
@@ -311,22 +335,25 @@ def check_design_basis(db, reg, manifests, rep: Report):
                     rep.err("T2", f, f"{no}: DN{m.group(1)} di drawing vs "
                                      f"DN{dn} di design basis")
 
-    pid = manifests.get("pid_v101")
+    pid = manifests.get(pid_file) if pid_file else None
     if pid:
         known = (set(db["equipment"]) | INSTR_SCOPE_PID
-                 | EQUIP_SCOPE.get("pid_v101", set()))
-        drawn = collect_tags(pid)
+                 | EQUIP_SCOPE.get(pid_file, set()))
+        drawn = collect_tags(pid, tag_re, legacy)
         # FE/FT-141 sah bila FE-141 atau FT-141 dikenal (pola tag majemuk)
         unknown = []
         for t in sorted(drawn):
-            pre, num = t.rsplit("-", 1)
-            if pre in IGNORE_PREFIX or t in known:
+            if '-' not in t:
+                if t not in known: unknown.append(t)
                 continue
-            if any(f"{p}-{num}" in known for p in pre.split("/")):
+            pre, num = t.rsplit("-", 1)
+            if (legacy and pre in IGNORE_PREFIX) or t in known:
+                continue
+            if legacy and any(f"{p}-{num}" in known for p in pre.split("/")):
                 continue
             unknown.append(t)
         if unknown:
-            rep.warn("X1", "pid_v101",
+            rep.warn("X1", pid_file,
                      f"{len(unknown)} tag tidak ada di design basis: "
                      + ", ".join(unknown[:12])
                      + (" ..." if len(unknown) > 12 else ""))
@@ -340,17 +367,29 @@ def main(argv=None) -> int:
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--strict", action="store_true",
                     help="warning dianggap gagal")
+    ap.add_argument('--project', help='path konfigurasi proyek; default project.gpf.json untuk repo GPF')
     args = ap.parse_args(argv)
 
+    try:
+        project = load_project(args.project)
+    except ValueError as exc:
+        print(f'Konfigurasi proyek: {exc}', file=sys.stderr)
+        return 2
     rep = Report()
-    if REGISTRY.is_file():
-        reg = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    if project.registry.is_file():
+        try:
+            reg = json.loads(project.registry.read_text(encoding="utf-8"))
+            if not isinstance(reg,dict) or not isinstance(reg.get('documents'),list): raise ValueError('documents harus berupa daftar')
+        except (ValueError,OSError) as exc:
+            print(f'Registrasi dokumen tidak valid: {exc}', file=sys.stderr)
+            return 2
     else:
         reg = {"documents": []}
-        rep.err("D0", "documents.json", f"registri tidak ditemukan: {REGISTRY}")
+        rep.err("D0", "documents.json", f"registri tidak ditemukan: {project.registry}")
 
     manifests: dict[str, list[dict]] = {}
-    for p in sorted(CAD.glob("*.texts.json")):
+    if not project.cad_dir.is_dir(): rep.err('D0','cad_dir',f'direktori drawing tidak ditemukan: {project.cad_dir}')
+    for p in sorted(project.cad_dir.glob("*.texts.json")):
         if p.name.startswith(("test_", "test_opt")):
             continue
         try:
@@ -358,19 +397,25 @@ def main(argv=None) -> int:
         except Exception as exc:
             rep.err("D0", p.name, f"manifest tidak bisa dibaca: {exc}")
 
-    check_doc_no(reg, manifests, rep)
+    check_doc_no(reg, manifests, rep, re.compile(project.numbering['document_regex']))
 
     for d in reg["documents"]:
         texts = manifests.get(d["file"])
         if texts is not None:
             check_revision(d["file"], texts, rep)
 
-    db_file = reg.get("design_basis", {}).get("file",
-                                             "dokumen/01-design-basis.md")
-    db_path = REPO / db_file
+    db_path = project.basis
     if db_path.is_file():
-        db = parse_design_basis(db_path)
-        check_design_basis(db, reg, manifests, rep)
+        try:
+            if project.basis_format == 'gpf-markdown-v1':
+                db = parse_design_basis(db_path)
+            else:
+                register = load_register_json(db_path)
+                db = {'equipment':[x['tag'] for x in register['equipment']], 'lines':{x['line_no']:x['dn'] for x in register['lines']}, 'instruments':[x['tag'] for x in register['instruments']], 'doc_no':register['meta']['doc_no'], 'rev':register['meta'].get('rev'), 'ok':True}
+        except (ValueError,OSError) as exc:
+            print(f'Design basis tidak valid: {exc}', file=sys.stderr)
+            return 2
+        check_design_basis(db, reg, manifests, rep, project)
         expect = reg.get("design_basis", {}).get("doc_no")
         if db.get("doc_no") and expect and db["doc_no"] != expect:
             rep.err("D1", "design basis",
@@ -383,6 +428,8 @@ def main(argv=None) -> int:
     if args.json:
         print(json.dumps({
             "ok": not failed,
+            "project_id": project.project_id,
+            "hmb": {"status": project.hmb_status, "path": str(project.hmb) if project.hmb else None},
             "errors": [f.__dict__ for f in rep.errors],
             "warnings": [f.__dict__ for f in rep.warnings],
             "design_basis": {"equipment": len(db["equipment"]),
@@ -395,6 +442,7 @@ def main(argv=None) -> int:
         print("=" * 78)
         print(f"design basis : {db_path.name} ({len(db['equipment'])} equipment, "
               f"{len(db['lines'])} line, {len(db['instruments'])} instrument)")
+        print(f'proyek       : {project.project_id} | HMB: {project.hmb_status}')
         print(f"manifest     : {len(manifests)} drawing")
         print("-" * 78)
         for f in rep.errors:

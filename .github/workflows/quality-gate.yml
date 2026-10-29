@@ -17,6 +17,8 @@ on:
       - "tools/**"
       - "tests/**"
       - "pyproject.toml"
+      - "project.gpf.json"
+      - "AGENTS.md"
       - "requirements*.txt"
       - ".github/workflows/**"
   pull_request:
@@ -81,6 +83,9 @@ jobs:
 
       - name: Konsistensi Design Basis <-> Drawing
         run: python tools/consistency_check.py
+
+      - name: Tes pemilihan proyek dan design basis
+        run: python -m unittest tools.test_project_config -q
 
       - name: Quality gate (sweep 16 DXF + tests)
         env:
