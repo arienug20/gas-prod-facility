@@ -9,6 +9,7 @@ from typing import Any
 from .readiness import assess_readiness
 from .registry import audit_graph
 from .standards import validate_catalog
+from .connectivity import check_connectivity
 
 SCHEMA_VERSION = "1.0"
 
@@ -18,7 +19,7 @@ def _status(findings: list[dict[str, Any]]) -> str:
     return "INVALID" if any(item.get("severity") == "error" for item in findings) else "NOT ASSESSED"
 
 
-def assess_package(payload: Any, catalog: Any, graph: Any, deliverable_id: str) -> dict[str, Any]:
+def assess_package(payload: Any, catalog: Any, graph: Any, deliverable_id: str, connectivity_requirements: Any = None) -> dict[str, Any]:
     """Assess the three supplied sections independently; never infer missing inputs."""
     package_findings = []
     if not isinstance(payload, dict):
@@ -69,6 +70,7 @@ def assess_package(payload: Any, catalog: Any, graph: Any, deliverable_id: str) 
         "data_readiness": basis_report,
         "catalog_assessment": {"input_status": catalog_input, "status": "NOT ASSESSED" if catalog_input == "MISSING" else _status(catalog_report), "findings": catalog_report},
         "graph_assessment": {"input_status": graph_input, "status": "NOT ASSESSED" if graph_input == "MISSING" else _status(graph_report), "findings": graph_report},
+        "connectivity_assessment": check_connectivity(graph, connectivity_requirements),
         "engineering_review": {"status": "NOT ASSESSED", "findings": []},
     }
 
@@ -91,7 +93,7 @@ def main(argv=None) -> int:
     if not isinstance(raw, dict):
         report = assess_package(raw, None, None, "")
     else:
-        report = assess_package(raw.get("basis"), raw.get("catalog"), raw.get("graph"), raw.get("deliverable_id"))
+        report = assess_package(raw.get("basis"), raw.get("catalog"), raw.get("graph"), raw.get("deliverable_id"), raw.get("connectivity_requirements"))
         for field in ("basis", "catalog", "graph", "deliverable_id"):
             if field not in raw:
                 report["package_findings"].append({"rule": "package.field_missing", "category": "schema", "severity": "error",
@@ -113,6 +115,8 @@ def main(argv=None) -> int:
     if report["package_findings"] or report["data_readiness"]["status"] != "ready":
         return 1
     if report["catalog_assessment"]["status"] == "INVALID" or report["graph_assessment"]["status"] == "INVALID":
+        return 1
+    if report['connectivity_assessment']['status'] in ('INVALID', 'INCOMPLETE'):
         return 1
     # Even a data-ready, structurally clean package does not constitute engineering review.
     return 0
